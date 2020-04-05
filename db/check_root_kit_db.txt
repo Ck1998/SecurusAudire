@@ -1,0 +1,418 @@
+#####################################################################
+#                                                                   #
+#    This is a database for lib_check_root_kit.py                   #
+#    Located at modules/check_root_kit/lib_check_root_kit.py        #
+#                                                                   #
+#####################################################################
+
+#####################################################################
+#                                                                   #
+#    Guidelines for this database                                   #
+#                                                                   #
+#    1. Lines starting with '#' and blank lines will                #
+#       be ignored by the parser                                    #
+#                                                                   #
+#    2. Record Format -                                             #
+#          @<module_name> !<file to check>                          #
+#                                                                   #
+#    3. Lines having '*' will be recursively searched               #
+#       throughout the file path provided                           #
+#       Format to search the whole directory -                      #
+#           @<module_name> !<file path>*<file name>                 #
+#                                                                   #
+#       if <file path> is None then the file will be                #
+#       searched throughout the whole system                        #
+#                                                                   #
+#####################################################################
+
+# Bash door
+@Bash Door !tmp/mcliZokhb
+@Bash Door !tmp/mclzaKmfa
+
+# adore Worm
+@Adore Worm !dev/.shit/red.tgz
+@Adore Worm !usr/lib/libt
+@Adore Worm !usr/bin/adore
+@Adore Worm !*/klogd.o
+@Adore Worm !*/red.tar
+
+# T.R.K rootkit
+@T.R.K RootKit !usr/bin/soucemask
+@T.R.K RootKit !usr/bin/sourcemask
+
+# 55.808.A Worm
+@55.808.A Worm !tmp/.../a
+@55.808.A Worm !tmp/.../r
+
+# Volc Rootkit
+@Volc Rootkit !usr/lib/volc
+@Volc Rootkit !usr/bin/volc
+
+# Illogic RootKit
+@Illogic Rootkit !lib/security/.config
+@Illogic Rootkit !usr/bin/sia
+@Illogic Rootkit !etc/ld.so.hash
+@Illogic Rootkit !*/uconf.inv
+
+# T0rnkit
+@t0rn Rootkit !usr/src/.puta
+@t0rn Rootkit !usr/info/.t0rn
+@t0rn Rootkit !lib/ldlib.tk
+@t0rn Rootkit !etc/ttyhash
+@t0rn Rootkit !sbin/xlogin
+@t0rn Rootkit !*/ldlib.tk
+@t0rn Rootkit !*/.t0rn
+@t0rn Rootkit !*/.puta
+
+# RK17 RootKit
+@RK17 RootKit !bin/rtty
+@RK17 RootKit !bin/squit
+@RK17 RootKit !sbin/pback
+@RK17 RootKit !proc/kset
+@RK17 RootKit !usr/src/linux/modules/autod.o
+@RK17 RootKit !usr/src/linux/modules/soundx.o
+
+# Ramen Worm
+@Ramen Worm !usr/lib/ldlibps.so
+@Ramen Worm !usr/lib/ldlibns.so
+@Ramen Worm !usr/lib/ldliblogin.so
+@Ramen Worm !usr/src/.poop
+@Ramen Worm !tmp/ramen.tgz
+@Ramen Worm !etc/xinetd.d/asp
+
+# Sadmind/IIS Worm
+@Sadmind/IIS Worm !dev/cuc
+
+# Monkit RootKit
+@Monkit RootKit !lib/defs
+@Monkit RootKit !usr/lib/libpikapp.a
+
+# RSHA RootKit
+@RSHA RootKit !usr/bin/kr4p
+@RSHA RootKit !usr/bin/n3tstat
+@RSHA RootKit !usr/bin/chsh2
+@RSHA RootKit !usr/bin/slice2
+@RSHA RootKit !etc/rc.d/rsha
+
+# ShitC Worm
+@ShitC Worm !bin/homo
+@ShitC Worm !bin/frgy
+@ShitC Worm !bin/dy
+@ShitC Worm !sbin/dir
+@ShitC Worm !usr/sbin/in.slogind
+
+# Omega Worm
+@Omega Worm !dev/chr
+
+# Rh-Sharpe
+@Rh-Sharpe !bin/.ps
+@Rh-Sharpe !usr/bin/cleaner
+@Rh-Sharpe !usr/bin/slice
+@Rh-Sharpe !usr/bin/vadim
+@Rh-Sharpe !usr/bin/.ps
+@Rh-Sharpe !bin/.lpstree
+@Rh-Sharpe !usr/bin/.lpstree
+@Rh-Sharpe !usr/bin/lnetstat
+@Rh-Sharpe !bin/lnetstat
+@Rh-Sharpe !usr/bin/ldu
+@Rh-Sharpe !bin/ldu
+@Rh-Sharpe !usr/bin/lkillall
+@Rh-Sharpe !bin/lkillall
+@Rh-Sharpe !usr/include/rpcsvc/du
+
+# Maniac RK
+@Maniac RootKit !usr/bin/mailrc
+
+# Showtee RootKit
+@Showtee RootKit !usr/lib/.egcs
+@Showtee RootKit !usr/lib/.wormie
+@Showtee RootKit !usr/lib/.kinetic
+@Showtee RootKit !usr/lib/liblog.o
+@Showtee RootKit !usr/include/cron.h
+@Showtee RootKit !usr/include/chk.h
+
+# Romanian Rootkit
+@Romanian RootKit !usr/sbin/initdl
+@Romanian RootKit !usr/sbin/xntps
+@Romanian/Showtee RootKit !usr/include/addr.h
+@Romanian/Showtee RootKit !usr/include/file.h
+@Romanian/Showtee RootKit !usr/include/syslogs.h
+@Romanian/Showtee RootKit !usr/include/proc.h
+
+# Optickit RootKit
+@Optickit RootKit !usr/bin/xchk
+@Optickit RootKit !usr/bin/xsf
+
+# LDP Worm
+@LDP Worm !dev/.kork
+@LDP Worm !bin/.login
+@LDP Worm !bin/.ps
+
+# Telekit RootKit
+@Telekit RootKit !dev/hda06
+@Telekit RootKit !usr/info/libc1.so
+
+# Tribe bot
+@Tribe Bot !dev/wd4
+
+# LRK RootKit
+@LRK RootKit !dev/ida/.inet
+@LRK RootKit !*/bindshell
+
+# Adore Rootkit
+@Adore Rootkit !etc/bin/ava
+@Adore Rootkit !etc/sbin/ava
+
+# Slapper
+@Slapper !tmp/.bugtraq
+@Slapper !tmp/.bugtraq.c
+@Slapper !tmp/.cinik
+@Slapper !tmp/.b
+@Slapper !tmp/httpd
+@Slapper !tmp./update
+@Slapper !tmp/.unlock
+@Slapper !tmp/.font-unix/.cinik
+@Slapper !tmp/.cinik
+
+# Scalper
+@Scalper !tmp/.uua
+@Scalper !tmp/.a
+
+# Knark
+@Knark !proc/knark
+@Knark !dev/.pizda
+@Knark !dev/.pula
+@Knark !dev/.pula
+@Knark !*/taskhack
+@Knark !*/rootme
+@Knark !*/nethide
+@Knark !*/hidef
+@Knark !*/ered
+
+# Lion Worm
+@Lion Worm !dev/.lib
+@Lion Worm !dev/.lib/1iOn.sh
+@Lion Worm !bin/mjy
+@Lion Worm !bin/in.telnetd
+@Lion Worm !usr/info/torn
+@Lion Worm !*/1iOn\.sh
+
+# Bobkit RootKit
+@Bobkit RootKit !usr/include/.../
+@Bobkit RootKit !usr/lib/.../
+@Bobkit RootKit !usr/sbin/.../
+@Bobkit RootKit !usr/bin/ntpsx
+@Bobkit RootKit !tmp/.bkp
+@Bobkit RootKit !usr/lib/.bkit-
+@Bobkit RootKit !*/bkit-
+
+# Hidrootkit
+@Hidr00tkit RootKit !var/lib/games/.k
+
+# Ark RootKit
+@Ark RootKit !dev/ptyxx
+
+# Mithra Rootkit
+@Mithra Rootkit !usr/lib/locale/uboot
+
+# LOC RootKit
+@LOC RootKit !tmp/xp
+@LOC RootKit !tmp/kidd0.c
+@LOC RootKit !tmp/kidd0
+
+# TC2 worm
+@TC2 Worm !usr/info/.tc2k
+@TC2 Worm !usr/bin/util
+@TC2 Worm !usr/sbin/initcheck
+@TC2 Worm !usr/sbin/ldb
+
+# Anonoiyng RootKit
+@Anonoiyng RootKit !usr/sbin/mech
+@Anonoiyng RootKit !usr/sbin/kswapd
+
+# SuckIt RootKit
+@SuckIt RootKit !lib/.x
+@SuckIt RootKit !*/hide.log
+@SuckIt RootKit !lib/sk
+
+# Beastkit RootKit
+@Beastkit RootKit !usr/local/bin/bin
+@Beastkit RootKit !usr/man/.man10
+@Beastkit RootKit !usr/sbin/arobia
+@Beastkit RootKit !usr/lib/elm/arobia
+@Beastkit RootKit !usr/local/bin/.../bktd
+
+# Tuxkit
+@Tuxkit RootKit !dev/tux
+@Tuxkit RootKit !usr/bin/xsf
+@Tuxkit RootKit !usr/bin/xchk
+@Tuxkit RootKit !*/.file
+@Tuxkit RootKit !*/.addr
+
+# Old rootkits
+@Other RootKits !usr/include/rpc/ ../kit
+@Other RootKits !usr/include/rpc/ ../kit2
+@Other RootKits !usr/doc/.sl
+@Other RootKits !usr/doc/.sp
+@Other RootKits !usr/doc/.statnet
+@Other RootKits !usr/doc/.logdsys
+@Other RootKits !usr/doc/.dpct
+@Other RootKits !usr/doc/.gifnocfi
+@Other RootKits !usr/doc/.dnif
+@Other RootKits !usr/doc/.nigol
+
+# Kenga3 rootkit
+@Kenga3 RootKit !usr/include/. .
+
+# ESRK rootkit
+@ESRK RootKit !usr/lib/tcl5.3
+
+# Fu rootkit
+@Fu RootKit !sbin/xc
+@Fu RootKit !usr/include/ivtype.h
+@Fu RootKit !bin/.lib
+
+# ShKit rootkit
+@Sh RootKit !lib/security/.config
+@Sh RootKit !etc/ld.so.hash
+
+# AjaKit rootkit
+@AjaKit RootKit !lib/.ligh.gh
+@AjaKit RootKit !lib/.libgh.gh
+@AjaKit RootKit !lib/.libgh-gh
+@AjaKit RootKit !dev/tux
+@AjaKit RootKit !dev/tux/.proc
+@AjaKit RootKit !dev/tux/.file
+
+# zaRwT rootkit
+@zaRwT rootkit !bin/imin
+@zaRwT rootkit !bin/imout
+
+# Madalin rootkit
+@Madalin rootkit !usr/include/icekey.h
+@Madalin rootkit !usr/include/iceconf.h
+@Madalin rootkit !usr/include/iceseed.h
+
+# shv5 rootkit
+@shv5 rootkit !lib/libsh.so
+@shv5 rootkit !usr/lib/libsh
+
+# BMBL rootkit
+@BMBL rootkit !etc/.bmbl
+@BMBL rootkit !etc/.bmbl/sk
+
+# rootedoor rootkit
+@Rootedoor rootkit !*/rootedoor
+
+# 0vason rootkit
+@ovas0n rootkit !*/ovas0n
+@ovas0n rootkit !*/ovason
+
+# Rpimp reverse telnet
+@Rpimp RootKit !*/rpimp
+
+# Cback Linux worm
+@cback worm !tmp/cback
+@cback worm !tmp/derfiq
+
+# aPa Kit (from rkhunter)
+@aPa Kit !usr/share/.aPa
+
+# enye-sec Rootkit
+@Enye-Sec Rootkit !etc/.enyelkmHIDE^IT.ko
+
+# Override RootKit
+@Override RootKit !dev/grid-hide-pid-
+@Override RootKit !dev/grid-unhide-pid-
+@Override RootKit !dev/grid-show-pids
+@Override RootKit !dev/grid-hide-port-
+@Override RootKit !dev/grid-unhide-port-
+
+# PHALANX RootKit
+@PHALANX RootKit !usr/share/.home*
+@PHALANX RootKit !usr/share/.home*/tty
+@PHALANX RootKit !etc/host.ph1
+@PHALANX RootKit !bin/host.ph1
+
+# ZK RootKit
+@ZK RootKit !usr/share/.zk
+@ZK RootKit !usr/share/.zk/zk
+@ZK RootKit !etc/1ssue.net
+@ZK RootKit !usr/X11R6/.zk
+@ZK RootKit !usr/X11R6/.zk/xfs
+@ZK RootKit !usr/X11R6/.zk/echo
+@ZK RootKit !etc/sysconfig/console/load.zk
+
+# Sniffers
+@Sniffers !*/.linux-sniff
+@Sniffers !*/sniff-l0g
+@Sniffers !*/core_$
+@Sniffers !*/tcp.log
+@Sniffers !*/chipsul
+@Sniffers !*/beshina
+@Sniffers !*/.owned$
+
+# Solaris worm
+@Solaris Worm !var/adm/.profile
+@Solaris Worm !var/spool/lp/.profile
+@Solaris Worm !var/adm/sa/.adm
+@Solaris Worm !var/spool/lp/admins/.
+
+# Suspicious Files
+@Suspicious File(s) !etc/rc.d/init.d/rc.modules
+@Suspicious File(s) !lib/ldd.so
+@Suspicious File(s) !usr/man/muie
+@Suspicious File(s) !usr/X11R6/include/pain
+@Suspicious File(s) !usr/bin/sourcemask
+@Suspicious File(s) !usr/bin/ras2xm
+@Suspicious File(s) !usr/bin/ddc
+@Suspicious File(s) !usr/bin/jdc
+@Suspicious File(s) !usr/sbin/in.telnet
+@Suspicious File(s) !sbin/vobiscum
+@Suspicious File(s) !usr/sbin/jcd
+@Suspicious File(s) !usr/sbin/atd2
+@Suspicious File(s) !usr/bin/ishit
+@Suspicious File(s) !usr/bin/.etc
+@Suspicious File(s) !usr/bin/xstat
+@Suspicious File(s) !var/run/.tmp
+@Suspicious File(s) !usr/man/man1/lib/.lib
+@Suspicious File(s) !usr/man/man2/.man8
+@Suspicious File(s) !var/run/.pid
+@Suspicious File(s) !lib/.so
+@Suspicious File(s) !lib/.fx
+@Suspicious File(s) !lib/lblip.tk
+@Suspicious File(s) !usr/lib/.fx
+@Suspicious File(s) !var/local/.lpd
+@Suspicious File(s) !dev/rd/cdb
+@Suspicious File(s) !dev/.rd/
+@Suspicious File(s) !usr/lib/pt07
+@Suspicious File(s) !usr/bin/atm
+@Suspicious File(s) !tmp/.cheese
+@Suspicious File(s) !dev/.arctic
+@Suspicious File(s) !dev/.xman
+@Suspicious File(s) !dev/.golf
+@Suspicious File(s) !dev/srd0
+@Suspicious File(s) !dev/ptyzx
+@Suspicious File(s) !dev/ptyzg
+@Suspicious File(s) !dev/xdf1
+@Suspicious File(s) !dev/ttyop
+@Suspicious File(s) !dev/ttyof
+@Suspicious File(s) !dev/hd7
+@Suspicious File(s) !dev/hdx1
+@Suspicious File(s) !dev/hdx2
+@Suspicious File(s) !dev/xdf2
+@Suspicious File(s) !dev/ptyp
+@Suspicious File(s) !dev/ptyr
+@Suspicious File(s) !sbin/pback
+@Suspicious File(s) !usr/man/man3/psid
+@Suspicious File(s) !proc/kset
+@Suspicious File(s) !usr/bin/gib
+@Suspicious File(s) !usr/bin/snick
+@Suspicious File(s) !usr/bin/kfl
+@Suspicious File(s) !tmp/.dump
+@Suspicious File(s) !var/.x
+@Suspicious File(s) !var/.x/psotnic
+@Suspicious File(s) !*/.log
+@Suspicious File(s) !*/ecmf
+@Suspicious File(s) !*/mirkforce
+@Suspicious File(s) !*/mfclean
