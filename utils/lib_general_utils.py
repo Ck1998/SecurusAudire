@@ -61,6 +61,12 @@ class Utils:
             return curr_datetime
     
     @staticmethod
+    def get_datetime_fromtimestamp(timestamp):
+        formatted_datetime = datetime.fromtimestamp(timestamp)
+
+        return formatted_datetime
+    
+    @staticmethod
     def write_line_to_log_file(line_to_write: str):
         with open(LOG_FILE+".log", "a+") as write_file_object:
             try:

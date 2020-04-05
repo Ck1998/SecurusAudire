@@ -12,3 +12,7 @@ modules/check_trojan/support
 modules/check_trojan/*
 modules/audit_linux_system/*
 modules/check_root_kit/*
+__pycache__/config.cpython-36.pyc
+utils/__pycache__/lib_general_utils.cpython-36.pyc
+modules/__pycache__/general_system_information.cpython-36.pyc
+
