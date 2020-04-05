@@ -1,3 +1,14 @@
 /venv/*
 /test/*
 
+test.py
+.vscode/settings.json
+modules/__pycache__/lib_check_system_integrity.cpython-36.pyc
+modules/__pycache__/lib_kernel_hardening.cpython-36.pyc
+modules/__pycache__/lib_check_system_integrity.cpython-36.pyc
+modules/check_trojan/support
+modules/__pycache__/lib_check_system_integrity.cpython-36.pyc
+modules/check_trojan/support
+modules/check_trojan/*
+modules/audit_linux_system/*
+modules/check_root_kit/*

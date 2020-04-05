@@ -15,13 +15,13 @@ class TestHomeDir:
     
     def check_for_suspicious_shell_history_files(self, home_dir_list: list):
         susp_file_list = []
-        print("wow")
         self.test_result['Checking For Suspicious Shell History Files'] = {}
         home_dir_list.remove('/')
+
         for dir_name in home_dir_list:
             shell_history_files_list = self.get_shell_history_files(dir_name)
             for shell_history_file in shell_history_files_list:
-                print(shell_history_file)
+                
                 result = self.util_obj.check_is_file(shell_history_file)
                 if not result:
                     susp_file_list.append(shell_history_file)

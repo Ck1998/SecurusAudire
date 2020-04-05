@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from ntplib import NTPClient
-from subprocess import check_outputt
+from subprocess import check_output
 import os
 import re
 import glob
@@ -90,7 +90,7 @@ class Utils:
     
     @staticmethod
     def get_command_output(args: list):
-        command_output = check_outputt(args)
+        command_output = check_output(args)
         command_output = command_output.decode('utf-8')
 
         return command_output
