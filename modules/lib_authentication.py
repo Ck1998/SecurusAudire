@@ -101,7 +101,7 @@ class CheckAuthenticationModule(BaseTest):
     def check_group_file_with_chkgrp(self):
         chkgrp_file_location = self.ROOT_DIR+"usr/sbin/chkgrp"
 
-        if self.util_obj.check_is_file(chkgrp_file_location):
+        if self.util_obj.check_file_exsists(chkgrp_file_location):
             # chkgrp binary present performing additional audits
             command_output = self.util_obj.get_command_output([self.ROOT_DIR+"usr/sbin/chkgrp"])
 
@@ -127,7 +127,7 @@ class CheckAuthenticationModule(BaseTest):
     def check_group_file_with_grpck(self):
         grpck_file_location = self.ROOT_DIR+"usr/sbin/grpck"
 
-        if self.util_obj.check_is_file(grpck_file_location):
+        if self.util_obj.check_file_exsists(grpck_file_location):
             # grpck binary present performing additional audits
             command_output = self.util_obj.get_command_output([self.ROOT_DIR+"usr/sbin/grpck", '-r'])
 
@@ -221,7 +221,7 @@ class CheckAuthenticationModule(BaseTest):
     def check_passwd_file_consistency(self):
         pwck_file_location = self.ROOT_DIR+"usr/sbin/pwck"
 
-        if self.util_obj.check_is_file(pwck_file_location):
+        if self.util_obj.check_file_exsists(pwck_file_location):
             # pwck binary present performing additional audits
             try:
                 command_output = subprocess.check_output([self.ROOT_DIR+"usr/sbin/pwck", '-r'])
@@ -290,7 +290,7 @@ class CheckAuthenticationModule(BaseTest):
     def query_nis_plus_auth_support(self):
         nis_file_location = self.ROOT_DIR+"etc/nsswitch.conf"
 
-        if self.util_obj.check_is_file(nis_file_location):
+        if self.util_obj.check_file_exsists(nis_file_location):
             
             nis_regex = r"(^passwd):[\s]+(.+)"
             with open(nis_file_location, 'r') as file_read_obj:
@@ -324,7 +324,7 @@ class CheckAuthenticationModule(BaseTest):
     def query_nis_auth_support(self):
         nis_file_location = self.ROOT_DIR+"etc/nsswitch.conf"
 
-        if self.util_obj.check_is_file(nis_file_location):
+        if self.util_obj.check_file_exsists(nis_file_location):
             
             nis_regex = r"(^passwd):[\s]+(.+)"
             with open(nis_file_location, 'r') as file_read_obj:
@@ -361,7 +361,7 @@ class CheckAuthenticationModule(BaseTest):
         sudoers_file_array = []
 
         for sudoer_file in sudoers_file_location:
-            if self.util_obj.check_is_file(self.ROOT_DIR+sudoer_file):
+            if self.util_obj.check_file_exsists(self.ROOT_DIR+sudoer_file):
                 sudoers_file_array.append(sudoer_file)
 
         if len(sudoers_file_array) == 0:

@@ -16,3 +16,5 @@ __pycache__/config.cpython-36.pyc
 utils/__pycache__/lib_general_utils.cpython-36.pyc
 modules/__pycache__/general_system_information.cpython-36.pyc
 
+__pycache__/generate_web_report.cpython-36.pyc
+modules/__pycache__/lib_authentication.cpython-36.pyc
