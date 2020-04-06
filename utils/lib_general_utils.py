@@ -107,3 +107,9 @@ class Utils:
         
         return iter_obj
 
+    @staticmethod
+    def run_regex_search(regex: str, data: str):
+        match = re.search(regex, data)
+        
+        return match
+
