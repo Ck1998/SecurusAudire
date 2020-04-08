@@ -1,2 +1,5 @@
 # SecurusAudire
-Private repo 
+
+
+run 
+python3 test.py
