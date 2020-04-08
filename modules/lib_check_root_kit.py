@@ -14,8 +14,14 @@ class CheckRootKits:
 
         rootkit = {
             "module_name": {
-                "file_name": "infected",
-                "file_name": "not found",
+                "file_name": {
+                    "result": "",
+                    "args": ""
+                },
+                "file_name": {
+                    "result": "",
+                    "args": ""
+                },
             }
         }
 
@@ -24,20 +30,32 @@ class CheckRootKits:
     def check_file_exsists(self, file_path):
         result = os.path.exists(self.ROOT_DIR+file_path)
         if result:
-            return "infected"
+            return {
+                        "result": "infected",
+                        "args": None
+                    }
         else:
-            return "not found"
+            return {
+                        "result": "not found",
+                        "args": None
+                    }
 
     def glob_check(self,file_path,file_name):
         files = glob.iglob(file_path+'**/'+file_name, recursive = True) 
         if files is None:
             result = {}
             for filename in files:
-                result[file_name] = "infected"
+                result[file_name] = {
+                        "result": "infected",
+                        "args": None
+                    }
             return result
 
         else:
-            return "not found"
+            return {
+                        "result": "not found",
+                        "args": None
+                    }
 
     #   272 checks
     #   60 rootkits

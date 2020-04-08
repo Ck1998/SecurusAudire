@@ -88,7 +88,8 @@ class CheckAuthenticationModule(BaseTest):
         
         if len(duplicates_array) == 0:
             test_result = {
-                "result": "All accounts found in etc/passwd file are unique"
+                "result": "All accounts found in etc/passwd file are unique",
+                "args": None
             }
         else:
             test_result = {

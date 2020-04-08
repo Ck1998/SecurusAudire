@@ -2,9 +2,10 @@ from utils.lib_general_utils import Utils
 
 class GenerateWebReport:
 
-    def __init__(self, report_dict: dict):
+    def __init__(self, report_dict: dict, save_file_location: str):
         super().__init__()
         self.util_obj = Utils()
+        self.save_file_location = save_file_location
         self.file_content = """<!DOCTYPE html>
         <html>
         <head>
@@ -93,7 +94,7 @@ class GenerateWebReport:
 
 
     def parse_result(self):
-
+        # Add keys to side nav bar
         for key in self.system_report.keys():
             self.file_content += f"<a href='#'>{key}</a>"
 
@@ -101,39 +102,56 @@ class GenerateWebReport:
                 </div>
             </div>
 
-            <div class="main">
-            <h2>SECURUS AUDIRE</h2>
-            
-            <p>Some random text..</p>
-            </div>
-            <script>
-            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
+                <div class="main">
+                <h2>SECURUS AUDIRE</h2>
+            """
 
-            for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-            } else {
-            dropdownContent.style.display = "block";
-            }
-            });
-            }
-            </script>
+        def parse_value(value):
+            if type(value) != dict:
+                return value
+            else:
+                for key, val in value.items():
+                    parse_value(val)
+
+        # add content for that particular key
+        self.file_content += """
+                <script>
+                /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
+
+                    for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    } else {
+                    dropdownContent.style.display = "block";
+                    }
+                    });
+                    }
+                </script>
+                <script>
+                        function myFunc(id){
+                        if (document.getElementById(id.concat("_content")).style.display == "none") {
+                            document.getElementById(id.concat("_content")).style.display = "table-row";
+                        } else {
+                                document.getElementById(id.concat("_content")).style.display = "none";
+                            } 
+                        }
+                </script>
 
             </body>
             </html> """
 
     def create_file(self):
         
-        if not self.util_obj.check_file_exsists("/tmp/SecurusAudire_Reports"):
-            self.util_obj.get_command_output(['mkdir', '/tmp/SecurusAudire_Reports'])
+        if not self.util_obj.check_file_exsists(self.save_file_location+"/SecurusAudire_Reports"):
+            self.util_obj.get_command_output(['mkdir', self.save_file_location+'/SecurusAudire_Reports'])
 
         timestamp = self.util_obj.get_current_datetime()
-        with open("/tmp/SecurusAudire_Reports/web_report-"+self.util_obj.get_current_datetime()+".html", 'w+') as write_file_obj:
+        with open(self.save_file_location+"/SecurusAudire_Reports/web_report-"+self.util_obj.get_current_datetime()+".html", 'w+') as write_file_obj:
             write_file_obj.write(self.file_content)
     
     def generate_report(self):
