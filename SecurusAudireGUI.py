@@ -28,7 +28,7 @@ class SecurusAudireGUI:
         run_audit_button.grid(column=0, row=7)
 
         exit_button = tk.Button(self.window, text="Exit", command=self.exit)
-        exit_button.grid(column=0, row=10)
+        exit_button.grid(column=1, row=7)
 
     def file_entry_widget(self):
         file_save_title_label = tk.Label(self.window, text="Report Save Location")

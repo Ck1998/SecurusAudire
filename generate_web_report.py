@@ -6,6 +6,7 @@ class GenerateWebReport:
         super().__init__()
         self.util_obj = Utils()
         self.save_file_location = save_file_location
+        self.system_report = report_dict
         self.file_content = """<!DOCTYPE html>
         <html>
         <head>
@@ -90,14 +91,23 @@ class GenerateWebReport:
             <div class="dropdown-container">
         """
 
-        self.system_report = report_dict
-
 
     def parse_result(self):
         # Add keys to side nav bar
         for key in self.system_report.keys():
             self.file_content += f"<a href='#'>{key}</a>"
 
+        keys = []
+        
+        ## parse for keyss
+        for key in self.system_report.keys():
+            if key == "result" or key == "args":
+                pass
+            else:
+                
+        
+        
+        
         self.file_content += """
                 </div>
             </div>
@@ -106,12 +116,8 @@ class GenerateWebReport:
                 <h2>SECURUS AUDIRE</h2>
             """
 
-        def parse_value(value):
-            if type(value) != dict:
-                return value
-            else:
-                for key, val in value.items():
-                    parse_value(val)
+        for key, value in self.system_report.items():
+            if 
 
         # add content for that particular key
         self.file_content += """
