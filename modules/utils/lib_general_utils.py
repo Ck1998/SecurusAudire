@@ -5,6 +5,7 @@ import os
 import re
 import glob
 from config import LOG_FILE
+import json
 
 class Utils:
     
@@ -14,21 +15,7 @@ class Utils:
     
     def __init__(self):
         super().__init__()
-        
-        # constants
-        self.NEW_LINE_1 = "\n"
-        self.NEW_LINE_2 = "\n\n"
-        self.NEW_LINE_3 = "\n\n\n"
-        self.NEW_LINE_4 = "\n\n\n\n"
-        self.NEW_LINE_5 = "\n\n\n\n\n"
-        self.NEW_LINE_6 = "\n\n\n\n\n\n"
-        self.TAB_6 = "\t\t\t\t\t\t"
-        self.TAB_5 = "\t\t\t\t\t"
-        self.TAB_4 = "\t\t\t\t"
-        self.TAB_3 = "\t\t\t"
-        self.TAB_2 = "\t\t"
-        self.TAB_1 = "\t"
-        
+
     @staticmethod
     def get_size(bytes, suffix="B"):
         factor = 1024
@@ -67,15 +54,6 @@ class Utils:
         return formatted_datetime
     
     @staticmethod
-    def write_line_to_log_file(line_to_write: str):
-        with open(LOG_FILE+".log", "a+") as write_file_object:
-            try:
-                write_file_object.write(line_to_write+NEW_LINE_1)
-                return 0
-            except:
-                raise IOError
-
-    @staticmethod
     def check_file_exsists(file_path: str):
         result = os.path.exists(file_path)
         return result
@@ -112,4 +90,13 @@ class Utils:
         match = re.search(regex, data)
         
         return match
+
+    @staticmethod
+    def convert_dict_to_json(dict_convert: dict):
+        try:
+            converted_json = json.dumps(dict_convert, indent=4)
+        except:
+            converted_json = json.dumps({"None":"None"})
+
+        return converted_json
 
