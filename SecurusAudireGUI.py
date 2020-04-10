@@ -12,7 +12,7 @@ class SecurusAudireGUI:
         self.window_height = 200
         self.window.geometry(str(self.window_width)+"x"+str(self.window_height))
         self.window.title("SecurusAudire - A Security Audit Tool")
-        self.save_folder_location = ""
+        self.save_folder_location = "/var/log"
 
     def set_text_labels(self):
 
@@ -27,7 +27,7 @@ class SecurusAudireGUI:
         run_audit_button = tk.Button(self.window, text="Run System Audit", command= self.run_audit)
         run_audit_button.grid(column=0, row=7)
 
-        exit_button = tk.Button(self.window, text="Exit", command=self.exit)
+        exit_button = tk.Button(self.window, text="Exit", command=self.exit_gui)
         exit_button.grid(column=1, row=7)
 
     def file_entry_widget(self):
@@ -52,6 +52,7 @@ class SecurusAudireGUI:
         audit_status = audit_controller_object.controller()
         if audit_status == 0:
             tk.messagebox.showinfo('Success','System Audit Complete. You can view generated reports at - '+self.save_folder_location+"/SecurusAudire_Reports/")
+            #self.exit_gui()
         else:
             result = tk.messagebox.askyesno('Error', 'SecurusAudire encountered some errors, are you running the script as root?') 
             if not result:
@@ -65,7 +66,7 @@ class SecurusAudireGUI:
         self.file_entry_widget()
         self.window.mainloop()
 
-    def exit(self):
+    def exit_gui(self):
         self.window.destroy()
 
 
