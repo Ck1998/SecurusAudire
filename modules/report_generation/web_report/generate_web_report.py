@@ -20,5 +20,6 @@ class GenerateWebReport(ReportGenBase):
             write_file_obj.write(self.file_content)
     
     def generate_report(self):
+        
         self.parse_result()
         self.create_file()
