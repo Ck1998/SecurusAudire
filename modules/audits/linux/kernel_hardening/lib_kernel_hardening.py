@@ -1,4 +1,4 @@
-from modules.base_model import BaseTest
+from modules.audits.base_model import BaseTest
 from config import ROOT_DIR
 
 

@@ -1,7 +1,7 @@
 import tkinter as tk 
 from tkinter import filedialog
-from audit_controller import AuditController
 from tkinter import messagebox
+from modules.audit_controller import AuditController
 
 class SecurusAudireGUI:
 

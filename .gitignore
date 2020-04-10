@@ -192,3 +192,11 @@ web_report/src/skin-xp/ui.fancytree.css
 web_report/src/skin-xp/ui.fancytree.less
 web_report/src/skin-xp/vline-rtl.gif
 web_report/src/skin-xp/vline.gif
+__pycache__/*
+modules/__pycache__/*
+sample.html
+__pycache__/audit_controller.cpython-36.pyc
+old/linux_script.py
+old/recur_test.py
+old/script.py
+__pycache__/audit_controller.cpython-36.pyc

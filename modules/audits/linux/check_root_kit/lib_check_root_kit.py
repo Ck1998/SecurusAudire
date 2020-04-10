@@ -1,8 +1,8 @@
+from modules.audits.base_model import BaseTest
 import os
-import json
 import glob
 
-class CheckRootKits:
+class CheckRootKits(BaseTest):
     def __init__(self):
         super().__init__()
         self.database_file = "db/check_root_kit_db.txt"

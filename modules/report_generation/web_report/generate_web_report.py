@@ -100,11 +100,11 @@ class GenerateWebReport:
         keys = []
         
         ## parse for keyss
-        for key in self.system_report.keys():
-            if key == "result" or key == "args":
-                pass
-            else:
-                
+        #for key in self.system_report.keys():
+        #    if key == "result" or key == "args":
+        #        pass
+        #    else:
+        #        pass
         
         
         
@@ -116,8 +116,7 @@ class GenerateWebReport:
                 <h2>SECURUS AUDIRE</h2>
             """
 
-        for key, value in self.system_report.items():
-            if 
+        #for key, value in self.system_report.items():
 
         # add content for that particular key
         self.file_content += """

@@ -1,4 +1,4 @@
-from modules.base_model import BaseTest
+from modules.audits.base_model import BaseTest
 import subprocess
 
 class CheckAuthenticationModule(BaseTest):

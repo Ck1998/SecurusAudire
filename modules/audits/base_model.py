@@ -1,4 +1,4 @@
-from utils.lib_general_utils import Utils
+from modules.utils.lib_general_utils import Utils
 from config import ROOT_DIR
 
 class BaseTest(object):

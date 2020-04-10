@@ -1,6 +1,6 @@
 import psutil
 import platform
-from modules.base_model import BaseTest
+from modules.audits.base_model import BaseTest
 
 class GeneralSystemInformation(BaseTest):
     

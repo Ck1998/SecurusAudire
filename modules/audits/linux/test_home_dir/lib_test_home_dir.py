@@ -1,14 +1,13 @@
-from utils.lib_general_utils import Utils
+from modules.audits.base_model import BaseTest
 import re 
 
-class TestHomeDir:
+class TestHomeDir(BaseTest):
     def __init__(self):
         super().__init__()
         self.home_dir_regex = r".*:.*:.*:.*:.*:(.*):.*[\s]"
-        self.home_dir_location = "/etc/passwd"
+        self.home_dir_location = self.ROOT_DIR+"etc/passwd"
         self.ignore_dir_list = []
         self.test_result = {}
-        self.util_obj = Utils()
 
     def get_shell_history_files(self, dir_name):
         return self.util_obj.recursive_search(dir_name, ".*history")

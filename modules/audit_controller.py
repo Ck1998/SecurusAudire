@@ -1,10 +1,14 @@
-from modules.lib_test_home_dir import TestHomeDir
-from modules.lib_check_system_integrity import CheckSystemIntegrity
-from modules.lib_kernel_hardening import KernelHardening
-from modules.lib_check_root_kit import CheckRootKits
-from modules.general_system_information import GeneralSystemInformation
-from modules.lib_authentication import CheckAuthenticationModule
-from generate_web_report import GenerateWebReport
+# audit modules
+
+from modules.audits.linux.check_authentication.lib_authentication import CheckAuthenticationModule
+from modules.audits.linux.check_system_integrity.lib_check_system_integrity import CheckSystemIntegrity
+from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernelHardening
+from modules.audits.linux.check_root_kits.lib_check_root_kit import CheckRootKits
+from modules.audits.linux.test_home_dir.lib_test_home_dir import TestHomeDir
+from modules.audits.linux.common.general_system_information.lib_general_system_information import GeneralSystemInformation
+
+# report modules
+from modules.report_generation.web_report.generate_web_report import GenerateWebReport
 
 
 class AuditController:
@@ -50,4 +54,5 @@ class AuditController:
         except:
             return 1
 
+        #print(self.audit_results)
         return 0 
