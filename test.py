@@ -27,4 +27,4 @@ data = {
 web = GenerateWebReport(data)
 web.generate_report()
 
-print(json.dumps(data))
+print(json.dumps(data)) 
