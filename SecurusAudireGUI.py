@@ -52,13 +52,15 @@ class SecurusAudireGUI:
         audit_status = audit_controller_object.controller()
         if audit_status == 0:
             tk.messagebox.showinfo('Success','System Audit Complete. You can view generated reports at - '+self.save_folder_location+"/SecurusAudire_Reports/")
-            #self.exit_gui()
+            self.exit_gui()
         else:
             result = tk.messagebox.askyesno('Error', 'SecurusAudire encountered some errors, are you running the script as root?') 
             if not result:
                 tk.messagebox.showinfo('Info','Script should be executed with root privileges!!!')
+                self.exit_gui()
             else:
                 tk.messagebox.showinfo('Info','Please exit and try again!!!')
+                self.exit_gui()
 
     def run_gui(self):
         self.set_text_labels()

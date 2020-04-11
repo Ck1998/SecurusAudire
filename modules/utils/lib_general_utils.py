@@ -6,6 +6,7 @@ import re
 import glob
 from config import LOG_FILE
 import json
+from json2html import *
 
 class Utils:
     
@@ -100,3 +101,8 @@ class Utils:
 
         return converted_json
 
+    @staticmethod
+    def convert_json_to_html_table(json_data: dict):
+        minify_html_table = json2html.convert(json = json_data, table_attributes=f'class="table table-bordered table-hover"')
+
+        return minify_html_table
