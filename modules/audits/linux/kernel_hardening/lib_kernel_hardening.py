@@ -1,5 +1,5 @@
 from modules.audits.base_model import BaseTest
-from config import ROOT_DIR
+import config as CONFIG
 
 
 class KernelHardening(BaseTest):
@@ -62,18 +62,26 @@ class KernelHardening(BaseTest):
                     break
             
             if not flag:
+                CONFIG.SYSTEM_SCORE += 1
+                CONFIG.TOTAL_SCORE_POSSIBLE += 1
                 self.test_result[sysctl_key] = {}
                 self.test_result[sysctl_key].update(result = "Sysctl key value in compliance with standards", args = {
                     "description": db_dict[sysctl_key]['description'],
                     "Support Link": db_dict[sysctl_key]['support_link']
                 })
             else:
-                self.test_result[sysctl_key] = {}
-                self.test_result[sysctl_key].update(result = "Sysctl key value not in compliance with standards", args = {
+                CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                CONFIG.WARNING_DICT[sysctl_key] = {
+                    "Warning": f"{sysctl_key} key value not in complaince with standards",
                     "Value Found in System": system_key_value,
                     "Expected Value": expected_value,
                     "description": db_dict[sysctl_key]['description'],
                     "Support Link": db_dict[sysctl_key]['support_link']
+                }
+                self.test_result[sysctl_key] = {}
+                self.test_result[sysctl_key].update(result = "Sysctl key value not in compliance with standards", args = {
+                    "Value Found in System": system_key_value,
+                    "Expected Value": expected_value,
                 })
 
     def parse_db(self):

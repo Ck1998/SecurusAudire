@@ -4,7 +4,6 @@ from subprocess import check_output
 import os
 import re
 import glob
-from config import LOG_FILE
 import json
 from json2html import *
 

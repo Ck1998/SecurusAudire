@@ -9,6 +9,9 @@ from modules.audits.common.general_system_information.lib_general_system_informa
 # report modules
 from modules.report_generation.report_generation_controller import ReportGenController
 
+# config varibales
+import config as CONFIG
+
 
 class AuditController:
 
@@ -47,5 +50,5 @@ class AuditController:
             self.run_all_audits()
         except:
             return 1
-
+            
         return 0 

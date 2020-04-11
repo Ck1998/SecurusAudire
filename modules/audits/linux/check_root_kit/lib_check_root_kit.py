@@ -1,4 +1,8 @@
 from modules.audits.base_model import BaseTest
+import config as CONFIG
+
+# TODO: Refractor this file
+
 import os
 import glob
 
@@ -27,24 +31,40 @@ class CheckRootKits(BaseTest):
 
     """
 
-    def check_file_exsists(self, file_path):
+    def check_file_exsists(self, file_path, module):
         result = os.path.exists(self.ROOT_DIR+file_path)
         if result:
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
+            CONFIG.WARNING_DICT[module] = {
+                    "Warning": f"Possible {module} infection",
+                    "Infected Files": f"{file_path}",
+                    "Mitigation": "Remove the infected files using a live CD OS",
+                    "Support Links": None
+            }
             return {
-                        "result": "infected",
+                        "result": "possible infection detected",
                         "args": None
                     }
         else:
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
+            CONFIG.SYSTEM_SCORE += 1
             return {
                         "result": "not found",
                         "args": None
                     }
 
-    def glob_check(self,file_path,file_name):
+    def glob_check(self,file_path,file_name, module):
         files = glob.iglob(file_path+'**/'+file_name, recursive = True) 
         if files is None:
             result = {}
             for filename in files:
+                CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                CONFIG.WARNING_DICT[module] = {
+                    "Warning": f"Possible {module} infection",
+                    "Infected Files": filename,
+                    "Mitigation": "Remove the infected files using a live CD OS",
+                    "Support Links": None
+                }
                 result[file_name] = {
                         "result": "infected",
                         "args": None
@@ -52,6 +72,8 @@ class CheckRootKits(BaseTest):
             return result
 
         else:
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
+            CONFIG.SYSTEM_SCORE += 1
             return {
                         "result": "not found",
                         "args": None
@@ -78,11 +100,11 @@ class CheckRootKits(BaseTest):
                             # remove this in production
                             file_path = '/usr/bin'
 
-                        result = self.glob_check(file_path, file_name)
+                        result = self.glob_check(file_path, file_name, __module__)
                         self.test_result[__module__][__file__] = result
 
                     else: 
-                        result = self.check_file_exsists(__file__)
+                        result = self.check_file_exsists(__file__, __module__)
                         self.test_result[__module__][__file__] = result
 
     def run_test(self):
