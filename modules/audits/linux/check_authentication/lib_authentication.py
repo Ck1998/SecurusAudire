@@ -1,4 +1,5 @@
 from modules.audits.base_model import BaseTest
+import config as CONFIG
 import subprocess
 
 class CheckAuthenticationModule(BaseTest):
@@ -228,6 +229,11 @@ class CheckAuthenticationModule(BaseTest):
                 command_output = subprocess.check_output([self.ROOT_DIR+"usr/sbin/pwck", '-r'])
             except subprocess.CalledProcessError as e:
                 
+                CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                CONFIG.WARNING_DICT["/etc/passwd File Consistency"] = {
+                    "Warning": "pwck check found one or more errors/warnings in the password file",
+                    "Mitigation": "Run pwck check manually to fix these errors"
+                }
                 test_result = {
                     "result": "pwck check found one or more errors/warnings in the password file",
                     "args" : None
@@ -235,12 +241,18 @@ class CheckAuthenticationModule(BaseTest):
 
                 return test_result
             
+            CONFIG.SYSTEM_SCORE += 1
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
             test_result = {
                 "result": "pwck check didn't find any errors in the password file.",
                 "args" : None
             }
 
         else:
+            CONFIG.SUGGESTIONS_DICT["NISs Authentication"] = {
+                "Suggestion": "Install pwck binary for added system persistence",
+                "Support Link": "https://linux.die.net/man/8/pwck"
+            }
             # pwck binary not present skipping additional audits
             test_result = {
                 "result": "pwck binary not found, skipping additional tests",
@@ -299,22 +311,37 @@ class CheckAuthenticationModule(BaseTest):
             
                 if match:
                     if "compat" in match.group(1) or "nisplus" in match.group(1):
+                        CONFIG.SYSTEM_SCORE += 1
+                        CONFIG.TOTAL_SCORE_POSSIBLE += 1
                         test_result = {
                             "result": "NIS+ authentication enabled",
                             "args" : None
                         }
                     else:
+                        CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                        CONFIG.SUGGESTIONS_DICT["NIS+ Authentication"] = {
+                            "Suggestion": "Enable NIS+ Authentication for added system protection",
+                            "Support Link": "https://linux.die.net/man/5/nisplus_table"
+                        }
                         test_result = {
                             "result": "NIS+ authentication not enabled",
                             "args" : None
                         }
                 else:
+                    CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                    CONFIG.SUGGESTIONS_DICT["NIS+ Authentication"] = {
+                        "Suggestion": "Enable NIS+ Authentication for added system protection",
+                        "Support Link": "https://linux.die.net/man/5/nisplus_table"
+                    }
                     test_result = {
                         "result": "NIS+ authentication not enabled",
                         "args" : None
                     }
         else:
-
+            CONFIG.SUGGESTIONS_DICT["NIS+ Authentication"] = {
+                "Suggestion": "Install NIS+ Authentication for added system protection",
+                "Support Link": "https://linux.die.net/man/5/nisplus_table"
+            }            
             test_result = {
                 "result": "/etc/nsswitch.conf not found",
                 "args" : None
@@ -333,22 +360,37 @@ class CheckAuthenticationModule(BaseTest):
             
             if match:
                 if "compat" in match.group(1) or "nis" in match.group(1):
+                    CONFIG.SYSTEM_SCORE += 1
+                    CONFIG.TOTAL_SCORE_POSSIBLE += 1
                     test_result = {
                         "result": "NIS authentication enabled",
                         "args" : None
                     }
                 else:
+                    CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                    CONFIG.SUGGESTIONS_DICT["NIS Authentication"] = {
+                        "Suggestion": "Enable NIS Authentication for added system protection",
+                        "Support Link": "https://linux.die.net/man/8/ypserv"
+                    }
                     test_result = {
                         "result": "NIS authentication not enabled",
                         "args" : None
                     }
             else:
+                CONFIG.TOTAL_SCORE_POSSIBLE += 1
+                CONFIG.SUGGESTIONS_DICT["NIS Authentication"] = {
+                        "Suggestion": "Enable NIS Authentication for added system protection",
+                        "Support Link": "https://linux.die.net/man/8/ypserv"
+                    }
                 test_result = {
                     "result": "NIS authentication not enabled",
                     "args" : None
                 }
         else:
-
+            CONFIG.SUGGESTIONS_DICT["NISs Authentication"] = {
+                "Suggestion": "Install NIS Authentication for added system protection",
+                "Support Link": "https://linux.die.net/man/5/nisplus_table"
+            }
             test_result = {
                 "result": "/etc/nsswitch.conf not found",
                 "args" : None

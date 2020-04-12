@@ -19,6 +19,7 @@ class AuditController:
         super().__init__()
         self.save_folder_location = save_folder_location
         self.audit_result = {}
+        self.full_report = {}
 
     def run_all_audits(self):
 
@@ -38,10 +39,24 @@ class AuditController:
             "Check Root Kit": check_root_kits_object.run_test()
         }
 
+        self.generate_full_report()
+
+    def generate_full_report(self):
+
+        # this function is used for adding audit score and warnings and suggwstions to the audit_results
+
+        self.full_report = {
+            "System Score": CONFIG.SYSTEM_SCORE,
+            "Total Score Possible": CONFIG.TOTAL_SCORE_POSSIBLE,
+            "Suggestions": CONFIG.SUGGESTIONS_DICT,
+            "Warnings": CONFIG.WARNING_DICT,
+            "Audit Results": self.audit_result
+        }
+
         self.generate_reports()
 
     def generate_reports(self):
-        report_gen_obj = ReportGenController(self.audit_result, self.save_folder_location)
+        report_gen_obj = ReportGenController(self.full_report, self.save_folder_location)
 
         report_gen_obj.controller()
 

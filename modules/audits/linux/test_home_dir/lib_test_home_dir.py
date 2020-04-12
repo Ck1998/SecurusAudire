@@ -1,5 +1,6 @@
 from modules.audits.base_model import BaseTest
 import re 
+import config as CONFIG
 
 class TestHomeDir(BaseTest):
     def __init__(self):
@@ -26,8 +27,15 @@ class TestHomeDir(BaseTest):
                     susp_file_list.append(shell_history_file)
 
         if len(susp_file_list) == 0:
+            CONFIG.SYSTEM_SCORE += 1
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
             self.test_result['Checking For Suspicious Shell History Files'].update(result = "No suspicious shell history files found", args = None)
         else:
+            CONFIG.TOTAL_SCORE_POSSIBLE += 1
+            CONFIG.WARNING_DICT["Suspicious Shell History Files"] = {
+                "Warning": "Suspicious Shell History files found",
+                "Suspicious Shell history files": susp_file_list
+            }
             self.test_result['Checking For Suspicious Shell History Files'].update(result = "Suspicious shell history files found", args = susp_file_list)
             
 

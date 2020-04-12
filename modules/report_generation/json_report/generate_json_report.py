@@ -2,15 +2,15 @@ from modules.report_generation.report_generator_base import ReportGenBase
 
 class GenerateJsonReport(ReportGenBase):
 
-    def __init__(self, audit_result: dict, save_folder_location: str, timestamp):
+    def __init__(self, full_report: dict, save_folder_location: str, timestamp):
         super().__init__()
-        self.audit_result = audit_result
+        self.full_report = full_report
         self.save_folder_location = save_folder_location
         self.timestamp = timestamp
 
 
     def parse_result(self):
-        file_content = self.util_obj.convert_dict_to_json(self.audit_result)
+        file_content = self.util_obj.convert_dict_to_json(self.full_report)
 
         self.create_file(file_content)
 

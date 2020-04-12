@@ -8,20 +8,20 @@ from modules.report_generation.web_report.generate_web_report import GenerateWeb
 
 class ReportGenController:
     
-    def __init__(self, audit_result: dict, save_folder_location):
+    def __init__(self, full_report: dict, save_folder_location):
         super().__init__()
         self.save_folder_location = save_folder_location
-        self.audit_result = audit_result
+        self.full_report = full_report
         util_obj = Utils()
         self.timestamp = util_obj.get_current_datetime()
 
     def generate_json_report(self):
-        json_report_obj = GenerateJsonReport(self.audit_result, self.save_folder_location, self.timestamp)
+        json_report_obj = GenerateJsonReport(self.full_report, self.save_folder_location, self.timestamp)
 
         json_report_obj.generate_report()
 
     def generate_web_report(self):
-        web_report_obj = GenerateWebReport(self.audit_result, self.save_folder_location, self.timestamp)
+        web_report_obj = GenerateWebReport(self.full_report, self.save_folder_location, self.timestamp)
 
         web_report_obj.generate_report()
 
