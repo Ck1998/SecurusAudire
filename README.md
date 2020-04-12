@@ -1,7 +1,7 @@
 # SecurusAudire
 
 This repo is for linux auditing 
-for windows auditing see branch dev_windows
+for windows auditing see branch windows_dev
 
 to execute - 
 1. pip install -r requirements.txt
