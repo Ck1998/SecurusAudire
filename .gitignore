@@ -324,3 +324,6 @@ teset2.py
 web_report_test.py
 web_report.html
 script.py
+db/create_formatted_db.py
+db/win10_audit_db.txt
+db/win10_audit_db.txt

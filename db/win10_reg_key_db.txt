@@ -1,0 +1,2310 @@
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: NoConnectedUser -> expected_value: 0 -> desc: 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: SCENoApplyLegacyAuditPolicy -> expected_value: !1 -> desc: 'Audit: Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: CrashOnAuditFail -> expected_value: 1 -> desc: 'Audit: Shut down system immediately if unable to log security audits' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: CrashOnAuditFail -> expected_value: 2 -> desc: 'Audit: Shut down system immediately if unable to log security audits' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: AllocateDASD -> expected_value: 1 -> desc: 'Devices: Allowed to format and eject removable media' is set to 'Administrators and Interactive Users' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: AllocateDASD -> expected_value: 2 -> desc: 'Devices: Allowed to format and eject removable media' is set to 'Administrators and Interactive Users' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\Netlogon\Parameters -> sub_key: RequireSignOrSeal -> expected_value: 0 -> desc: 'Domain member: Digitally encrypt or sign secure channel data (always)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\Netlogon\Parameters -> sub_key: SealSecureChannel -> expected_value: 0 -> desc: 'Domain member: Digitally encrypt secure channel data (when possible)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\Netlogon\Parameters -> sub_key: SignSecureChannel -> expected_value: 0 -> desc: 'Domain member: Digitally sign secure channel data (when possible)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Netlogon\Parameters -> sub_key: DisablePasswordChange -> expected_value: !0 -> desc: 'Domain member: Disable machine account password changes' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Netlogon\Parameters -> sub_key: RequireStrongKey -> expected_value: !1 -> desc: 'Domain member: Require strong (Windows 2000 or later) session key' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: DontDisplayLastUserName -> expected_value: !1 -> desc: 'Interactive logon: Do not display last user name' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: DisableCAD -> expected_value: !0 -> desc: 'Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 0 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 385 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 386 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 387 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 388 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: 389 -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:38\D -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:39\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:3\D\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:4\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:5\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:6\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:7\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:8\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:9\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:\D\w\w -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: InactivityTimeoutSecs -> expected_value: r:\w\w\w\w+ -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 0 -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 1 -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 2 -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 3 -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 4 -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: 0F -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:1\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:2\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:3\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:4\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:5\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:6\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:7\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:8\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:9\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:\D\w -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: PasswordExpiryWarning -> expected_value: r:\w\w\w+ -> desc: 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: ScRemoveOption -> expected_value: 0 -> desc: 'Interactive logon: Smart card removal behavior' is set to 'Lock Workstation' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanmanWorkstation\Parameters -> sub_key: RequireSecuritySignature -> expected_value: !1 -> desc: 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanmanWorkstation\Parameters -> sub_key: EnableSecuritySignature -> expected_value: !1 -> desc: 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanmanWorkstation\Parameters -> sub_key: EnablePlainTextPassword -> expected_value: !0 -> desc: 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: 0 -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:1\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:2\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:3\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:4\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:5\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:6\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:7\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:8\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:9\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:\D\w -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: AutoDisconnect -> expected_value: r:\w\w\w+ -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: RequireSecuritySignature -> expected_value: !1 -> desc: 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: EnableSecuritySignature -> expected_value: !1 -> desc: 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: EnableForcedLogOff -> expected_value: !1 -> desc: 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: SMBServerNameHardeningLevel -> expected_value: 0 -> desc: 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: RestrictAnonymousSAM -> expected_value: 0 -> desc: 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: RestrictAnonymous -> expected_value: !1 -> desc: 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: DisableDomainCreds -> expected_value: !1 -> desc: 'Network access: Do not allow storage of passwords and credentials for network authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: EveryoneIncludesAnonymous -> expected_value: 1 -> desc: 'Network access: Let Everyone permissions apply to anonymous users' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: EveryoneIncludesAnonymous -> expected_value: 2 -> desc: 'Network access: Let Everyone permissions apply to anonymous users' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: NullSessionPipes -> expected_value: r:\S* -> desc: 'Network access: Named Pipes that can be accessed anonymously' is set to 'None' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths -> sub_key: Machine -> expected_value: !r:System\\CurrentControlSet\\Control\\ProductOptions|System\\CurrentControlSet\\Control\\Server Applications|Software\\Microsoft\\Windows NT\\CurrentVersion -> desc: 'Network access: Remotely accessible registry paths' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths -> sub_key: Machine -> expected_value: !r:System\\CurrentControlSet\\Control\\Print\\Printers|System\\CurrentControlSet\\Services\\Eventlog|Software\\Microsoft\\OLAP Server|Software\\Microsoft\\Windows NT\\CurrentVersion\\Print|Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows|System\\CurrentControlSet\\Control\\ContentIndex|System\\CurrentControlSet\\Control\\Terminal Server|System\\CurrentControlSet\\Control\\Terminal Server\\UserConfig|System\\CurrentControlSet\\Control\\Terminal Server\\DefaultUserConfiguration|Software\\Microsoft\\Windows NT\\CurrentVersion\\Perflib|System\\CurrentControlSet\\Services\\SysmonLog -> desc: 'Network access: Remotely accessible registry paths and sub-paths' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: RestrictNullSessAccess -> expected_value: !1 -> desc: 'Network access: Restrict anonymous access to Named Pipes and Shares' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: restrictremotesam -> expected_value: !r:O:BAG:BAD:\(A;;RC;;;BA\) -> desc: 'Network access: Restrict clients allowed to make remote calls to SAM' is set to 'Administrators: Remote Access: Allow' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: NullSessionShares -> expected_value: r:\S* -> desc: 'Network access: Shares that can be accessed anonymously' is set to 'None' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: ForceGuest -> expected_value: 1 -> desc: 'Network access: Sharing and security model for local accounts' is set to 'Classic - local users authenticate as themselves' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: UseMachineId -> expected_value: !1 -> desc: 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: allownullsessionfallback -> expected_value: 1 -> desc: 'Network security: Allow LocalSystem NULL session fallback' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\pku2u -> sub_key: AllowOnlineID -> expected_value: !0 -> desc: 'Network Security: Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters -> sub_key: SupportedEncryptionTypes -> expected_value: !2147483644 -> desc: 'Network security: Configure encryption types allowed for Kerberos' is set to 'AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: NoLMHash -> expected_value: 0 -> desc: 'Network security: Do not store LAN Manager hash value on next password change' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: EnableForcedLogOff -> expected_value: !1 -> desc: 'Network security: Force logoff when logon hours expire' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: LmCompatibilityLevel -> expected_value: 0 -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: LmCompatibilityLevel -> expected_value: 1 -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: LmCompatibilityLevel -> expected_value: 2 -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: LmCompatibilityLevel -> expected_value: 3 -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: LmCompatibilityLevel -> expected_value: 4 -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LDAP -> sub_key: LDAPClientIntegrity -> expected_value: !1 -> desc: 'Network security: LDAP client signing requirements' is set to 'Negotiate signing' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: NTLMMinClientSec -> expected_value: !537395200 -> desc: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: NTLMMinServerSec -> expected_value: !537395200 -> desc: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Session Manager\Kernel -> sub_key: ObCaseInsensitive -> expected_value: !1 -> desc: 'System objects: Require case insensitivity for non-Windows subsystems' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Session Manager -> sub_key: ProtectionMode -> expected_value: !1 -> desc: 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: FilterAdministratorToken -> expected_value: 0 -> desc: 'User Account Control: Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: EnableUIADesktopToggle -> expected_value: 1 -> desc: 'User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: ConsentPromptBehaviorAdmin -> expected_value: 0 -> desc: 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: ConsentPromptBehaviorAdmin -> expected_value: 1 -> desc: 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: ConsentPromptBehaviorUser -> expected_value: 1 -> desc: 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: EnableInstallerDetection -> expected_value: 0 -> desc: 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: EnableSecureUIAPaths -> expected_value: 0 -> desc: 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: EnableLUA -> expected_value: 0 -> desc: 'User Account Control: Run all administrators in Admin Approval Mode' is set to 'Enabled'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: PromptOnSecureDesktop -> expected_value: 0 -> desc: 'User Account Control: Switch to the secure desktop when prompting for elevation' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: EnableVirtualization -> expected_value: 0 -> desc: 'User Account Control: Virtualize file and registry write failures to per-user locations' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Browser -> sub_key: Start -> expected_value: !4 -> desc: 'Computer Browser (Browser)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\HomeGroupListener -> sub_key: Start -> expected_value: !4 -> desc: 'HomeGroup Listener (HomeGroupListener)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\HomeGroupProvider -> sub_key: Start -> expected_value: !4 -> desc: 'HomeGroup Provider (HomeGroupProvider)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\IISADMIN -> sub_key: Start -> expected_value: !4 -> desc: 'IIS Admin Service (IISADMIN)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\irmon -> sub_key: Start -> expected_value: !4 -> desc: 'Infrared monitor service (irmon)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SharedAccess -> sub_key: Start -> expected_value: !4 -> desc: 'Internet Connection Sharing (ICS) (SharedAccess) ' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LxssManager -> sub_key: Start -> expected_value: !4 -> desc: 'LxssManager (LxssManager)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\FTPSVC -> sub_key: Start -> expected_value: !4 -> desc: 'Microsoft FTP Service (FTPSVC)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RpcLocator -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RemoteAccess -> sub_key: Start -> expected_value: !4 -> desc: 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\simptcp -> sub_key: Start -> expected_value: !4 -> desc: 'Simple TCP/IP Services (simptcp)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SSDPSRV -> sub_key: Start -> expected_value: !4 -> desc: 'SSDP Discovery (SSDPSRV)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\upnphost -> sub_key: Start -> expected_value: !4 -> desc: 'UPnP Device Host (upnphost)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WMSvc -> sub_key: Start -> expected_value: !4 -> desc: 'Web Management Service (WMSvc)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WMPNetworkSvc -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Media Player Network Sharing Service (WMPNetworkSvc)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\icssvc -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Mobile Hotspot Service (icssvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\W3SVC -> sub_key: Start -> expected_value: !4 -> desc: 'World Wide Web Publishing Service (W3SVC)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XboxGipSvc -> sub_key: Start -> expected_value: !4 -> desc: 'Xbox Accessory Management Service (XboxGipSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\xbgm -> sub_key: Start -> expected_value: !4 -> desc: 'Xbox Game Monitoring (xbgm)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XblAuthManager -> sub_key: Start -> expected_value: !4 -> desc: 'Xbox Live Auth Manager (XblAuthManager)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XblGameSave -> sub_key: Start -> expected_value: !4 -> desc: 'Xbox Live Game Save (XblGameSave)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XboxNetApiSvce -> sub_key: Start -> expected_value: !4 -> desc: 'Xbox Live Networking Service (XboxNetApiSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Domain: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Domain: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFiretoo seedha wall\PrivateProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Private: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Private: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Private: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Private: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Private: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Private: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Private: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Private: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Private: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Private: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: EnableFirewall -> expected_value: 0 -> desc: 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Public: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: DefaultInboundAction -> expected_value: 0 -> desc: 'Windows Firewall: Public: Inbound connections' is set to 'Block (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Public: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: DefaultOutboundAction -> expected_value: 1 -> desc: 'Windows Firewall: Public: Outbound connections' is set to 'Allow (default)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: AllowLocalPolicyMerge -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: AllowLocalPolicyMerge -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile -> sub_key: AllowLocalIPsecPolicyMerge -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: AllowLocalIPsecPolicyMerge -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:1\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:2\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:3\w\w\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Public: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogDroppedPackets -> expected_value: 0 -> desc: 'Windows Firewall: Public: Logging: Log dropped packets' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Public: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogSuccessfulConnections -> expected_value: 0 -> desc: 'Windows Firewall: Public: Logging: Log successful connections' is set to 'Yes' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Personalization -> sub_key: NoLockScreenCamera -> expected_value: !1 -> desc: 'Prevent enabling lock screen camera' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Personalization -> sub_key: NoLockScreenSlideshow -> expected_value: !1 -> desc: 'Prevent enabling lock screen slide show' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\InputPersonalization -> sub_key: AllowInputPersonalization -> expected_value: 1 -> desc: 'Allow input personalization' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PwdExpirationProtectionEnabled -> expected_value: !1 -> desc: 'Do not allow password expiration time longer than required by policy' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: AdmPwdEnabled -> expected_value: !1 -> desc: 'Enable Local Admin Password Management' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordComplexity -> expected_value: !4 -> desc: 'Password Settings: Password Complexity' is set to 'Enabled: Large letters + small letters + numbers + special characters' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:\d -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:a -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:b -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:c -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:d -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordLength -> expected_value: r:e -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: 1F -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:2\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:3\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:4\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:5\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:6\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:7\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:8\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:9\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: PasswordAgeDays -> expected_value: r:\D\w -> desc: 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: LocalAccountTokenFilterPolicy -> expected_value: !0 -> desc: 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\mrxsmb10 -> sub_key: Start -> expected_value: !4 -> desc: 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters -> sub_key: SMB1 -> expected_value: 1 -> desc: 'Configure SMB v1 server' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Session Manager\kernel -> sub_key: DisableExceptionChainValidation -> expected_value: 1 -> desc: 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine -> sub_key: MpEnablePus -> expected_value: 0 -> desc: 'Turn on Windows Defender protection against Potentially Unwanted Applications' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest -> sub_key: UseLogonCredential -> expected_value: !0 -> desc: 'WDigest Authentication' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: AutoAdminLogon -> expected_value: !0 -> desc: 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters -> sub_key: DisableIPSourceRouting -> expected_value: !2 -> desc: 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: DisableIPSourceRouting -> expected_value: !2 -> desc: 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: EnableICMPRedirect -> expected_value: 1 -> desc: 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\NetBT\Parameters -> sub_key: NoNameReleaseOnDemand -> expected_value: !1 -> desc: 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Session Manager -> sub_key: SafeDllSearchMode -> expected_value: 0 -> desc: 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: ScreenSaverGracePeriod -> expected_value: 6 -> desc: 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: ScreenSaverGracePeriod -> expected_value: 7 -> desc: 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: ScreenSaverGracePeriod -> expected_value: 8 -> desc: 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: ScreenSaverGracePeriod -> expected_value: 9 -> desc: 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: ScreenSaverGracePeriod -> expected_value: r:\w\w+ -> desc: 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: 5B -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: 5C -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: 5D -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: 5E -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: 5F -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:6\w -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:7\w -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:8\w -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:9\w -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:\D\w -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: WarningLevel -> expected_value: r:\w\w\w+ -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\NetBT\Parameters -> sub_key: NodeType -> expected_value: !2 -> desc: NetBT Parameter 'NodeType' is set to '0x2 (2)') 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\DNSClient -> sub_key: EnableMulticast -> expected_value: !0 -> desc: 'Turn off multicast name resolution' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation -> sub_key: AllowInsecureGuestAuth -> expected_value: !0 -> desc: 'Enable insecure guest logons' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: NC_AllowNetBridge_NLA -> expected_value: 1 -> desc: 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: NC_ShowSharedAccessUI -> expected_value: !0 -> desc: 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: NC_StdDomainUserSetLocation -> expected_value: !1 -> desc: 'Require domain users to elevate when setting a network's location' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths -> sub_key: \\\\*\\NETLOGON -> expected_value: !r:RequireMutualAuthentication=1, RequireIntegrity=1 -> desc: 'Hardened UNC Paths' is set to 'Enabled, with "Require Mutual Authentication" and "Require Integrity" set for all NETLOGON and SYSVOL shares' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths -> sub_key: \\\\*\\SYSVOL -> expected_value: !r:RequireMutualAuthentication=1, RequireIntegrity=1 -> desc: 'Hardened UNC Paths' is set to 'Enabled, with "Require Mutual Authentication" and "Require Integrity" set for all NETLOGON and SYSVOL shares' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy -> sub_key: fMinimizeConnections -> expected_value: !1 -> desc: 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy -> sub_key: fBlockNonDomain -> expected_value: 0 -> desc: 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\config -> sub_key: AutoConnectAllowedOEM -> expected_value: !0 -> desc: 'Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit -> sub_key: ProcessCreationIncludeCmdLine_Enabled -> expected_value: !0 -> desc: 'Include command line in process creation events' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation -> sub_key: AllowProtectedCreds -> expected_value: 0 -> desc: 'Remote host allows delegation of non-exportable credentials' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Policies\EarlyLaunch -> sub_key: DriverLoadPolicy -> expected_value: !3 -> desc: 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2} -> sub_key: NoBackgroundPolicy -> expected_value: !0 -> desc: 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2} -> sub_key: NoGPOListChanges -> expected_value: !0 -> desc: 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: EnableCdp -> expected_value: !0 -> desc: 'Continue experiences on this device' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: DisableBkGndGroupPolicy -> expected_value: !0 -> desc: 'Turn off background refresh of Group Policy' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Printers -> sub_key: DisableWebPnPDownload -> expected_value: !1 -> desc: 'Turn off downloading of print drivers over HTTP' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: NoWebServices -> expected_value: !1 -> desc: 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Printers -> sub_key: DisableHTTPPrinting -> expected_value: !1 -> desc: 'Turn off printing over HTTP' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: BlockUserFromShowingAccountDetailsOnSignin -> expected_value: !1 -> desc: 'Block user from showing account details on sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: DontDisplayNetworkSelectionUI -> expected_value: !1 -> desc: 'Do not display network selection UI' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: DontEnumerateConnectedUsers -> expected_value: !1 -> desc: 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: EnumerateLocalUsers -> expected_value: !0 -> desc: 'Enumerate local users on domain-joined computers' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: DisableLockScreenAppNotifications -> expected_value: !1 -> desc: 'Turn off app notifications on the lock screen' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: BlockDomainPicturePassword -> expected_value: !1 -> desc: 'Turn off picture password sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: AllowDomainPINLogon -> expected_value: !0 -> desc: 'Turn on convenience PIN sign-in' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9 -> sub_key: DCSettingIndex -> expected_value: !0 -> desc: 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9 -> sub_key: ACSettingIndex -> expected_value: !0 -> desc: 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51 -> sub_key: DCSettingIndex -> expected_value: !1 -> desc: 'Require a password when a computer wakes (on battery)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51 -> sub_key: ACSettingIndex -> expected_value: !1 -> desc: 'Require a password when a computer wakes (plugged in)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fAllowUnsolicited -> expected_value: !0 -> desc: 'Configure Offer Remote Assistance' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fAllowToGetHelp -> expected_value: !0 -> desc: 'Configure Solicited Remote Assistance' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Rpc -> sub_key: EnableAuthEpResolution -> expected_value: !1 -> desc: 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Rpc -> sub_key: RestrictRemoteClients -> expected_value: !1 -> desc: 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: MSAOptional -> expected_value: !1 -> desc: 'Allow Microsoft accounts to be optional' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: NoAutoplayfornonVolume -> expected_value: !1 -> desc: 'Disallow Autoplay for non-volume devices' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: NoAutorun -> expected_value: !1 -> desc: 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures -> sub_key: EnhancedAntiSpoofing -> expected_value: !1 -> desc: 'Configure enhanced anti-spoofing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CloudContent -> sub_key: DisableWindowsConsumerFeatures -> expected_value: !1 -> desc: 'Turn off Microsoft consumer experiences' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Connect -> sub_key: RequirePinForPairing -> expected_value: !1 -> desc: 'Require pin for pairing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CredUI -> sub_key: DisablePasswordReveal -> expected_value: !1 -> desc: 'Do not display the password reveal button' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI -> sub_key: EnumerateAdministrators -> expected_value: !0 -> desc: 'Enumerate administrator accounts on elevation' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: AllowTelemetry -> expected_value: 2 -> desc: 'Allow Telemetry' is set to 'Enabled: 0 - Security (Enterprise Only)' or 'Enabled: 1 - Basic' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: AllowTelemetry -> expected_value: 3 -> desc: 'Allow Telemetry' is set to 'Enabled: 0 - Security (Enterprise Only)' or 'Enabled: 1 - Basic' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PreviewBuilds -> sub_key: EnableConfigFlighting -> expected_value: !0 -> desc: 'Disable pre-release features or settings' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: DoNotShowFeedbackNotifications -> expected_value: 1 -> desc: 'Do not show feedback notifications' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PreviewBuilds -> sub_key: AllowBuildPreview -> expected_value: 1 -> desc: 'Toggle user control over Insider builds' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization -> sub_key: DODownloadMode -> expected_value: 3 -> desc: 'Download Mode' is NOT set to 'Enabled: Internet' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: Retention -> expected_value: 1 -> desc: 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:0\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:1\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:2\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:3\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:4\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:5\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:6\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: MaxSize -> expected_value: r:7\w\w\w -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: Retention -> expected_value: !0 -> desc: 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:\w\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:\w\w\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:0\w\w\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:1\w\w\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: MaxSize -> expected_value: r:2\w\w\w\w -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: Retention -> expected_value: !0 -> desc: 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:0\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:1\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:2\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:3\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:4\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:5\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:6\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: MaxSize -> expected_value: r:7\w\w\w -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: Retention -> expected_value: !0 -> desc: 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:0\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:1\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:2\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:3\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:4\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:5\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:6\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: MaxSize -> expected_value: r:7\w\w\w -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: NoDataExecutionPrevention -> expected_value: !0 -> desc: 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: NoHeapTerminationOnCorruption -> expected_value: !0 -> desc: 'Turn off heap termination on corruption' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: PreXPSP2ShellProtocolBehavior -> expected_value: !0 -> desc: 'Turn off shell protocol protected mode' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\HomeGroup -> sub_key: DisableHomeGroup -> expected_value: !1 -> desc: 'Prevent the computer from joining a homegroup' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftAccount -> sub_key: DisableUserAuth -> expected_value: !1 -> desc: 'Block all consumer Microsoft account user authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: Cookies -> expected_value: 2 -> desc: 'Configure cookies' is set to 'Enabled: Block only 3rd-party cookies' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: FormSuggest Passwords -> expected_value: !no -> desc: 'Configure Password Manager' is set to 'Disabled'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Security -> sub_key: FlashClickToRunMode -> expected_value: !1 -> desc: 'Configure the Adobe Flash Click-to-Run setting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\OneDrive -> sub_key: DisableFileSyncNGSC -> expected_value: !1 -> desc: 'Prevent the usage of OneDrive for file storage' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: DisablePasswordSaving -> expected_value: !1 -> desc: 'Do not allow passwords to be saved' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fDisableCdma -> expected_value: !1 -> desc: 'Do not allow drive redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fPromptForPassword -> expected_value: !1 -> desc: 'Always prompt for password upon connection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fEncryptRPCTraffic -> expected_value: !1 -> desc: 'Require secure RPC communication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MinEncryptionLevel -> expected_value: !3 -> desc: 'Set client connection encryption level' is set to 'Enabled: High Level' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: DeleteTempDirsOnExit -> expected_value: !1 -> desc: 'Do not delete temp folders upon exit' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: PerSessionTempDir -> expected_value: !1 -> desc: 'Do not use temporary folders per session' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Internet Explorer\Feeds -> sub_key: DisableEnclosureDownload -> expected_value: !1 -> desc: 'Prevent downloading of enclosures' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: AllowCortana -> expected_value: !0 -> desc: 'Allow Cortana' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: AllowCortanaAboveLock -> expected_value: !0 -> desc: 'Allow Cortana above lock screen' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: AllowIndexingEncryptedStoresOrItems -> expected_value: !0 -> desc: 'Allow indexing of encrypted files' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: AllowSearchToUseLocation -> expected_value: !0 -> desc: 'Allow search and Cortana to use location' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: AutoDownload -> expected_value: !4 -> desc: 'Turn off Automatic Download and Install of updates' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: DisableOSUpgrade -> expected_value: !1 -> desc: 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Spynet -> sub_key: LocalSettingOverrideSpynetReporting -> expected_value: !0 -> desc: 'Configure local setting override for reporting to Microsoft MAPS' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection -> sub_key: DisableBehaviorMonitoring -> expected_value: !1 -> desc: 'Turn on behavior monitoring' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Scan -> sub_key: DisableRemovableDriveScanning -> expected_value: !0 -> desc: 'Scan removable drives' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Scan -> sub_key: DisableEmailScanning -> expected_value: !0 -> desc: 'Turn on e-mail scanning' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR -> sub_key: ExploitGuard_ASR_Rules -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550 -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: D4F940AB-401B-4EFC-AADC-AD5F3C50688A -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: 3B576869-A4EC-4529-8536-B80A7769E899 -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84 -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: D3E037E1-3EB8-44C8-A917-57927947596D -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B -> expected_value: !1 -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection -> sub_key: EnableNetworkProtection -> expected_value: !1 -> desc: 'Prevent users and apps from accessing dangerous websites' is set to 'Enabled: Block' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender -> sub_key: DisableAntiSpyware -> expected_value: 1 -> desc: 'Turn off Windows Defender AntiVirus' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App and Browser protection -> sub_key: DisallowExploitProtectionOverride -> expected_value: 0 -> desc: 'Prevent users from modifying settings' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: EnableSmartScreen -> expected_value: !1 -> desc: 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: ShellSmartScreenLevel -> expected_value: !Block -> desc: 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter -> sub_key: EnabledV9 -> expected_value: !1 -> desc: 'Configure Windows Defender SmartScreen' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter -> sub_key: PreventOverrideAppRepUnknown -> expected_value: !1 -> desc: 'Prevent bypassing Windows Defender SmartScreen prompts for files' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter -> sub_key: PreventOverride -> expected_value: !1 -> desc: 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\GameDVR -> sub_key: AllowGameDVR -> expected_value: 1 -> desc: 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsInkWorkspace -> sub_key: AllowWindowsInkWorkspace -> expected_value: 2 -> desc: 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Disabled' but not 'Enabled: On' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Installer -> sub_key: EnableUserControl -> expected_value: !0 -> desc: 'Allow user control over installs' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Installer -> sub_key: AlwaysInstallElevated -> expected_value: !0 -> desc: 'Always install with elevated privileges' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: DisableAutomaticRestartSignOn -> expected_value: !1 -> desc: 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging -> sub_key: EnableScriptBlockLogging -> expected_value: !0 -> desc: 'Turn on PowerShell Script Block Logging' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription -> sub_key: EnableTranscripting -> expected_value: !0 -> desc: 'Turn on PowerShell Transcription' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Client -> sub_key: AllowBasic -> expected_value: !0 -> desc: 'Allow Basic authentication' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Client -> sub_key: AllowUnencryptedTraffic -> expected_value: !0 -> desc: 'Allow unencrypted traffic' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Client -> sub_key: AllowDigest -> expected_value: !0 -> desc: 'Disallow Digest authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service -> sub_key: AllowBasic -> expected_value: !0 -> desc: 'Allow Basic authentication' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service -> sub_key: AllowUnencryptedTraffic -> expected_value: !0 -> desc: 'Allow unencrypted traffic' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service -> sub_key: DisableRunAs -> expected_value: !1 -> desc: 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: ManagePreviewBuilds -> expected_value: !1 -> desc: 'Manage preview builds' is set to 'Enabled: Disable preview builds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: ManagePreviewBuildsPolicyValue -> expected_value: !0 -> desc: 'Manage preview builds' is set to 'Enabled: Disable preview builds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdates -> expected_value: !1 -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:10\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:11\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:12\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:13\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:14\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:15\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:16\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: r:17\d -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferFeatureUpdatesPeriodInDays -> expected_value: !r:\d\d\d+ -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: BranchReadinessLevel -> expected_value: !32 -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferQualityUpdates -> expected_value: !1 -> desc: 'Select when Quality Updates are received' is set to 'Enabled: 0 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: DeferQualityUpdatesPeriodInDays -> expected_value: !0 -> desc: 'Select when Quality Updates are received' is set to 'Enabled: 0 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -> sub_key: NoAutoUpdate -> expected_value: !1 -> desc: 'Configure Automatic Updates' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -> sub_key: ScheduledInstallDay -> expected_value: !0 -> desc: 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -> sub_key: NoAutoRebootWithLoggedOnUsers -> expected_value: !0 -> desc: 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers -> sub_key: AddPrinterDrivers -> expected_value: !1 -> desc: 'Devices: Prevent users from installing printer drivers' is set to 'Enabled'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: CachedLogonsCount -> expected_value: !4 -> desc: 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Cryptography -> sub_key: ForceKeyProtection -> expected_value: 0 -> desc: 'System cryptography: Force strong key protection for user keys stored on the computer' is set to 'User is prompted when the key is first used' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\BthHFSrv -> sub_key: Start -> expected_value: !4 -> desc: 'Bluetooth Handsfree Service (BthHFSrv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\bthserv -> sub_key: Start -> expected_value: !4 -> desc: 'Bluetooth Support Service (bthserv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\MapsBroker -> sub_key: Start -> expected_value: !4 -> desc: 'Downloaded Maps Manager (MapsBroker)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\lfsvc -> sub_key: Start -> expected_value: !4 -> desc: 'Geolocation Service (lfsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\lltdsvc -> sub_key: Start -> expected_value: !4 -> desc: 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\MSiSCSI -> sub_key: Start -> expected_value: !4 -> desc: 'Microsoft iSCSI Initiator Service (MSiSCSI)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PNRPsvc -> sub_key: Start -> expected_value: !4 -> desc: 'Peer Name Resolution Protocol (PNRPsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\p2psvc -> sub_key: Start -> expected_value: !4 -> desc: 'Peer Networking Grouping (p2psvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\p2pimsvc -> sub_key: Start -> expected_value: !4 -> desc: 'Peer Networking Identity Manager (p2pimsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PNRPAutoReg -> sub_key: Start -> expected_value: !4 -> desc: 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\wercplsupport -> sub_key: Start -> expected_value: !4 -> desc: 'Problem Reports and Solutions Control Panel Support (wercplsupport)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RasAuto -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Access Auto Connection Manager (RasAuto)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SessionEnv -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Desktop Configuration (SessionEnv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TermService -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Desktop Services (TermService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\UmRdpService -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Desktop Services UserMode Port Redirector (UmRdpService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RemoteRegistry -> sub_key: Start -> expected_value: !4 -> desc: 'Remote Registry (RemoteRegistry)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanmanServer -> sub_key: Start -> expected_value: !4 -> desc: 'Server (LanmanServer)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SNMP -> sub_key: Start -> expected_value: !4 -> desc: 'SNMP Service (SNMP)' is set to 'Disabled' or 'Not Installed' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WerSvc -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Error Reporting Service (WerSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Wecsvc -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Event Collector (Wecsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WpnService -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Push Notifications System Service (WpnService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PushToInstall -> sub_key: Start -> expected_value: !4 -> desc: 'Windows PushToInstall Service (PushToInstall)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WinRM -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\InstallService -> sub_key: Start -> expected_value: !4 -> desc: 'Windows Store Install Service (InstallService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: AllowOnlineTips -> expected_value: !0 -> desc: 'Allow Online Tips' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RasMan\Parameters -> sub_key: DisableSavePassword -> expected_value: !1 -> desc: 'MSS: (DisableSavePassword) Prevent the dial-up password from being saved' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: KeepAliveTime -> expected_value: !493e0 -> desc: 'MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled: 300,000 or 5 minutes (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: PerformRouterDiscovery  -> expected_value: !0 -> desc: 'MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters -> sub_key: TcpMaxDataRetransmissions -> expected_value: !3 -> desc: 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: TcpMaxDataRetransmissions -> expected_value: !3 -> desc: 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: EnableFontProviders -> expected_value: !0 -> desc: 'Enable Font Providers' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: AllowLLTDIOOnDomain -> expected_value: !0 -> desc: 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: AllowLLTDIOOnPublicNet -> expected_value: !0 -> desc: 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: EnableLLTDIO -> expected_value: !0 -> desc: 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: ProhibitLLTDIOOnPrivateNet -> expected_value: !0 -> desc: 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: AllowRspndrOnDomain -> expected_value: !0 -> desc: 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: AllowRspndrOnPublicNet -> expected_value: !0 -> desc: 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: EnableRspndr -> expected_value: !0 -> desc: 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LLTD -> sub_key: ProhibitRspndrOnPrivateNet -> expected_value: !0 -> desc: 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Peernet -> sub_key: Disabled -> expected_value: !1 -> desc: 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters -> sub_key: DisabledComponents -> expected_value: !ff -> desc: TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)') 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: EnableRegistrars -> expected_value: !0 -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: DisableUPnPRegistrar -> expected_value: !0 -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: DisableInBand802DOT11Registrar -> expected_value: !0 -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: DisableFlashConfigRegistrar -> expected_value: !0 -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: DisableWPDRegistrar -> expected_value: !0 -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\UI -> sub_key: DisableWcnUi -> expected_value: !1 -> desc: 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: NoUseStoreOpenWith -> expected_value: !1 -> desc: 'Turn off access to the Store' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\TabletPC -> sub_key: PreventHandwritingDataSharing -> expected_value: !1 -> desc: 'Turn off handwriting personalization data sharing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports -> sub_key: PreventHandwritingErrorReports -> expected_value: !1 -> desc: 'Turn off handwriting recognition error reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Internet Connection Wizard -> sub_key: ExitOnMSICW -> expected_value: !1 -> desc: 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Policies\Microsoft\Windows\Registration Wizard Control -> sub_key: NoRegistration -> expected_value: !1 -> desc: 'Turn off Registration if URL connection is referring to Microsoft.com' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\SearchCompanion -> sub_key: DisableContentFileUpdates -> expected_value: !1 -> desc: 'Turn off Search Companion content file updates' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: NoOnlinePrintsWizard -> expected_value: !1 -> desc: 'Turn off the "Order Prints" picture task' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: NoPublishingWizard -> expected_value: !1 -> desc: 'Turn off the "Publish to Web" task for files and folders' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Messenger\Client -> sub_key: CEIP -> expected_value: 1 -> desc: 'Turn off the Windows Messenger Customer Experience Improvement Program' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\SQMClient\Windows -> sub_key: CEIPEnable -> expected_value: !0 -> desc: 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting -> sub_key: Disabled -> expected_value: !0 -> desc: 'Turn off Windows Error Reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting -> sub_key: DoReport -> expected_value: !1 -> desc: 'Turn off Windows Error Reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters -> sub_key: DevicePKInitBehavior -> expected_value: !0 -> desc: 'Support device authentication using certificate' is set to 'Enabled: Automatic' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters -> sub_key: DevicePKInitEnabled -> expected_value: !1 -> desc: 'Support device authentication using certificate' is set to 'Enabled: Automatic' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Control Panel\International -> sub_key: BlockUserInputMethodsForSignIn -> expected_value: !1 -> desc: 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy -> sub_key: DisableQueryRemoteServer -> expected_value: !0 -> desc: 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WDI\{9c5a40da-b965-4fc3-8781-88dd50a6299d} -> sub_key: ScenarioExecutionEnabled -> expected_value: !0 -> desc: 'Enable/Disable PerfTrack' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo -> sub_key: DisabledByGroupPolicy -> expected_value: !1 -> desc: 'Turn off the advertising ID' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\W32Time\TimeProviders\NtpClient -> sub_key: Enabled -> expected_value: !1 -> desc: 'Enable Windows NTP Client' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\W32Time\TimeProviders\NtpServer -> sub_key: Enabled -> expected_value: !0 -> desc: 'Enable Windows NTP Server' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\AppModel\StateManager -> sub_key: AllowSharedLocalAppData -> expected_value: !0 -> desc: 'Allow a Windows app to share application data between users' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: BlockHostedAppAccessWinRT -> expected_value: !1 -> desc: 'Block launching Windows Store apps with Windows Runtime API access from hosted content.' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Camera -> sub_key: AllowCamera -> expected_value: !0 -> desc: 'Allow Use of Camera' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: DisableEnterpriseAuthProxy -> expected_value: !1 -> desc: 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled: Disable Authenticated Proxy usage' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors -> sub_key: DisableLocation -> expected_value: !1 -> desc: 'Turn off location' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Messaging -> sub_key: AllowMessageSync -> expected_value: !0 -> desc: 'Allow Message Service Cloud Sync' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\ServiceUI -> sub_key: ShowOneBox -> expected_value: !0 -> desc: 'Allow Address bar drop-down list suggestions' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addons -> sub_key: FlashPlayerEnabled -> expected_value: !0 -> desc: 'Allow Adobe Flash' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: AllowInPrivate -> expected_value: !0 -> desc: 'Allow InPrivate Browsing' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: AllowPopups -> expected_value: !r:yes -> desc: 'Configure Pop-up Blocker' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\SearchScopes -> sub_key: ShowSearchSuggestionsGlobal -> expected_value: !0 -> desc: 'Configure search suggestions in Address bar' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: PreventAccessToAboutFlagsInMicrosoftEdge -> expected_value: !1 -> desc: 'Prevent access to the about:flags page in Microsoft Edge' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: HideLocalHostIP -> expected_value: !1 -> desc: 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\PushToInstall -> sub_key: DisablePushToInstall -> expected_value: !1 -> desc: 'Turn off Push To Install service' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fDenyTSConnections -> expected_value: !1 -> desc: 'Allow users to connect remotely by using Remote Desktop Services' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fDisableCcm -> expected_value: !1 -> desc: 'Do not allow COM port redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fDisableLPT -> expected_value: !1 -> desc: 'Do not allow LPT port redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: fDisablePNPRedir -> expected_value: !1 -> desc: 'Do not allow supported Plug and Play device redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba1 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba2 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba3 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba4 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba5 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba6 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba7 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba8 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba9 -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbba\D -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbbb\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbbc\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbbd\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbbe\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbbf\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbc\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbd\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbe\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dbf\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dc\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:dd\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:de\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:df\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:e\w\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:f\w\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxIdleTime -> expected_value: r:\w\w\w\w\w\w -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: MaxDisconnectionTime -> expected_value: !EA60 -> desc: 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: AllowCloudSearch -> expected_value: !0 -> desc: 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform -> sub_key: NoGenTicket -> expected_value: !1 -> desc: 'Turn off KMS Client Online AVS Validation' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: DisableStoreApps -> expected_value: !1 -> desc: 'Disable all apps from Windows Store' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: RemoveWindowsStore -> expected_value: !1 -> desc: 'Turn off the Store application' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Spynet -> sub_key: SpynetReporting -> expected_value: !0 -> desc: 'Join Microsoft MAPS' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Reporting -> sub_key: DisableGenericRePorts -> expected_value: !1 -> desc: 'Configure Watson events' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsInkWorkspace -> sub_key: AllowSuggestedAppsInWindowsInkWorkspace -> expected_value: !0 -> desc: 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Installer -> sub_key: SafeForScripting -> expected_value: !0 -> desc: 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service -> sub_key: AllowAutoConfig -> expected_value: !0 -> desc: 'Allow remote server management through WinRM' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service\WinRS -> sub_key: AllowRemoteShellAccess -> expected_value: !0 -> desc: 'Allow Remote Shell Access' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !InactivityTimeoutSecs -> expected_value: None -> desc: 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\WindowsNT\CurrentVersion\Winlogon -> sub_key: !ScRemoveOption -> expected_value: None -> desc: 'Interactive logon: Smart card removal behavior' is set to 'Lock Workstation' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanmanWorkstation\Parameters -> sub_key: !RequireSecuritySignature -> expected_value: None -> desc: 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: !AutoDisconnect -> expected_value: None -> desc: 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: !RequireSecuritySignature -> expected_value: None -> desc: 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: !EnableSecuritySignature -> expected_value: None -> desc: 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: !SMBServerNameHardeningLevel -> expected_value: None -> desc: 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: !RestrictAnonymous -> expected_value: None -> desc: 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Lsa -> sub_key: !DisableDomainCreds -> expected_value: None -> desc: 'Network access: Do not allow storage of passwords and credentials for network authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\LanManServer\Parameters -> sub_key: !NullSessionPipes -> expected_value: None -> desc: 'Network access: Named Pipes that can be accessed anonymously' is set to 'None' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths -> sub_key: !Machine -> expected_value: None -> desc: 'Network access: Remotely accessible registry paths' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths -> sub_key: !Machine -> expected_value: None -> desc: 'Network access: Remotely accessible registry paths and sub-paths' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: !UseMachineId -> expected_value: None -> desc: 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: !allownullsessionfallback -> expected_value: None -> desc: 'Network security: Allow LocalSystem NULL session fallback' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters -> sub_key: !SupportedEncryptionTypes -> expected_value: None -> desc: 'Network security: Configure encryption types allowed for Kerberos' is set to 'AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: !LmCompatibilityLevel -> expected_value: None -> desc: 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: !NTLMMinClientSec -> expected_value: None -> desc: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa\MSV1_0 -> sub_key: !NTLMMinServerSec -> expected_value: None -> desc: 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !FilterAdministratorToken -> expected_value: None -> desc: 'User Account Control: Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !ConsentPromptBehaviorAdmin -> expected_value: None -> desc: 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !ConsentPromptBehaviorUser -> expected_value: None -> desc: 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !EnableInstallerDetection -> expected_value: None -> desc: 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\HomeGroupListener -> sub_key: !Start -> expected_value: None -> desc: 'HomeGroup Listener (HomeGroupListener)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\HomeGroupProvider -> sub_key: !Start -> expected_value: None -> desc: 'HomeGroup Provider (HomeGroupProvider)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\irmon -> sub_key: !Start -> expected_value: None -> desc: 'Infrared monitor service (irmon)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SharedAccess -> sub_key: !Start -> expected_value: None -> desc: 'Internet Connection Sharing (ICS) (SharedAccess) ' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RpcLocator -> sub_key: !Start -> expected_value: None -> desc: 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RemoteAccess -> sub_key: !Start -> expected_value: None -> desc: 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SSDPSRV -> sub_key: !Start -> expected_value: None -> desc: 'SSDP Discovery (SSDPSRV)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\upnphost -> sub_key: !Start -> expected_value: None -> desc: 'UPnP Device Host (upnphost)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\icssvc -> sub_key: !Start -> expected_value: None -> desc: 'Windows Mobile Hotspot Service (icssvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XboxGipSvc -> sub_key: !Start -> expected_value: None -> desc: 'Xbox Accessory Management Service (XboxGipSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\xbgm -> sub_key: !Start -> expected_value: None -> desc: 'Xbox Game Monitoring (xbgm)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XblAuthManager -> sub_key: !Start; -> expected_value: None -> desc: 'Xbox Live Auth Manager (XblAuthManager)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XblGameSave -> sub_key: !Start -> expected_value: None -> desc: 'Xbox Live Game Save (XblGameSave)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\XboxNetApiSvce -> sub_key: !Start -> expected_value: None -> desc: 'Xbox Live Networking Service (XboxNetApiSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile -> sub_key: !DisableNotifications -> expected_value: None -> desc: 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: !DisableNotifications -> expected_value: None -> desc: 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Personalization -> sub_key: !NoLockScreenCamera -> expected_value: None -> desc: 'Prevent enabling lock screen camera' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Personalization -> sub_key: !NoLockScreenSlideshow -> expected_value: None -> desc: 'Prevent enabling lock screen slide show' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\InputPersonalization -> sub_key: !AllowInputPersonalization -> expected_value: None -> desc: 'Allow input personalization' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{D76B9641-3288-4f75-942D-087DE603E3EA} -> sub_key: !DllName -> expected_value: None -> desc: LAPS AdmPwd GPO Extension / CSE is installed 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: !PwdExpirationProtectionEnabled -> expected_value: None -> desc: 'Do not allow password expiration time longer than required by policy' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: !AdmPwdEnabled -> expected_value: None -> desc: 'Enable Local Admin Password Management' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft Services\AdmPwd -> sub_key: !PasswordLength -> expected_value: None -> desc: 'Password Settings: Password Length' is set to 'Enabled: 15 or more' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\mrxsmb10 -> sub_key: !Start -> expected_value: None -> desc: 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters -> sub_key: !SMB1 -> expected_value: None -> desc: 'Configure SMB v1 server' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Control\Session Manager\kernel -> sub_key: !DisableExceptionChainValidation -> expected_value: None -> desc: 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters -> sub_key: !DisableIPSourceRouting -> expected_value: None -> desc: 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: !DisableIPSourceRouting -> expected_value: None -> desc: 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: !EnableICMPRedirect -> expected_value: None -> desc: 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Eventlog\Security -> sub_key: !WarningLevel -> expected_value: None -> desc: 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Services\NetBT\Parameters -> sub_key: !NodeType -> expected_value: None -> desc: NetBT Parameter 'NodeType' is set to '0x2 (2)') 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\DNSClient -> sub_key: !EnableMulticast -> expected_value: None -> desc: 'Turn off multicast name resolution' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation -> sub_key: !AllowInsecureGuestAuth -> expected_value: None -> desc: 'Enable insecure guest logons' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: !NC_AllowNetBridge_NLA -> expected_value: None -> desc: 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: !NC_ShowSharedAccessUI -> expected_value: None -> desc: 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Network Connections -> sub_key: !NC_StdDomainUserSetLocation -> expected_value: None -> desc: 'Require domain users to elevate when setting a network's location' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy -> sub_key: !fBlockNonDomain -> expected_value: None -> desc: 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\config -> sub_key: !AutoConnectAllowedOEM -> expected_value: None -> desc: 'Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation -> sub_key: !AllowProtectedCreds -> expected_value: None -> desc: 'Remote host allows delegation of non-exportable credentials' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2} -> sub_key: !NoBackgroundPolicy -> expected_value: None -> desc: 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2} -> sub_key: !NoGPOListChanges -> expected_value: None -> desc: 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !EnableCdp -> expected_value: None -> desc: 'Continue experiences on this device' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Printers -> sub_key: !DisableWebPnPDownload -> expected_value: None -> desc: 'Turn off downloading of print drivers over HTTP' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: !NoWebServices -> expected_value: None -> desc: 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Printers -> sub_key: !DisableHTTPPrinting -> expected_value: None -> desc: 'Turn off printing over HTTP' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !BlockUserFromShowingAccountDetailsOnSignin -> expected_value: None -> desc: 'Block user from showing account details on sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !DontDisplayNetworkSelectionUI -> expected_value: None -> desc: 'Do not display network selection UI' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !DontEnumerateConnectedUsers -> expected_value: None -> desc: 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !DisableLockScreenAppNotifications -> expected_value: None -> desc: 'Turn off app notifications on the lock screen' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !BlockDomainPicturePassword -> expected_value: None -> desc: 'Turn off picture password sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9 -> sub_key: !DCSettingIndex -> expected_value: None -> desc: 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9 -> sub_key: !ACSettingIndex -> expected_value: None -> desc: 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fAllowToGetHelp -> expected_value: None -> desc: 'Configure Solicited Remote Assistance' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Rpc -> sub_key: !EnableAuthEpResolution -> expected_value: None -> desc: 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !MSAOptional -> expected_value: None -> desc: 'Allow Microsoft accounts to be optional' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: !NoAutoplayfornonVolume -> expected_value: None -> desc: 'Disallow Autoplay for non-volume devices' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: !NoAutorun -> expected_value: None -> desc: 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures -> sub_key: !EnhancedAntiSpoofing -> expected_value: None -> desc: 'Configure enhanced anti-spoofing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CloudContent -> sub_key: !DisableWindowsConsumerFeatures -> expected_value: None -> desc: 'Turn off Microsoft consumer experiences' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Connect -> sub_key: !RequirePinForPairing -> expected_value: None -> desc: 'Require pin for pairing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\CredUI -> sub_key: !DisablePasswordReveal -> expected_value: None -> desc: 'Do not display the password reveal button' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: !AllowTelemetry -> expected_value: None -> desc: 'Allow Telemetry' is set to 'Enabled: 0 - Security (Enterprise Only)' or 'Enabled: 1 - Basic' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PreviewBuilds -> sub_key: !EnableConfigFlighting -> expected_value: None -> desc: 'Disable pre-release features or settings' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: !DoNotShowFeedbackNotifications -> expected_value: None -> desc: 'Do not show feedback notifications' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PreviewBuilds -> sub_key: !AllowBuildPreview -> expected_value: None -> desc: 'Toggle user control over Insider builds' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization -> sub_key: !DODownloadMode -> expected_value: None -> desc: 'Download Mode' is NOT set to 'Enabled: Internet' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Application -> sub_key: !MaxSize -> expected_value: None -> desc: 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Security -> sub_key: !MaxSize -> expected_value: None -> desc: 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup -> sub_key: !MaxSize -> expected_value: None -> desc: 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\EventLog\System -> sub_key: !MaxSize -> expected_value: None -> desc: 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\HomeGroup -> sub_key: !DisableHomeGroup -> expected_value: None -> desc: 'Prevent the computer from joining a homegroup' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftAccount -> sub_key: !DisableUserAuth -> expected_value: None -> desc: 'Block all consumer Microsoft account user authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: !Cookies -> expected_value: None -> desc: 'Configure cookies' is set to 'Enabled: Block only 3rd-party cookies' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: !FormSuggest Passwords -> expected_value: None -> desc: 'Configure Password Manager' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\OneDrive -> sub_key: !DisableFileSyncNGSC -> expected_value: None -> desc: 'Prevent the usage of OneDrive for file storage' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !DisablePasswordSaving -> expected_value: None -> desc: 'Do not allow passwords to be saved' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fDisableCdm -> expected_value: None -> desc: 'Do not allow drive redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fPromptForPassword -> expected_value: None -> desc: 'Always prompt for password upon connection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fEncryptRPCTraffic -> expected_value: None -> desc: 'Require secure RPC communication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Internet Explorer\Feeds -> sub_key: !DisableEnclosureDownload -> expected_value: None -> desc: 'Prevent downloading of enclosures' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: !AllowCortana -> expected_value: None -> desc: 'Allow Cortana' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: !AllowCortanaAboveLock -> expected_value: None -> desc: 'Allow Cortana above lock screen' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: !AllowSearchToUseLocation -> expected_value: None -> desc: 'Allow search and Cortana to use location' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: !DisableOSUpgrade -> expected_value: None -> desc: 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Scan -> sub_key: !DisableRemovableDriveScanning -> expected_value: None -> desc: 'Scan removable drives' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Scan -> sub_key: !DisableEmailScanning -> expected_value: None -> desc: 'Turn on e-mail scanning' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR -> sub_key: !ExploitGuard_ASR_Rules -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550 -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !D4F940AB-401B-4EFC-AADC-AD5F3C50688A -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !3B576869-A4EC-4529-8536-B80A7769E899 -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84 -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !D3E037E1-3EB8-44C8-A917-57927947596D -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !5BEB7EFE-FD9A-4556-801D-275E5FFC04CC -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules -> sub_key: !92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B -> expected_value: None -> desc: 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is 'configured' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection -> sub_key: !EnableNetworkProtection -> expected_value: None -> desc: 'Prevent users and apps from accessing dangerous websites' is set to 'Enabled: Block' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App and Browser protection -> sub_key: !DisallowExploitProtectionOverride -> expected_value: None -> desc: 'Prevent users from modifying settings' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !EnableSmartScreen -> expected_value: None -> desc: 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !ShellSmartScreenLevel -> expected_value: None -> desc: 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter -> sub_key: !PreventOverrideAppRepUnknown -> expected_value: None -> desc: 'Prevent bypassing Windows Defender SmartScreen prompts for files' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter -> sub_key: !PreventOverride -> expected_value: None -> desc: 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\GameDVR -> sub_key: !AllowGameDVR -> expected_value: None -> desc: 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsInkWorkspace -> sub_key: !AllowWindowsInkWorkspace -> expected_value: None -> desc: 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Disabled' but not 'Enabled: On' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !DisableAutomaticRestartSignOn -> expected_value: None -> desc: 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging -> sub_key: !EnableScriptBlockLogging -> expected_value: None -> desc: 'Turn on PowerShell Script Block Logging' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Client -> sub_key: !AllowDigest -> expected_value: None -> desc: 'Disallow Digest authentication' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service -> sub_key: !DisableRunAs -> expected_value: None -> desc: 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !ManagePreviewBuilds -> expected_value: None -> desc: 'Manage preview builds' is set to 'Enabled: Disable preview builds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !ManagePreviewBuildsPolicyValue -> expected_value: None -> desc: 'Manage preview builds' is set to 'Enabled: Disable preview builds' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !DeferFeatureUpdates -> expected_value: None -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !DeferFeatureUpdatesPeriodInDays -> expected_value: None -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !BranchReadinessLevel -> expected_value: None -> desc: 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !DeferQualityUpdates -> expected_value: None -> desc: 'Select when Quality Updates are received' is set to 'Enabled: 0 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate -> sub_key: !DeferQualityUpdatesPeriodInDays -> expected_value: None -> desc: 'Select when Quality Updates are received' is set to 'Enabled: 0 days' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -> sub_key: !NoAutoUpdate -> expected_value: None -> desc: 'Configure Automatic Updates' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -> sub_key: !ScheduledInstallDay -> expected_value: None -> desc: 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers -> sub_key: !AddPrinterDrivers -> expected_value: None -> desc: 'Devices: Prevent users from installing printer drivers' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon -> sub_key: !CachedLogonsCount -> expected_value: None -> desc: 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Cryptography -> sub_key: !ForceKeyProtection -> expected_value: None -> desc: 'System cryptography: Force strong key protection for user keys stored on the computer' is set to 'User is prompted when the key is first used' or higher 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\BthHFSrv -> sub_key: !Start -> expected_value: None -> desc: 'Bluetooth Handsfree Service (BthHFSrv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\bthserv -> sub_key: !Start -> expected_value: None -> desc: 'Bluetooth Support Service (bthserv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\MapsBroker -> sub_key: !Start -> expected_value: None -> desc: 'Downloaded Maps Manager (MapsBroker)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\lfsvc -> sub_key: !Start -> expected_value: None -> desc: 'Geolocation Service (lfsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\lltdsvc -> sub_key: !Start -> expected_value: None -> desc: 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\MSiSCSI -> sub_key: !Start -> expected_value: None -> desc: 'Microsoft iSCSI Initiator Service (MSiSCSI)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PNRPsvc -> sub_key: !Start -> expected_value: None -> desc: 'Peer Name Resolution Protocol (PNRPsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\p2psvc -> sub_key: !Start -> expected_value: None -> desc: 'Peer Networking Grouping (p2psvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\p2pimsvc -> sub_key: !Start -> expected_value: None -> desc: 'Peer Networking Identity Manager (p2pimsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PNRPAutoReg -> sub_key: !Start -> expected_value: None -> desc: 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\wercplsupport -> sub_key: !Start -> expected_value: None -> desc: 'Problem Reports and Solutions Control Panel Support (wercplsupport)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RasAuto -> sub_key: !Start -> expected_value: None -> desc: 'Remote Access Auto Connection Manager (RasAuto)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\SessionEnv -> sub_key: !Start -> expected_value: None -> desc: 'Remote Desktop Configuration (SessionEnv)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TermService -> sub_key: !Start -> expected_value: None -> desc: 'Remote Desktop Services (TermService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\UmRdpService -> sub_key: !Start -> expected_value: None -> desc: 'Remote Desktop Services UserMode Port Redirector (UmRdpService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RemoteRegistry -> sub_key: !Start -> expected_value: None -> desc: 'Remote Registry (RemoteRegistry)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\LanmanServer -> sub_key: !Start -> expected_value: None -> desc: 'Server (LanmanServer)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WerSvc -> sub_key: !Start -> expected_value: None -> desc: 'Windows Error Reporting Service (WerSvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Wecsvc -> sub_key: !Start -> expected_value: None -> desc: 'Windows Event Collector (Wecsvc)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WpnService -> sub_key: !Start -> expected_value: None -> desc: 'Windows Push Notifications System Service (WpnService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\PushToInstall -> sub_key: !Start -> expected_value: None -> desc: 'Windows PushToInstall Service (PushToInstall)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\WinRM -> sub_key: !Start -> expected_value: None -> desc: 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\InstallService -> sub_key: !Start -> expected_value: None -> desc: 'Windows Store Install Service (InstallService)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: !AllowOnlineTips -> expected_value: None -> desc: 'Allow Online Tips' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\RasMan\Parameters -> sub_key: !DisableSavePassword -> expected_value: None -> desc: 'MSS: (DisableSavePassword) Prevent the dial-up password from being saved' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: !KeepAliveTime -> expected_value: None -> desc: 'MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled: 300,000 or 5 minutes (recommended)' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: !PerformRouterDiscovery -> expected_value: None -> desc: 'MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters -> sub_key: !TcpMaxDataRetransmissions -> expected_value: None -> desc: 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -> sub_key: !TcpMaxDataRetransmissions -> expected_value: None -> desc: 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\System -> sub_key: !EnableFontProviders -> expected_value: None -> desc: 'Enable Font Providers' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Peernet -> sub_key: !Disabled -> expected_value: None -> desc: 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters -> sub_key: !DisabledComponents -> expected_value: None -> desc: TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)') 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: !EnableRegistrars -> expected_value: None -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: !DisableUPnPRegistrar -> expected_value: None -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: !DisableInBand802DOT11Registrar -> expected_value: None -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: !DisableFlashConfigRegistrar -> expected_value: None -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\Registrars -> sub_key: !DisableWPDRegistrar -> expected_value: None -> desc: 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WCN\UI -> sub_key: !DisableWcnUi -> expected_value: None -> desc: 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Explorer -> sub_key: !NoUseStoreOpenWith -> expected_value: None -> desc: 'Turn off access to the Store' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\TabletPC -> sub_key: !PreventHandwritingDataSharing -> expected_value: None -> desc: 'Turn off handwriting personalization data sharing' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports -> sub_key: !PreventHandwritingErrorReports -> expected_value: None -> desc: 'Turn off handwriting recognition error reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Internet Connection Wizard -> sub_key: !ExitOnMSICW -> expected_value: None -> desc: 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: Policies\Microsoft\Windows\Registration Wizard Control -> sub_key: !NoRegistration -> expected_value: None -> desc: 'Turn off Registration if URL connection is referring to Microsoft.com' is set to 'Enabled'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\SearchCompanion -> sub_key: !DisableContentFileUpdates -> expected_value: None -> desc: 'Turn off Search Companion content file updates' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: !NoOnlinePrintsWizard -> expected_value: None -> desc: 'Turn off the "Order Prints" picture task' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer -> sub_key: !NoPublishingWizard -> expected_value: None -> desc: 'Turn off the "Publish to Web" task for files and folders' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Messenger\Client -> sub_key: !CEIP -> expected_value: None -> desc: 'Turn off the Windows Messenger Customer Experience Improvement Program' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\SQMClient\Windows -> sub_key: !CEIPEnable -> expected_value: None -> desc: 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting -> sub_key: !Disabled -> expected_value: None -> desc: 'Turn off Windows Error Reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting -> sub_key: !DoReport -> expected_value: None -> desc: 'Turn off Windows Error Reporting' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Control Panel\International -> sub_key: !BlockUserInputMethodsForSignIn -> expected_value: None -> desc: 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy -> sub_key: !DisableQueryRemoteServer -> expected_value: None -> desc: 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WDI\{9c5a40da-b965-4fc3-8781-88dd50a6299d} -> sub_key: !ScenarioExecutionEnabled -> expected_value: None -> desc: 'Enable/Disable PerfTrack' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo -> sub_key: !DisabledByGroupPolicy -> expected_value: None -> desc: 'Turn off the advertising ID' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\W32Time\TimeProviders\NtpClient -> sub_key: !Enabled -> expected_value: None -> desc: 'Enable Windows NTP Client' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: !BlockHostedAppAccessWinRT -> expected_value: None -> desc: 'Block launching Windows Store apps with Windows Runtime API access from hosted content.' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Camera -> sub_key: !AllowCamera -> expected_value: None -> desc: 'Allow Use of Camera' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\DataCollection -> sub_key: !DisableEnterpriseAuthProxy -> expected_value: None -> desc: 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled: Disable Authenticated Proxy usage' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors -> sub_key: !DisableLocation -> expected_value: None -> desc: 'Turn off location' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Messaging -> sub_key: !AllowMessageSync -> expected_value: None -> desc: 'Allow Message Service Cloud Sync' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\ServiceUI -> sub_key: !ShowOneBox -> expected_value: None -> desc: 'Allow Address bar drop-down list suggestions' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addons -> sub_key: !FlashPlayerEnabled -> expected_value: None -> desc: 'Allow Adobe Flash' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: !AllowInPrivate -> expected_value: None -> desc: 'Allow InPrivate Browsing' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\SearchScopes -> sub_key: !ShowSearchSuggestionsGlobal -> expected_value: None -> desc: 'Configure search suggestions in Address bar' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: !PreventAccessToAboutFlagsInMicrosoftEdge -> expected_value: None -> desc: 'Prevent access to the about:flags page in Microsoft Edge' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main -> sub_key: !HideLocalHostIP -> expected_value: None -> desc: 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\PushToInstall -> sub_key: !DisablePushToInstall -> expected_value: None -> desc: 'Turn off Push To Install service' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fDisableCcm -> expected_value: None -> desc: 'Do not allow COM port redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fDisableLPT -> expected_value: None -> desc: 'Do not allow LPT port redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !fDisablePNPRedir -> expected_value: None -> desc: 'Do not allow supported Plug and Play device redirection' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !MaxIdleTime -> expected_value: None -> desc: 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'  
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services -> sub_key: !MaxDisconnectionTime -> expected_value: None -> desc: 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\Windows Search -> sub_key: !AllowCloudSearch -> expected_value: None -> desc: 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: !DisableStoreApps -> expected_value: None -> desc: 'Disable all apps from Windows Store' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsStore -> sub_key: !RemoveWindowsStore -> expected_value: None -> desc: 'Turn off the Store application' is set to 'Enabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows Defender\Reporting -> sub_key: !DisableGenericRePorts -> expected_value: None -> desc: 'Configure Watson events' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsInkWorkspace -> sub_key: !AllowSuggestedAppsInWindowsInkWorkspace -> expected_value: None -> desc: 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\Windows\WinRM\Service\WinRS -> sub_key: !AllowRemoteShellAccess -> expected_value: None -> desc: 'Allow Remote Shell Access' is set to 'Disabled' 
+
