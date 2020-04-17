@@ -34,11 +34,12 @@ class WindowsRegistryAudits(BaseTest):
 
         try:
             registry_key = OpenKey(root_folder, key_path)
+            CloseKey(registry_key)
         except:
             # key not found 
             system_value = None
 
-        CloseKey(registry_key)
+        
 
         return system_value
 
@@ -66,12 +67,12 @@ class WindowsRegistryAudits(BaseTest):
 
             system_value, reg_word = QueryValueEx(registry_key, sub_key)
 
+            CloseKey(registry_key)
+            
         except:
             # key not found 
             system_value = None
 
-        
-        CloseKey(registry_key)
 
         return system_value
 
@@ -91,7 +92,7 @@ class WindowsRegistryAudits(BaseTest):
                 if '!' in sub_key:
                     system_value = self.check_registry_key_exsists(
                             root_folder = root_folder,
-                            path = key_path,
+                            key_path = key_path,
                             sub_key = sub_key
                     )
 
@@ -123,7 +124,7 @@ class WindowsRegistryAudits(BaseTest):
             else:
                 system_value = self.get_registry_key_value(
                         root_folder = root_folder,
-                        path = key_path,
+                        key_path = key_path,
                         sub_key = sub_key
                 )
 
@@ -220,9 +221,14 @@ class WindowsRegistryAudits(BaseTest):
                 }
                 registry_keys.append(key_dict)
 
-        self.comapre_registry_value(registry_keys)
+        self.compare_registry_keys(registry_keys)
 
 
     def run_test(self):
         self.get_registry_keys_from_database()
         return self.test_results
+
+
+if __name__ == "__main__":
+    obj = WindowsRegistryAudits()
+    print(obj.run_test())

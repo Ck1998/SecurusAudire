@@ -1,9 +1,6 @@
 # audit modules
-from modules.audits.linux.check_authentication.lib_authentication import CheckAuthenticationModule
-from modules.audits.linux.check_system_integrity.lib_check_system_integrity import CheckSystemIntegrity
-from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernelHardening
-from modules.audits.linux.check_root_kit.lib_check_root_kit import CheckRootKits
-from modules.audits.linux.test_home_dir.lib_test_home_dir import TestHomeDir
+from modules.audits.windows.win_reg import WindowsRegistryAudits
+
 from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
 
 # report modules
@@ -23,20 +20,12 @@ class AuditController:
 
     def run_all_audits(self):
 
-        test_home_dir_object = TestHomeDir()
-        check_root_kits_object = CheckRootKits()
-        check_system_integrity_object = CheckSystemIntegrity()
-        kernel_hardening_object = KernelHardening()
-        general_system_info_object = GeneralSystemInformation()
-        check_authentication_object = CheckAuthenticationModule()
+        obj = WindowsRegistryAudits()
+        obj2= GeneralSystemInformation()
 
         self.audit_result = {
-            "General System information": general_system_info_object.run_test(),
-            "authentication": check_authentication_object.run_test(),
-            "Check Home Dir": test_home_dir_object.run_test(),
-            "Check System Integrity": check_system_integrity_object.run_test(),
-            "Kernel Hardening": kernel_hardening_object.run_test(),
-            "Check Root Kit": check_root_kits_object.run_test()
+            "General System information": obj2.run_test(),
+            "Winreg": obj.run_test()
         }
 
         self.generate_full_report()
@@ -63,7 +52,8 @@ class AuditController:
     def controller(self):
         try:
             self.run_all_audits()
-        except:
+        except Exception as e:
+            print(e)
             return 1
             
         return 0 

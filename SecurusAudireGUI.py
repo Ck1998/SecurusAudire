@@ -1,7 +1,7 @@
 import tkinter as tk 
 from tkinter import filedialog
 from tkinter import messagebox
-from modules.audit import AuditController
+from modules.audit_controller import AuditController
 
 class SecurusAudireGUI:
 
@@ -71,3 +71,7 @@ class SecurusAudireGUI:
     def exit_gui(self):
         self.window.destroy()
 
+
+if __name__ == "__main__":
+    gui_obj = SecurusAudireGUI()
+    gui_obj.run_gui()
