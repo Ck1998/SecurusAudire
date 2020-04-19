@@ -377,3 +377,6 @@ web_report_test.py
 .idea/vcs.xml
 2.py
 teset2.py
+db/create_formatted_db.py
+script.py
+modules/audit_controller copy.py

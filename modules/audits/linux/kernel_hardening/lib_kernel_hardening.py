@@ -9,7 +9,7 @@ class KernelHardening(BaseTest):
         super().__init__()
         self.sysctl_keys_regex = r"(.+)(?:[\s])=(?:[\s])(.+)"
         self.parse_db_regex = r"(.+)(?:[\s])@(?:[\s])(.*)(?:[\s])!(?:[\s])(.*)(?:[\s]):(?:[\s])(.*)(?:[\s]):(?:[\s])url:(.*)"
-        self.db_location = "db/kernel_hardening_db.txt"
+        self.db_location = "db/linux_db/kernel_hardening_db.txt"
         self.test_result = {}
 
     def format_sysctl_keys(self, raw_keys: str):

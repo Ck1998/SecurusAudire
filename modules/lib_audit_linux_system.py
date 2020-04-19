@@ -5,7 +5,7 @@ import glob
 class AuditLinuxSystem:
     def __init__(self):
         super().__init__()
-        self.database_file = "../../db/check_root_kit_db.txt"
+        self.database_file = "../../db/linux_db/check_root_kit_db.txt"
         self.check_root_kit = {}
         self.ROOT_DIR = "/"
         self.root_kit = {}

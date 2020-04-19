@@ -10,7 +10,10 @@ class SecurusAudireCLI:
     def run_audit(self):
         audit_controller_object = AuditController(self.save_folder_location)
         audit_status = audit_controller_object.controller()
-        if audit_status == 0:
+        
+        if audit_status == 5:
+            print("OS not supported")
+        elif audit_status == 0:
             print('System Audit Complete. You can view generated reports at - '+self.save_folder_location+"/SecurusAudire_Reports/")
         else:
             answer = input('SecurusAudire encountered some errors, are you running the script as root?') 

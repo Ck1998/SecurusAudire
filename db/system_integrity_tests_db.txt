@@ -1,9 +1,0 @@
-# DB for system integrity tests
-# config file = rtc/csf/csf/conf
-
-# root test
-s @ System integrity Tests : csrutil > usr/bin/ ! CSrutil Found Skipping these tests : No CSrutil Found Skipping these tests
-
-# follow up test
-r @ csrutil checks : enabled ! System integrity Protection enabled : System integrity Protection disabled
-

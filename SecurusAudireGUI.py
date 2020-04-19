@@ -50,7 +50,11 @@ class SecurusAudireGUI:
     def run_audit(self):
         audit_controller_object = AuditController(self.save_folder_location)
         audit_status = audit_controller_object.controller()
-        if audit_status == 0:
+        
+        if audit_status == 5:
+            tk.messagebox.showinfo('Info','OS Not Supported as of now')
+            self.exit_gui()
+        elif audit_status == 0:
             tk.messagebox.showinfo('Success','System Audit Complete. You can view generated reports at - '+self.save_folder_location+"/SecurusAudire_Reports/")
             self.exit_gui()
         else:
