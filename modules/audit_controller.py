@@ -1,3 +1,5 @@
+import traceback
+
 # audit modules
 from modules.audits.windows.win_reg import WindowsRegistryAudits
 
@@ -53,7 +55,7 @@ class AuditController:
         try:
             self.run_all_audits()
         except Exception as e:
-            print(e)
+            print(traceback.print_exc())
             return 1
             
         return 0 

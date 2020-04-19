@@ -327,3 +327,5 @@ script.py
 db/create_formatted_db.py
 db/win10_audit_db.txt
 db/win10_audit_db.txt
+cd
+python
