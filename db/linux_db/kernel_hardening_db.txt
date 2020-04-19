@@ -1,0 +1,102 @@
+# format 
+# sysctl @ <key_to_lookup> ! <Expected Value> : <Decription> : <Support Links>
+# regex: (.+)(?:[\s])@(?:[\s])(.*)(?:[\s])!(?:[\s])(.*)(?:[\s]):(?:[\s])(.*)(?:[\s]):(?:[\s])url:(.*)
+
+# Kernel
+
+sysctl @ fs.suid_dumpable ! 0 : Restrict core dumps : url:https://www.kernel.org/doc/Documentation/sysctl/fs.txt
+sysctl @ fs.protected_hardlinks ! 1 : Restrict hardlink creation behavior : url:https://www.kernel.org/doc/Documentation/sysctl/fs.txt
+sysctl @ fs.protected_symlinks ! 1 : Restrict symlink following behavior : url:https://www.kernel.org/doc/Documentation/sysctl/fs.txt
+sysctl @ kern.sugid_coredump ! 0 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.core_setuid_ok ! 0 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.core_uses_pid ! 1 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.ctrl-alt-del ! 0 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.dmesg_restrict ! 1 : Restrict use of dmesg : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.exec-shield-randomize ! 1 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.exec-shield ! 1 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.kptr_restrict ! 2 : Restrict access to kernel symbols : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.maps_protect ! 1 : Restrict access to /proc/[pid]/maps : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.randomize_va_space ! 2 : Randomize of memory address locations (ASLR) : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.suid_dumpable ! 0 : Restrict core dumps : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.sysrq ! 0 : Disable magic SysRQ : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.use-nx ! 0 : No description : url:https://kernel.org/doc/Documentation/sysctl/kernel.txt
+sysctl @ kernel.yama.ptrace_scope ! 1,2,3 : Disable process tracing for everyone : url: None
+
+# Processes
+
+sysctl @ security.bsd.see_other_gids ! 0 : Groups only see their own processes : url: None
+sysctl @ security.bsd.see_other_uids ! 0 : Users only see their own processes : url: None
+sysctl @ security.bsd.stack_guard_page ! 1 : Enable stack smashing protection (SSP)/ProPolice to defend against possible buffer overflows : url: None
+sysctl @ security.bsd.unprivileged_proc_debug ! 0 : Unprivileged processes can not use process debugging : url: None
+sysctl @ security.bsd.unprivileged_read_msgbuf ! 0 : Unprivileged processes can not read the kernel message buffer : url: None
+
+
+# Network 
+sysctl @ net.inet.ip.linklocal.in.allowbadttl ! 0 : None : url: None
+sysctl @ net.inet.tcp.always_keepalive ! 0 : Disable TCP keep alive detection for dead peers as the keepalive can be spoofed : url: None
+sysctl @ net.inet.tcp.fast_finwait2_recycle ! 1 : Recycle FIN/WAIT states more quickly (DoS mitigation step, with risk of false RST) : url: None
+sysctl @ net.inet.tcp.nolocaltimewait ! 1 : Remove the TIME_WAIT state for loopback interface : url: None
+sysctl @ net.inet.tcp.path_mtu_discovery ! 0 : Disable MTU discovery as many hosts drop the ICMP type 3 packets : url: None
+sysctl @ net.inet.icmp.bmcastecho ! 0 : Ignore ICMP packets directed to broadcast address : url: None
+sysctl @ net.inet.tcp.icmp_may_rst ! 0 : ICMP may not send RST to avoid spoofed ICMP/UDP floods : url: None
+sysctl @ net.inet.icmp.drop_redirect ! 1 : Do not allow redirected ICMP packets : url: None
+sysctl @ net.inet.icmp.rediraccept ! 0 : Disable incoming ICMP redirect routing redirects : url: None
+sysctl @ net.inet.icmp.timestamp ! 0 : Disable timestamps : url: None
+sysctl @ net.inet.ip.accept_sourceroute ! 0 : Disable IP source routing : url: None
+sysctl @ net.inet.ip.check_interface ! 1 : Verify that a packet arrived on the right interface : url: None
+sysctl @ net.inet.ip.forwarding ! 0 : Do not allow forwarding of traffic : url: None
+sysctl @ net.inet.ip.process_options ! 0 : Ignore any IP options in the incoming packets : url: None
+sysctl @ net.inet.ip.random_id ! 1 : Use a random IP id to each packet leaving the system : url: None
+sysctl @ net.inet.ip.redirect ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.inet.ip.sourceroute ! 0 : Disable IP source routing : url: None
+sysctl @ net.inet.ip6.redirect ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.inet.tcp.blackhole ! 2 : Do not send RST but drop traffic when delivered to closed TCP port : url: None
+sysctl @ net.inet.tcp.drop_synfin ! 1 : SYN/FIN packets will be dropped on initial connection : url: None
+sysctl @ net.inet.udp.blackhole ! 1 : Do not send RST but drop traffic when delivered to closed UDP port : url: None
+sysctl @ net.inet6.icmp6.rediraccept ! 0 : Disable incoming ICMP redirect routing redirects : url: None
+sysctl @ net.inet6.ip6.forwarding ! 0 : Do not allow forwarding of traffic : url: None
+sysctl @ net.inet6.ip6.fw.enable ! 1 : Enable filtering : url: None
+sysctl @ net.inet6.ip6.redirect ! 0 : Disable sending ICMP redirect routing redirects : url: None
+sysctl @ net.ipv4.conf.all.accept_redirects ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.ipv4.conf.all.accept_source_route ! 0 : Disable IP source routing : url: None
+sysctl @ net.ipv4.conf.all.bootp_relay ! 0 : Do not relay BOOTP packets : url: None
+sysctl @ net.ipv4.conf.all.forwarding ! 0 : Disable IP source routing : url: None
+sysctl @ net.ipv4.conf.all.log_martians ! 1 : Log all packages for which the host does not have a path back to the source : url: None
+sysctl @ net.ipv4.conf.all.mc_forwarding ! 0 : Disable IP source routing : url: None
+sysctl @ net.ipv4.conf.all.proxy_arp ! 0 : Do not relay ARP packets : url: None
+sysctl @ net.ipv4.conf.all.rp_filter ! 1 : Enforce ingress/egress filtering for packets : url: None
+sysctl @ net.ipv4.conf.all.send_redirects ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.ipv4.conf.default.accept_redirects ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.ipv4.conf.default.accept_source_route ! 0 : Disable IP source routing : url: None
+sysctl @ net.ipv4.conf.default.log_martians ! 1 : Log all packages for which the host does not have a path back to the source : url: None
+sysctl @ net.ipv4.icmp_echo_ignore_broadcasts ! 1 : Ignore ICMP packets directed to broadcast address : url: None
+sysctl @ net.ipv4.icmp_ignore_bogus_error_responses ! 1 : None : url: None
+sysctl @ net.ipv4.ip_forward ! 0 : Do not forward traffic : url: None
+sysctl @ net.ipv4.tcp_syncookies ! 1 : Use SYN cookies to prevent SYN attack : url: None
+sysctl @ net.ipv4.tcp_timestamps ! 0,1 : Disable TCP time stamps or enable them with different offsets : url: None
+sysctl @ net.ipv6.conf.all.send_redirects ! 0 : Disable/ignore ICMP routing redirects : url: None
+sysctl @ net.ipv6.conf.all.accept_redirects ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.ipv6.conf.all.accept_source_route ! 0 : Disable IP source routing : url: None
+sysctl @ net.ipv6.conf.default.accept_redirects ! 0 : Disable/Ignore ICMP routing redirects : url: None
+sysctl @ net.ipv6.conf.default.accept_source_route ! 0 : Disable IP source routing : url: None
+
+# Misc
+
+sysctl @ hw.kbd.keymap_restrict_change ! 4 : Disable changing the keymap by non-privileged users : url: None
+sysctl @ kern.securelevel ! 1,2,3 : FreeBSD security level : url: None
+sysctl @ security.jail.jailed ! 0 : None : url: None
+sysctl @ security.jail.jail_max_af_ips ! 255 : None : url: None
+sysctl @ security.jail.mount_allowed ! 0 : None : url: None
+sysctl @ security.jail.chflags_allowed ! 0 : None : url: None
+sysctl @ security.jail.allow_raw_sockets ! 0 : None : url: None
+sysctl @ security.jail.enforce_statfs ! 2 : None : url: None
+sysctl @ security.jail.sysvipc_allowed ! 0 : None : url: None
+sysctl @ security.jail.socket_unixiproute_only ! 1 : None : url: None
+sysctl @ security.jail.set_hostname_allowed ! 1 : None : url: None
+sysctl @ security.bsd.suser_enabled ! 1 : None : url: None
+sysctl @ security.bsd.unprivileged_proc_debug ! 1 : None : url: None
+sysctl @ security.bsd.conservative_signals ! 1 : None : url: None
+sysctl @ security.bsd.unprivileged_read_msgbuf ! 1 : None : url: None
+sysctl @ security.bsd.unprivileged_get_quota ! 0 : None : url: None
+sysctl @ security.bsd.hardlink_check_gid ! 1 : Unprivileged processes are not allowed to create hard links to files which are owned by other groups : url: None
+sysctl @ security.bsd.hardlink_check_uid ! 1 : Unprivileged processes are not allowed to create hard links to files which are owned by other users : url: None

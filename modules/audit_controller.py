@@ -1,59 +1,28 @@
-# audit modules
-from modules.audits.windows.win_reg import WindowsRegistryAudits
-
-from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
-
-# report modules
-from modules.report_generation.report_generation_controller import ReportGenController
-
-# config varibales
-import config as CONFIG
+from platform import system
 
 
 class AuditController:
-
     def __init__(self, save_folder_location):
         super().__init__()
         self.save_folder_location = save_folder_location
-        self.audit_result = {}
-        self.full_report = {}
-
-    def run_all_audits(self):
-
-        obj = WindowsRegistryAudits()
-        obj2= GeneralSystemInformation()
-
-        self.audit_result = {
-            "General System information": obj2.run_test(),
-            "Winreg": obj.run_test()
-        }
-
-        self.generate_full_report()
-
-    def generate_full_report(self):
-
-        # this function is used for adding audit score and warnings and suggwstions to the audit_results
-
-        self.full_report = {
-            "System Score": CONFIG.SYSTEM_SCORE,
-            "Total Score Possible": CONFIG.TOTAL_SCORE_POSSIBLE,
-            "Suggestions": CONFIG.SUGGESTIONS_DICT,
-            "Warnings": CONFIG.WARNING_DICT,
-            "Audit Results": self.audit_result
-        }
-
-        self.generate_reports()
-
-    def generate_reports(self):
-        report_gen_obj = ReportGenController(self.full_report, self.save_folder_location)
-
-        report_gen_obj.controller()
-
+        
     def controller(self):
-        try:
-            self.run_all_audits()
-        except Exception as e:
-            print(e)
-            return 1
+        current_system = system()
+        if current_system.lower() == "linux":
+
+        
+            from modules.audits.linux.linux_controller import LinuxAuditController
+
+            linux_audit_controller_object = LinuxAuditController(save_folder_location=self.save_folder_location)
+            audit_result = linux_audit_controller_object.controller()
+        
+        elif current_system.lower() == "windows":
+
+            from modules.audits.windows.windows_controller import WindowsAuditController
+
+            windows_audit_controller_object = WindowsAuditController(save_folder_location=self.save_folder_location)
+            audit_result = windows_audit_controller_object.controller()
+        else:
+            audit_result = 5
             
-        return 0 
+        return audit_result

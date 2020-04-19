@@ -1,0 +1,27 @@
+############################################################
+#    Guidelines for this database
+#    1. Lines starting with '#' will be ignored by the parser
+#    2. Record Format -
+#       @/etc/hosts !<regex to check> !<status_message>
+############################################################
+
+@/etc/hosts  !^[^#]*avp.ch !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*avp.ru !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*awaps.net !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*ca.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*mcafee.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*microsoft.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*f-secure.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*sophos.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*symantec.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*my-etrust.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*nai.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*networkassociates.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*viruslist.ru !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*kaspersky !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*symantecliveupdate.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*grisoft.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*clamav.net !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*bitdefender.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*antivirus.com !Anti-virus site on the hosts file
+@/etc/hosts  !^[^#]*sans.org !Security site on the hosts file

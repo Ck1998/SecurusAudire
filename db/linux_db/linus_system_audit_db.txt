@@ -1,0 +1,208 @@
+#############################################################################################################
+#                                                                                                           #
+#    This database is for the list of checks to                                                             #
+#    perform on a linux/debian based machine                                                                #
+#                                                                                                           #
+#############################################################################################################
+
+#############################################################################################################
+#                                                                                                           #
+#    Guidelines for this database                                                                           #
+#                                                                                                           #
+#    1. Lines starting with '#' and blank lines will                                                        #
+#       be ignored by the parser                                                                            #
+#
+#    2. Record in this database will be of the following
+#       format
+#           <record_typ > @<specific format for that recor >  !<success messag >  :<failed messag > 
+#                                                                                                           #
+#    3. Records in this db can be off the following 
+#       types - 
+#
+#           3.1 Search Records(s) - this record signifies that 
+#               the record is to be searched in the path 
+#               specidifed.
+#               Format -
+#                  s @ <test nam > :<file/directory nam >  >  <p laces to searc >  !<success messag >  :<failed messag > 
+#
+#           3.2 Regex Records(s) - this record signifies that 
+#               a regex is to be used to search in a particular  
+#               file
+#                                                                                                           #
+#############################################################################################################
+
+
+
+# TEST = Checking for Important System Binaries
+# regex: ^([A-z]{1})\s@\s(.+)\s:\s(.+)\s>\s(.+)\s!\s(.+)\s:\s(.*)\s
+# group 1: record type
+# group 2: Test Name
+# group 3: File Name
+# group 4: Place to Check
+# group 5: Success message
+# group 6: Failed message
+
+
+s @ Checking for Important System Binaries : aa-status > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "aa-status" found. : Important system binary "aa-status" not found
+s @ Checking for Important System Binaries : afick.pl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "afick.pl" found. : Important system binary "afick.pl" not found
+s @ Checking for Important System Binaries : aide > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "aide" found. : Important system binary "aide" not found
+s @ Checking for Important System Binaries : apache2 > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "apache2" found. : Important system binary "apache2" not found
+s @ Checking for Important System Binaries : arch-audit > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "arch-audit" found. : Important system binary "arch-audit" not found
+s @ Checking for Important System Binaries : auditd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "auditd" found. : Important system binary "auditd" not found
+s @ Checking for Important System Binaries : awk > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "awk" found. : Important system binary "awk" not found
+s @ Checking for Important System Binaries : dig > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dig" found. : Important system binary "dig" not found
+s @ Checking for Important System Binaries : as > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "as" found. : Important system binary "as" not found
+s @ Checking for Important System Binaries : auditctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "auditctl" found. : Important system binary "auditctl" not found
+s @ Checking for Important System Binaries : autolog > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "autolog" found. : Important system binary "autolog" not found
+s @ Checking for Important System Binaries : base64 > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "base64" found. : Important system binary "base64" not found
+s @ Checking for Important System Binaries : blkid > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "blkid" found. : Important system binary "blkid" not found
+s @ Checking for Important System Binaries : cat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "cat" found. : Important system binary "cat" not found
+s @ Checking for Important System Binaries : chkconfig > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "chkconfig" found. : Important system binary "chkconfig" not found
+s @ Checking for Important System Binaries : clamconf > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "clamconf" found. : Important system binary "clamconf" not found
+s @ Checking for Important System Binaries : clamscan > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "clamscan" found. : Important system binary "clamscan" not found
+s @ Checking for Important System Binaries : cfagent > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "cfagent" found. : Important system binary "cfagent" not found
+s @ Checking for Important System Binaries : chkrootkit > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "chkrootkit" found. : Important system binary "chkrootkit" not found
+s @ Checking for Important System Binaries : comm > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "comm" found. : Important system binary "comm" not found
+s @ Checking for Important System Binaries : csum > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "csum" found. : Important system binary "csum" not found
+s @ Checking for Important System Binaries : curl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "curl" found. : Important system binary "curl" not found
+s @ Checking for Important System Binaries : cut > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "cut" found. : Important system binary "cut" not found
+s @ Checking for Important System Binaries : debsecan > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "debsecan" found. : Important system binary "debsecan" not found
+s @ Checking for Important System Binaries : debsums > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "debsums" found. : Important system binary "debsums" not found
+s @ Checking for Important System Binaries : dig > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dig" found. : Important system binary "dig" not found
+s @ Checking for Important System Binaries : dmidecode > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dmidecode" found. : Important system binary "dmidecode" not found
+s @ Checking for Important System Binaries : dnf > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dnf" found. : Important system binary "dnf" not found
+s @ Checking for Important System Binaries : dnsdomainname > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dnsdomainname" found. : Important system binary "dnsdomainname" not found
+s @ Checking for Important System Binaries : docker > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "docker" found. : Important system binary "docker" not found
+s @ Checking for Important System Binaries : domainname > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "domainname" found. : Important system binary "domainname" not found
+s @ Checking for Important System Binaries : dpkg > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "dpkg" found. : Important system binary "dpkg" not found
+s @ Checking for Important System Binaries : egrep > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "egrep" found. : Important system binary "egrep" not found
+s @ Checking for Important System Binaries : exim > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "exim" found. : Important system binary "exim" not found
+s @ Checking for Important System Binaries : fail2ban-server > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "fail2ban-server" found. : Important system binary "fail2ban-server" not found
+s @ Checking for Important System Binaries : file > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "file" found. : Important system binary "file" not found
+s @ Checking for Important System Binaries : find > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "find" found. : Important system binary "find" not found
+s @ Checking for Important System Binaries : g++ > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "g++" found. : Important system binary "g++" not found
+s @ Checking for Important System Binaries : gcc > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "gcc" found. : Important system binary "gcc" not found
+s @ Checking for Important System Binaries : getcap > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "getcap" found. : Important system binary "getcap" not found
+s @ Checking for Important System Binaries : getent > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "getent" found. : Important system binary "getent" not found
+s @ Checking for Important System Binaries : gradm > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "gradm" found. : Important system binary "gradm" not found
+s @ Checking for Important System Binaries : grep > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "grep" found. : Important system binary "grep" not found
+s @ Checking for Important System Binaries : grpck > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "grpck" found. : Important system binary "grpck" not found
+s @ Checking for Important System Binaries : grub2-install > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "grub2-install" found. : Important system binary "grub2-install" not found
+s @ Checking for Important System Binaries : gzip > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "gzip" found. : Important system binary "gzip" not found
+s @ Checking for Important System Binaries : head > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "head" found. : Important system binary "head" not found
+s @ Checking for Important System Binaries : httpd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "httpd" found. : Important system binary "httpd" not found
+s @ Checking for Important System Binaries : httpd2-prefork > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "httpd2-prefork" found. : Important system binary "httpd2-prefork" not found
+s @ Checking for Important System Binaries : initctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "initctl" found. : Important system binary "initctl" not found
+s @ Checking for Important System Binaries : ifconfig > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ifconfig" found. : Important system binary "ifconfig" not found
+s @ Checking for Important System Binaries : ip > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ip" found. : Important system binary "ip" not found
+s @ Checking for Important System Binaries : ipf > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ipf" found. : Important system binary "ipf" not found
+s @ Checking for Important System Binaries : iptables > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "iptables" found. : Important system binary "iptables" not found
+s @ Checking for Important System Binaries : iptables-save > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "iptables-save" found. : Important system binary "iptables-save" not found
+s @ Checking for Important System Binaries : istat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "istat" found. : Important system binary "istat" not found
+s @ Checking for Important System Binaries : journalctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "journalctl" found. : Important system binary "journalctl" not found
+s @ Checking for Important System Binaries : kldstat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "kldstat" found. : Important system binary "kldstat" not found
+s @ Checking for Important System Binaries : kstat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "kstat" found. : Important system binary "kstat" not found
+s @ Checking for Important System Binaries : launchctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "launchctl" found. : Important system binary "launchctl" not found
+s @ Checking for Important System Binaries : locate > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "locate" found. : Important system binary "locate" not found
+s @ Checking for Important System Binaries : logrotate > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "logrotate" found. : Important system binary "logrotate" not found
+s @ Checking for Important System Binaries : ls > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ls" found. : Important system binary "ls" not found
+s @ Checking for Important System Binaries : lsattr > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lsattr" found. : Important system binary "lsattr" not found
+s @ Checking for Important System Binaries : lsmod > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lsmod" found. : Important system binary "lsmod" not found
+s @ Checking for Important System Binaries : lsof > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lsof" found. : Important system binary "lsof" not found
+s @ Checking for Important System Binaries : lsvg > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lsvg" found. : Important system binary "lsvg" not found
+s @ Checking for Important System Binaries : lvdisplay > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lvdisplay" found. : Important system binary "lvdisplay" not found
+s @ Checking for Important System Binaries : lynx > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "lynx" found. : Important system binary "lynx" not found
+s @ Checking for Important System Binaries : maldet > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "maldet" found. : Important system binary "maldet" not found
+s @ Checking for Important System Binaries : md5 > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "md5" found. : Important system binary "md5" not found
+s @ Checking for Important System Binaries : md5sum > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "md5sum" found. : Important system binary "md5sum" not found
+s @ Checking for Important System Binaries : modprobe > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "modprobe" found. : Important system binary "modprobe" not found
+s @ Checking for Important System Binaries : mount > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "mount" found. : Important system binary "mount" not found
+s @ Checking for Important System Binaries : mtree > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "mtree" found. : Important system binary "mtree" not found
+s @ Checking for Important System Binaries : mysql > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "mysql" found. : Important system binary "mysql" not found
+s @ Checking for Important System Binaries : named-checkconf > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "named-checkconf" found. : Important system binary "named-checkconf" not found
+s @ Checking for Important System Binaries : netstat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "netstat" found. : Important system binary "netstat" not found
+s @ Checking for Important System Binaries : nft > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "nft" found. : Important system binary "nft" not found
+s @ Checking for Important System Binaries : nmap > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "nmap" found. : Important system binary "nmap" not found
+s @ Checking for Important System Binaries : ntpq > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ntpq" found. : Important system binary "ntpq" not found
+s @ Checking for Important System Binaries : osiris > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "osiris" found. : Important system binary "osiris" not found
+s @ Checking for Important System Binaries : openssl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "openssl" found. : Important system binary "openssl" not found
+s @ Checking for Important System Binaries : pacman > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "pacman" found. : Important system binary "pacman" not found
+s @ Checking for Important System Binaries : perl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "perl" found. : Important system binary "perl" not found
+s @ Checking for Important System Binaries : pgrep > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "pgrep" found. : Important system binary "pgrep" not found
+s @ Checking for Important System Binaries : php > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "php" found. : Important system binary "php" not found
+s @ Checking for Important System Binaries : pkg > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "pkg" found. : Important system binary "pkg" not found
+s @ Checking for Important System Binaries : pkg_admin > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "pkg_admin" found. : Important system binary "pkg_admin" not found
+s @ Checking for Important System Binaries : postconf > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "postconf" found. : Important system binary "postconf" not found
+s @ Checking for Important System Binaries : postfix > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "postfix" found. : Important system binary "postfix" not found
+s @ Checking for Important System Binaries : prelink > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "prelink" found. : Important system binary "prelink" not found
+s @ Checking for Important System Binaries : pfctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "pfctl" found. : Important system binary "pfctl" not found
+s @ Checking for Important System Binaries : ps > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ps" found. : Important system binary "ps" not found
+s @ Checking for Important System Binaries : puppet > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "puppet" found. : Important system binary "puppet" not found
+s @ Checking for Important System Binaries : puppetmasterd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "puppetmasterd" found. : Important system binary "puppetmasterd" not found
+s @ Checking for Important System Binaries : python > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "python" found. : Important system binary "python" not found
+s @ Checking for Important System Binaries : python2 > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "python2" found. : Important system binary "python2" not found
+s @ Checking for Important System Binaries : python3 > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "python3" found. : Important system binary "python3" not found
+s @ Checking for Important System Binaries : readlink > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "readlink" found. : Important system binary "readlink" not found
+s @ Checking for Important System Binaries : rkhunter > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "rkhunter" found. : Important system binary "rkhunter" not found
+s @ Checking for Important System Binaries : rootsh > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "rootsh" found. : Important system binary "rootsh" not found
+s @ Checking for Important System Binaries : rpcinfo > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "rpcinfo" found. : Important system binary "rpcinfo" not found
+s @ Checking for Important System Binaries : rpm > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "rpm" found. : Important system binary "rpm" not found
+s @ Checking for Important System Binaries : runlevel > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "runlevel" found. : Important system binary "runlevel" not found
+s @ Checking for Important System Binaries : salt-master > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "salt-master" found. : Important system binary "salt-master" not found
+s @ Checking for Important System Binaries : salt-minion > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "salt-minion" found. : Important system binary "salt-minion" not found
+s @ Checking for Important System Binaries : samhain > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "samhain" found. : Important system binary "samhain" not found
+s @ Checking for Important System Binaries : service > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "service" found. : Important system binary "service" not found
+s @ Checking for Important System Binaries : sed > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sed" found. : Important system binary "sed" not found
+s @ Checking for Important System Binaries : sestatus > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sestatus" found. : Important system binary "sestatus" not found
+s @ Checking for Important System Binaries : slocate > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "slocate" found. : Important system binary "slocate" not found
+s @ Checking for Important System Binaries : smbd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "smbd" found. : Important system binary "smbd" not found
+s @ Checking for Important System Binaries : smtpctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "smtpctl" found. : Important system binary "smtpctl" not found
+s @ Checking for Important System Binaries : showmount > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "showmount" found. : Important system binary "showmount" not found
+s @ Checking for Important System Binaries : snort > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "snort" found. : Important system binary "snort" not found
+s @ Checking for Important System Binaries : sockstat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sockstat" found. : Important system binary "sockstat" not found
+s @ Checking for Important System Binaries : sort > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sort" found. : Important system binary "sort" not found
+s @ Checking for Important System Binaries : squid > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "squid" found. : Important system binary "squid" not found
+s @ Checking for Important System Binaries : ss > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ss" found. : Important system binary "ss" not found
+s @ Checking for Important System Binaries : sshd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sshd" found. : Important system binary "sshd" not found
+s @ Checking for Important System Binaries : stat > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "stat" found. : Important system binary "stat" not found
+s @ Checking for Important System Binaries : strings > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "strings" found. : Important system binary "strings" not found
+s @ Checking for Important System Binaries : sha1|sha1sum|shasum > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sha1|sha1sum|shasum" found. : Important system binary "sha1|sha1sum|shasum" not found
+s @ Checking for Important System Binaries : sha256|sha256sum > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sha256|sha256sum" found. : Important system binary "sha256|sha256sum" not found
+s @ Checking for Important System Binaries : ssh-keyscan > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "ssh-keyscan" found. : Important system binary "ssh-keyscan" not found
+s @ Checking for Important System Binaries : sysctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "sysctl" found. : Important system binary "sysctl" not found
+s @ Checking for Important System Binaries : syslog-ng > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "syslog-ng" found. : Important system binary "syslog-ng" not found
+s @ Checking for Important System Binaries : systemctl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "systemctl" found. : Important system binary "systemctl" not found
+s @ Checking for Important System Binaries : timedatectl > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "timedatectl" found. : Important system binary "timedatectl" not found
+s @ Checking for Important System Binaries : tr > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "tr" found. : Important system binary "tr" not found
+s @ Checking for Important System Binaries : tripwire > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "tripwire" found. : Important system binary "tripwire" not found
+s @ Checking for Important System Binaries : tune2fs > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "tune2fs" found. : Important system binary "tune2fs" not found
+s @ Checking for Important System Binaries : uname > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "uname" found. : Important system binary "uname" not found
+s @ Checking for Important System Binaries : uniq > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "uniq" found. : Important system binary "uniq" not found
+s @ Checking for Important System Binaries : usbguard > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "usbguard" found. : Important system binary "usbguard" not found
+s @ Checking for Important System Binaries : vgdisplay > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "vgdisplay" found. : Important system binary "vgdisplay" not found
+s @ Checking for Important System Binaries : vmtoolsd > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "vmtoolsd" found. : Important system binary "vmtoolsd" not found
+s @ Checking for Important System Binaries : wc > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "wc" found. : Important system binary "wc" not found
+s @ Checking for Important System Binaries : wget > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "wget" found. : Important system binary "wget" not found
+s @ Checking for Important System Binaries : yum > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "yum" found. : Important system binary "yum" not found
+s @ Checking for Important System Binaries : xargs > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "xargs" found. : Important system binary "xargs" not found
+s @ Checking for Important System Binaries : zgrep > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "zgrep" found. : Important system binary "zgrep" not found
+s @ Checking for Important System Binaries : zypper > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "zypper" found. : Important system binary "zypper" not found
+
+# TEST = Authentication Modules
+s @ Checking for installed Authentication  Modules : pam_tmpdir.so > lib/ ! libpam-tmpdir is installed : libpam-tmpdir is not installed.
+s @ Checking for installed Authentication  Modules : pam_usb.so > lib/ ! libpam-usb is installed : libpam-usb is not installed.
+
+
+# TEST = pam_tmpdir.so checks
+r @ pam_tmpdir.so checks : pam_tmdpdir.so > etc/pam.d/common-session ! libpam-tmpdir is enabled in common-session. : libpam-tmpdir is not enabled in common-session.
+
+# TEST = pam_usb.so checks
+# do this line 131
+r @ pam_tmpdir.so checks : ^auth\s+ > etc/pam.d/common-session ! libpam-tmpdir is enabled in common-session. : libpam-tmpdir is not enabled in common-session.
+
+# TEST = File System
+# MAKE NOTES ASAP
+
+# line 427
+# TEST = Software Checks
+# MAKE NOTES ASAP
