@@ -34,7 +34,10 @@ class WindowsRegistryAudits(BaseTest):
 
         try:
             registry_key = OpenKey(root_folder, key_path)
+            system_value, reg_word = QueryValueEx(registry_key, sub_key)
+
             CloseKey(registry_key)
+            
         except:
             # key not found 
             system_value = None
@@ -131,7 +134,7 @@ class WindowsRegistryAudits(BaseTest):
 
                 if '!' in expected_value and 'r:' not in expected_value:
 
-                    expected_value = int(expected_value.replace("!", ''))
+                    expected_value = expected_value.replace("!", '')
 
                     if system_value != expected_value:
                         CONFIG.SYSTEM_SCORE += 1
@@ -175,7 +178,7 @@ class WindowsRegistryAudits(BaseTest):
                 elif 'r:' in expected_value:
                     expected_value_regex = fr"{expected_value[expected_value.find(':')+1:]}"
 
-                    match = self.util_obj.run_regex_search(expected_value_regex, system_value)
+                    match = self.util_obj.run_regex_search(expected_value_regex, str(system_value))
 
                     if '!r:' in expected_value:
                         if match is None:
@@ -226,7 +229,8 @@ class WindowsRegistryAudits(BaseTest):
                             }
 
                 else:
-                    expected_value = int(expected_value)
+                    expected_value = str(expected_value)
+                    system_value = str(system_value)
 
                     if system_value == expected_value:
                         CONFIG.SYSTEM_SCORE += 1
@@ -280,4 +284,5 @@ class WindowsRegistryAudits(BaseTest):
 
     def run_test(self):
         self.get_registry_keys_from_database()
+        print(self.test_results)
         return self.test_results

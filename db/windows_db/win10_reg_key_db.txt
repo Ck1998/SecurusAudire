@@ -404,10 +404,10 @@ root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFire
 root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\w+.log -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\w+.log -> desc: 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
 root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
@@ -482,10 +482,10 @@ root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFire
 root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile -> sub_key: DisableNotifications -> expected_value: 0 -> desc: 'Windows Firewall: Private: Settings: Display a notification' is set to 'No' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\w+.log -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\w+.log -> desc: 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
 root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
@@ -572,10 +572,10 @@ root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFire
 root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile -> sub_key: AllowLocalIPsecPolicyMerge -> expected_value: 0 -> desc: 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\\w+.log -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:\psystemroot\p\\system32\logfiles\firewall\\w+\plog -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
+root_folder: HKEY_LOCAL_MACHINE -> path: SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging -> sub_key: LogFilePath -> expected_value: r:%systemroot%\\system32\\logfiles\\firewall\\w+\.log -> desc: 'Windows Firewall: Public: Logging: Name' is set to '%SYSTEMROOT%\System32\logfiles\firewall\*.log' 
 
 
 root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging -> sub_key: LogFileSize -> expected_value: r:\w -> desc: 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater' 
