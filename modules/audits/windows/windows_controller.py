@@ -1,4 +1,7 @@
 # add audit modules
+from modules.audits.windows.windows_registry_check.lib_windows_registry_check import WindowsRegistryAudits
+from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
+
 # report modules
 from modules.report_generation.report_generation_controller import ReportGenController
 
@@ -7,6 +10,10 @@ import config as CONFIG
 
 # debugging module 
 from traceback import print_exc
+
+# UAC Elevation modules
+import ctypes
+import sys
 
 
 class WindowsAuditController:
@@ -17,25 +24,22 @@ class WindowsAuditController:
         self.audit_result = {}
         self.full_report = {}
 
+    def is_admin(self):
+        try: 
+            return ctypes.windll.shell32.IsUserAnAdmin()
+        except:
+            return False
+
+    
     def run_all_audits(self):
 
-        """test_home_dir_object = TestHomeDir()
-        check_root_kits_object = CheckRootKits()
-        check_system_integrity_object = CheckSystemIntegrity()
-        kernel_hardening_object = KernelHardening()
+        windows_registry_audits_object = WindowsRegistryAudits()
         general_system_info_object = GeneralSystemInformation()
-        check_authentication_object = CheckAuthenticationModule()
 
         self.audit_result = {
-            "General System information": general_system_info_object.run_test(),
-            "authentication": check_authentication_object.run_test(),
-            "Check Home Dir": test_home_dir_object.run_test(),
-            "Check System Integrity": check_system_integrity_object.run_test(),
-            "Kernel Hardening": kernel_hardening_object.run_test(),
-            "Check Root Kit": check_root_kits_object.run_test()
-        }"""
-
-        self.audit_result = {}
+            "General System Information": general_system_info_object.run_test(),
+            "Windows Registry Audits": windows_registry_audits_object.run_test()
+        }
 
         self.generate_full_report()
 
@@ -60,7 +64,13 @@ class WindowsAuditController:
 
     def controller(self):
         try:
-            self.run_all_audits()
+            if self.is_admin():
+                # check if user is admin, if True then run audit
+                # else re run program with admin privledges
+                self.run_all_audits()
+            else:
+                ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+
         except Exception:
             print(print_exc())
             return 1

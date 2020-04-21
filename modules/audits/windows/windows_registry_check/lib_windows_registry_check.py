@@ -81,6 +81,8 @@ class WindowsRegistryAudits(BaseTest):
 
 
     def compare_registry_keys(self, registry_keys: list):
+
+        registry_key_count = 1 
         
         for reg_key in registry_keys:
 
@@ -104,22 +106,32 @@ class WindowsRegistryAudits(BaseTest):
                         CONFIG.SYSTEM_SCORE += 1
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
 
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
                     else:
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is NOT in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
                         
-                        CONFIG.WARNING_DICT["something"] = {
+                        CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "Warning": "Registry Key Value not in compliance with the standards",
                             "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                             "System Value": system_value,
                             "Expected Value": None,
+                            "Description": description,
                             "Mitigation": """Change the registry key value to the standard expected value using regedit.exe after taking a backup of your current registry.
                                             Remove the key if expected_value = None or null""",
                             "Support Links": "https://www.dummies.com/computers/operating-systems/windows-xp-vista/how-to-modify-the-windows-registry/"
@@ -140,37 +152,53 @@ class WindowsRegistryAudits(BaseTest):
                         CONFIG.SYSTEM_SCORE += 1
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
 
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
 
                     elif system_value == None:
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Registry Key not found",
-                            "args" : []
+                            "args" : {
+                                    "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                    "System Value": system_value,
+                                    "Expected Value": expected_value,
+                                    "Description": description
+                                }
                         }
-                        CONFIG.WARNING_DICT["something"] = {
+                        CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "Warning": "Registry Key not found",
                             "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                             "System Value": "Key doesn't exsist",
                             "Expected Value": expected_value,
+                            "Description": description,
                             "Mitigation": "Add the registry key to the system after taking a backup of your current registry.",
                             "Support Links": "https://support.microsoft.com/en-in/help/310516/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg"
                         }
 
                     else:
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is NOT in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
-                        CONFIG.WARNING_DICT["something"] = {
+                        CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "Warning": "Registry Key Value not in compliance with the standards",
                             "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                             "System Value": system_value,
                             "Expected Value": expected_value,
+                            "Description": description,
                             "Mitigation": "Change the registry key value to the standard expected value using regedit.exe after taking a backup of your current registry.",
                             "Support Links": "https://www.dummies.com/computers/operating-systems/windows-xp-vista/how-to-modify-the-windows-registry/"
                         }
@@ -185,37 +213,53 @@ class WindowsRegistryAudits(BaseTest):
                             CONFIG.SYSTEM_SCORE += 1
                             CONFIG.TOTAL_SCORE_POSSIBLE += 1
 
-                            self.test_results['something'] = {
+                            self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "result" :  "Value of regsitry key is in compliance with standards",
-                                "args" : []
+                                "args" : {
+                                    "System Value": system_value,
+                                    "Expected Value": expected_value,
+                                    "Description": description
+                                }
                             }
                             
                         else:
                             CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                            self.test_results['something'] = {
+                            self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "result" :  "Value of regsitry key is NOT in compliance with standards",
-                                "args" : []
+                                "args" : {
+                                    "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                    "System Value": system_value,
+                                    "Expected Value": expected_value,
+                                    "Description": description
+                                }
                             }
-                            CONFIG.WARNING_DICT["something"] = {
+                            CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "Warning": "Registry Key Value not in compliance with the standards",
                                 "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                                 "System Value": system_value,
                                 "Expected Value": expected_value,
+                                "Description": description,
                                 "Mitigation": "Remove the key using regedit.exe after taking a backup of your current registry.",
                                 "Support Links": "https://www.dummies.com/computers/operating-systems/windows-xp-vista/how-to-modify-the-windows-registry/"
                             }
                     else: 
                         if match is None:
                             CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                            self.test_results['something'] = {
+                            self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "result" :  "Value of regsitry key is NOT in compliance with standards",
-                                "args" : []
+                                "args" : {
+                                    "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                    "System Value": system_value,
+                                    "Expected Value": expected_value,
+                                    "Description": description
+                                }
                             }
-                            CONFIG.WARNING_DICT["something"] = {
+                            CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "Warning": "Registry Key Value not in compliance with the standards",
                                 "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                                 "System Value": system_value,
                                 "Expected Value": expected_value,
+                                "Description": description,
                                 "Mitigation": "Change the registry key value to the standard expected value (as per the regex) using regedit.exe after taking a backup of your current registry.",
                                 "Support Links": "https://www.dummies.com/computers/operating-systems/windows-xp-vista/how-to-modify-the-windows-registry/"
                             }
@@ -223,9 +267,13 @@ class WindowsRegistryAudits(BaseTest):
                             CONFIG.SYSTEM_SCORE += 1
                             CONFIG.TOTAL_SCORE_POSSIBLE += 1
 
-                            self.test_results['something'] = {
+                            self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                                 "result" :  "Value of regsitry key is in compliance with standards",
-                                "args" : []
+                                "args" : {
+                                    "System Value": system_value,
+                                    "Expected Value": expected_value,
+                                    "Description": description
+                                }
                             }
 
                 else:
@@ -236,25 +284,37 @@ class WindowsRegistryAudits(BaseTest):
                         CONFIG.SYSTEM_SCORE += 1
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
 
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
                         
                     else:
                         CONFIG.TOTAL_SCORE_POSSIBLE += 1
-                        self.test_results['something'] = {
+                        self.test_results[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "result" :  "Value of regsitry key is NOT in compliance with standards",
-                            "args" : []
+                            "args" : {
+                                "Regsitry Key": f"{root_folder}\\{key_path}\\{sub_key}",
+                                "System Value": system_value,
+                                "Expected Value": expected_value,
+                                "Description": description
+                            }
                         }
-                        CONFIG.WARNING_DICT["something"] = {
+                        CONFIG.WARNING_DICT[f"{registry_key_count}- {root_folder}\\{key_path}\\{sub_key}"] = {
                             "Warning": "Registry Key Value not in compliance with the standards",
                             "Registry Key": f"{root_folder}\\{key_path}\\{sub_key}",
                             "System Value": system_value,
                             "Expected Value": expected_value,
+                            "Description": description,
                             "Mitigation": "Change the registry key value to the standard expected value using regedit.exe after taking a backup of your current registry.",
                             "Support Links": "https://www.dummies.com/computers/operating-systems/windows-xp-vista/how-to-modify-the-windows-registry/"
                         }
+
+            registry_key_count += 1
 
 
     def get_registry_keys_from_database(self):
