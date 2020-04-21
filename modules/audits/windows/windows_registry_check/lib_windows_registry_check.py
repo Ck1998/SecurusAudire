@@ -326,7 +326,7 @@ class WindowsRegistryAudits(BaseTest):
             Group4 : Expected Value
             Group5 : Description
         """
-        with open("db/win10_reg_key_db.txt", 'r') as read_object:
+        with open("db/windows_db/win10_reg_key_db.txt", 'r') as read_object:
             matches = self.util_obj.run_regex_finditer(self.registry_key_regex, read_object.read())
 
             for match in matches:
