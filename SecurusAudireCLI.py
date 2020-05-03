@@ -33,8 +33,11 @@ class SecurusAudireCLI:
         if len(self.save_folder_location) == 0:
             
             if CURR_SYSTEM_PLATFORM == "linux":
+                
                 self.save_folder_location = "/var/log"
+
             elif CURR_SYSTEM_PLATFORM == "windows":
+                
                 self.save_folder_location = ROOT_DIR
 
         self.run_audit()

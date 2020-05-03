@@ -1,5 +1,7 @@
 from modules.report_generation.report_generator_base import ReportGenBase
 from os import makedirs
+from config import CURR_SYSTEM_PLATFORM
+
 
 class GenerateWebReport(ReportGenBase):
 
@@ -123,10 +125,17 @@ class GenerateWebReport(ReportGenBase):
 
     def create_file(self):
         
-        if not self.util_obj.check_file_exsists(self.save_folder_location+r"\SecurusAudire_Reports"):
-            makedirs(self.save_folder_location+r'\SecurusAudire_Reports')
+        if CURR_SYSTEM_PLATFORM == "windows":
+            if not self.util_obj.check_file_exsists(self.save_folder_location+r"\SecurusAudire_Reports"):
+                makedirs(self.save_folder_location+r'\SecurusAudire_Reports')
 
-        complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\web_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".html"
+            complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\web_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".html"
+
+        else:
+            if not self.util_obj.check_file_exsists(self.save_folder_location+r"/SecurusAudire_Reports"):
+                makedirs(self.save_folder_location+r'/SecurusAudire_Reports')
+                
+            complete_location = f"{self.save_folder_location}/SecurusAudire_Reports/web_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".html"
         
         with open(complete_location, 'w+') as write_file_obj:
             write_file_obj.write(self.file_content)

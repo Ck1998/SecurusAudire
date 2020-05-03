@@ -1,4 +1,5 @@
 from modules.report_generation.report_generator_base import ReportGenBase
+from config import CURR_SYSTEM_PLATFORM
 
 from os import makedirs
 
@@ -18,10 +19,17 @@ class GenerateJsonReport(ReportGenBase):
 
     def create_file(self, file_content):
         
-        if not self.util_obj.check_file_exsists(self.save_folder_location+r"\SecurusAudire_Reports"):
-            makedirs(self.save_folder_location+r'\SecurusAudire_Reports')
+        if CURR_SYSTEM_PLATFORM == "windows":
+            if not self.util_obj.check_file_exsists(self.save_folder_location+r"\SecurusAudire_Reports"):
+                makedirs(self.save_folder_location+r'\SecurusAudire_Reports')
 
-        complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\json_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".json"
+            complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\json_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".json"
+
+        else:
+            if not self.util_obj.check_file_exsists(self.save_folder_location+r"/SecurusAudire_Reports"):
+                makedirs(self.save_folder_location+r'/SecurusAudire_Reports')
+                
+            complete_location = f"{self.save_folder_location}/SecurusAudire_Reports/json_report-"+str(self.timestamp)[:str(self.timestamp).find(' ')]+".json"
     
         with open(complete_location, 'w') as write_file_obj:
             write_file_obj.write(file_content)

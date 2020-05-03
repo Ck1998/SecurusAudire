@@ -47,9 +47,10 @@ class SecurusAudireGUI:
         file_save_button.grid(column=2, row=4)
     
     def set_save_directory(self):
-        save_folder_location = tk.filedialog.askdirectory()
-        
-        if len(save_folder_location) == 0:
+        self.save_folder_location = tk.filedialog.askdirectory()
+        print(self.save_folder_location)
+
+        if len(self.save_folder_location) == 0:
             
             if CURR_SYSTEM_PLATFORM == "linux":
                 self.save_folder_location = "/var/log"
@@ -112,7 +113,7 @@ if __name__ == "__main__":
             ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 
     elif CURR_SYSTEM_PLATFORM == "linux":
-        
+
         gui_obj = SecurusAudireGUI()
         gui_obj.run_gui()
     
