@@ -48,7 +48,6 @@ class SecurusAudireGUI:
     
     def set_save_directory(self):
         self.save_folder_location = tk.filedialog.askdirectory()
-        print(self.save_folder_location)
 
         if len(self.save_folder_location) == 0:
             
@@ -57,8 +56,9 @@ class SecurusAudireGUI:
 
             elif CURR_SYSTEM_PLATFORM == "windows":
                 self.save_folder_location = ROOT_DIR
-        else:
-            self.save_folder_location = save_folder_location
+
+            else:
+                pass
 
         
         file_entry_text = tk.Entry(self.window, width=50)
