@@ -23,13 +23,6 @@ class WindowsAuditController:
         self.save_folder_location = save_folder_location
         self.audit_result = {}
         self.full_report = {}
-
-    def is_admin(self):
-        try: 
-            return ctypes.windll.shell32.IsUserAnAdmin()
-        except:
-            return False
-
     
     def run_all_audits(self):
 
@@ -64,12 +57,7 @@ class WindowsAuditController:
 
     def controller(self):
         try:
-            if self.is_admin():
-                # check if user is admin, if True then run audit
-                # else re run program with admin privledges
-                self.run_all_audits()
-            else:
-                ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+            self.run_all_audits()
 
         except Exception:
             print(print_exc())

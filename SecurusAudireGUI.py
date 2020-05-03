@@ -2,6 +2,12 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
 from modules.audit_controller import AuditController
+from config import CURR_SYSTEM_PLATFORM, ROOT_DIR
+
+
+# UAC elevation
+import ctypes
+import sys
 
 class SecurusAudireGUI:
 
@@ -12,7 +18,7 @@ class SecurusAudireGUI:
         self.window_height = 200
         self.window.geometry(str(self.window_width)+"x"+str(self.window_height))
         self.window.title("SecurusAudire - A Security Audit Tool")
-        self.save_folder_location = "/var/log"
+        self.save_folder_location = ""
 
     def set_text_labels(self):
 
@@ -41,8 +47,19 @@ class SecurusAudireGUI:
         file_save_button.grid(column=2, row=4)
     
     def set_save_directory(self):
-        self.save_folder_location = tk.filedialog.askdirectory()
+        save_folder_location = tk.filedialog.askdirectory()
+        
+        if len(save_folder_location) == 0:
+            
+            if CURR_SYSTEM_PLATFORM == "linux":
+                self.save_folder_location = "/var/log"
 
+            elif CURR_SYSTEM_PLATFORM == "windows":
+                self.save_folder_location = ROOT_DIR
+        else:
+            self.save_folder_location = save_folder_location
+
+        
         file_entry_text = tk.Entry(self.window, width=50)
         file_entry_text.grid(column=1, row=4)
         file_entry_text.insert(0, self.save_folder_location)
@@ -75,7 +92,27 @@ class SecurusAudireGUI:
     def exit_gui(self):
         self.window.destroy()
 
+def is_admin():
+    try: 
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
 
 if __name__ == "__main__":
-    gui_obj = SecurusAudireGUI()
-    gui_obj.run_gui()
+
+    if CURR_SYSTEM_PLATFORM == "windows":
+        
+        if is_admin():
+            # check if user is admin, if True then run audit
+            # else re run program with admin privledges
+            gui_obj = SecurusAudireGUI()
+            gui_obj.run_gui()
+
+        else:
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+
+    elif CURR_SYSTEM_PLATFORM == "linux":
+        
+        gui_obj = SecurusAudireGUI()
+        gui_obj.run_gui()
+    

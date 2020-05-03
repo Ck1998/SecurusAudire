@@ -1,4 +1,9 @@
 from modules.audit_controller import AuditController
+from config import CURR_SYSTEM_PLATFORM, ROOT_DIR
+
+# UAC elevation
+import ctypes
+import sys
 
 
 class SecurusAudireCLI:
@@ -26,11 +31,35 @@ class SecurusAudireCLI:
         self.save_folder_location = input("Enter location to save generated reports (default: /var/log/SecurusAudire_Reports)- ")
 
         if len(self.save_folder_location) == 0:
-            self.save_folder_location = "/var/log"
+            
+            if CURR_SYSTEM_PLATFORM == "linux":
+                self.save_folder_location = "/var/log"
+            elif CURR_SYSTEM_PLATFORM == "windows":
+                self.save_folder_location = ROOT_DIR
 
         self.run_audit()
 
 
+def is_admin():
+    try: 
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+
+
 if __name__ == "__main__":
-    cli_obj = SecurusAudireCLI()
-    cli_obj.run_cli()
+
+    if CURR_SYSTEM_PLATFORM == "windows":
+        
+        if is_admin():
+            # check if user is admin, if True then run audit
+            # else re run program with admin privledges
+            cli_obj = SecurusAudireCLI()
+            cli_obj.run_gui()
+
+        else:
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+
+    elif CURR_SYSTEM_PLATFORM == "linux":
+        cli_obj = SecurusAudireCLI()
+        cli_obj.run_cli()
