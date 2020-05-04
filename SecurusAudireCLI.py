@@ -40,6 +40,9 @@ class SecurusAudireCLI:
                 
                 self.save_folder_location = ROOT_DIR
 
+        if CURR_SYSTEM_PLATFORM == "windows":
+            self.save_folder_location = self.save_folder_location.replace("/", '\\')
+
         self.run_audit()
 
 

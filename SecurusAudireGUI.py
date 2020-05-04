@@ -60,6 +60,9 @@ class SecurusAudireGUI:
             else:
                 pass
 
+        if CURR_SYSTEM_PLATFORM == "windows":
+            self.save_folder_location = self.save_folder_location.replace("/", '\\')
+
         
         file_entry_text = tk.Entry(self.window, width=50)
         file_entry_text.grid(column=1, row=4)
