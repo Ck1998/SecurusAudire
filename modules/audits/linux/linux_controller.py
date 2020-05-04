@@ -15,6 +15,9 @@ import config as CONFIG
 # debugging module
 from traceback import print_exc
 
+# timestamp modules
+from datetime import datetime
+
 
 class LinuxAuditController:
 
@@ -23,6 +26,8 @@ class LinuxAuditController:
         self.save_folder_location = save_folder_location
         self.audit_result = {}
         self.full_report = {}
+        self.audit_start_time = ""
+        self.audit_end_time = ""
 
     def run_all_audits(self):
 
@@ -34,12 +39,12 @@ class LinuxAuditController:
         check_authentication_object = CheckAuthenticationModule()
 
         self.audit_result = {
-            "General System information": general_system_info_object.run_test(),
-            "authentication": check_authentication_object.run_test(),
-            "Check Home Dir": test_home_dir_object.run_test(),
-            "Check System Integrity": check_system_integrity_object.run_test(),
-            "Kernel Hardening": kernel_hardening_object.run_test(),
-            "Check Root Kit": check_root_kits_object.run_test()
+            "General System Information": general_system_info_object.run_test(),
+            "Authentication Audits": check_authentication_object.run_test(),
+            "Home Directory Audits": test_home_dir_object.run_test(),
+            "System Integrity Audits": check_system_integrity_object.run_test(),
+            "Kernel Hardening Audits": kernel_hardening_object.run_test(),
+            "Root Kit Audits": check_root_kits_object.run_test()
         }
 
         self.generate_full_report()
@@ -48,9 +53,14 @@ class LinuxAuditController:
 
         # this function is used for adding audit score and warnings and suggwstions to the audit_results
 
+        self.audit_end_time = datetime.now()
+
         self.full_report = {
             "System Score": CONFIG.SYSTEM_SCORE,
             "Total Score Possible": CONFIG.TOTAL_SCORE_POSSIBLE,
+            'Audit Start Time': str(self.audit_start_time),
+            'Audit End Time': str(self.audit_end_time),
+            'Audit Duration': str(self.audit_end_time - self.audit_start_time),
             "Suggestions": CONFIG.SUGGESTIONS_DICT,
             "Warnings": CONFIG.WARNING_DICT,
             "Audit Results": self.audit_result
@@ -65,6 +75,7 @@ class LinuxAuditController:
 
     def controller(self):
         try:
+            self.audit_start_time = datetime.now()
             self.run_all_audits()
         except:
             print(print_exc())

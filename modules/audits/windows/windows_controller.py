@@ -11,9 +11,8 @@ import config as CONFIG
 # debugging module 
 from traceback import print_exc
 
-# UAC Elevation modules
-import ctypes
-import sys
+# datetime module
+from datetime import datetime
 
 
 class WindowsAuditController:
@@ -23,7 +22,9 @@ class WindowsAuditController:
         self.save_folder_location = save_folder_location
         self.audit_result = {}
         self.full_report = {}
-    
+        self.audit_start_time = ""
+        self.audit_end_time = ""
+
     def run_all_audits(self):
 
         windows_registry_audits_object = WindowsRegistryAudits()
@@ -40,9 +41,14 @@ class WindowsAuditController:
 
         # this function is used for adding audit score and warnings and suggwstions to the audit_results
 
+        self.audit_end_time = datetime.now()
+        
         self.full_report = {
             "System Score": CONFIG.SYSTEM_SCORE,
             "Total Score Possible": CONFIG.TOTAL_SCORE_POSSIBLE,
+            'Audit Start Time': str(self.audit_start_time),
+            'Audit End Time': str(self.audit_end_time),
+            'Audit Duration': str(self.audit_end_time - self.audit_start_time),
             "Suggestions": CONFIG.SUGGESTIONS_DICT,
             "Warnings": CONFIG.WARNING_DICT,
             "Audit Results": self.audit_result
@@ -57,6 +63,7 @@ class WindowsAuditController:
 
     def controller(self):
         try:
+            self.audit_start_time = datetime.now()
             self.run_all_audits()
 
         except Exception:
