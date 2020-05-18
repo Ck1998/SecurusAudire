@@ -187,22 +187,3 @@ s @ Checking for Important System Binaries : yum > bin/ sbin/ usr/bin/ usr/sbin/
 s @ Checking for Important System Binaries : xargs > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "xargs" found. : Important system binary "xargs" not found
 s @ Checking for Important System Binaries : zgrep > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "zgrep" found. : Important system binary "zgrep" not found
 s @ Checking for Important System Binaries : zypper > bin/ sbin/ usr/bin/ usr/sbin/ usr/local/bin/ usr/local/sbin/ ! Important system binary "zypper" found. : Important system binary "zypper" not found
-
-# TEST = Authentication Modules
-s @ Checking for installed Authentication  Modules : pam_tmpdir.so > lib/ ! libpam-tmpdir is installed : libpam-tmpdir is not installed.
-s @ Checking for installed Authentication  Modules : pam_usb.so > lib/ ! libpam-usb is installed : libpam-usb is not installed.
-
-
-# TEST = pam_tmpdir.so checks
-r @ pam_tmpdir.so checks : pam_tmdpdir.so > etc/pam.d/common-session ! libpam-tmpdir is enabled in common-session. : libpam-tmpdir is not enabled in common-session.
-
-# TEST = pam_usb.so checks
-# do this line 131
-r @ pam_tmpdir.so checks : ^auth\s+ > etc/pam.d/common-session ! libpam-tmpdir is enabled in common-session. : libpam-tmpdir is not enabled in common-session.
-
-# TEST = File System
-# MAKE NOTES ASAP
-
-# line 427
-# TEST = Software Checks
-# MAKE NOTES ASAP

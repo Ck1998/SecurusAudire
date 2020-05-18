@@ -1,4 +1,4 @@
 psutil
 ntplib
 json2html
-winreg
+scapy
