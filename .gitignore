@@ -326,8 +326,9 @@ web_report.html
 script.py
 db/create_formatted_db.py
 db/win10_audit_db.txt
-db/win10_audit_db.txt
 cd
 python
 /SecurusAudire_Reports/json_report-2020-05-03.json
 /SecurusAudire_Reports/web_report-2020-05-03.html
+
+/not_included

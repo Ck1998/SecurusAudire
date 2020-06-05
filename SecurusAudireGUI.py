@@ -1,9 +1,8 @@
-import tkinter as tk 
+import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
 from modules.audit_controller import AuditController
 from config import CURR_SYSTEM_PLATFORM, ROOT_DIR
-
 
 # UAC elevation
 import ctypes

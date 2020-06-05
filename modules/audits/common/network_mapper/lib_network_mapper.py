@@ -1,9 +1,12 @@
-from modules.audits.base_model import BaseTest
+# from modules.audits.base_model import BaseTest
 from scapy import *
 import socket
 from subprocess import check_output, CalledProcessError
 #from config import CURR_SYSTEM_PLATFORM
 import json
+import threading
+from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import IPScannerUsingPing
+from queue import Queue
 
 class NetworkMapper:  # (BaseTest):
 
@@ -37,11 +40,14 @@ class NetworkMapper:  # (BaseTest):
     def send_ping_packet(self):
         for interface in self.system_network.keys():
             all_possible_ips = self.system_network[interface]["all_possible_ips"]
-            for ip in all_possible_ips:
+            ping_scanner_obj = IPScannerUsingPing(all_possible_ips=all_possible_ips)
+            result = ping_scanner_obj.run_test()
+            """for ip in all_possible_ips:
                 output = ""
                 try:
                     #if CURR_SYSTEM_PLATFORM == "linux":
-                    output = check_output(["ping", "-c", "3", ip])
+                    print("checking ip "+ip)
+                    output = check_output(["ping", "-c", "1", ip])
                     # elif CURR_SYSTEM_PLATFORM == "windows":
                     #    output = check_output(["ping", "-n", "3", ip])
                 except CalledProcessError:
@@ -49,27 +55,62 @@ class NetworkMapper:  # (BaseTest):
 
                 output = output.decode("utf-8")
                 if "100% packet loss" not in output:
-                    self.system_network[interface]["connected_nodes"].append(ip)
+                    self.system_network[interface]["connected_nodes"].append(ip)"""
+
+            print(result)
 
     def send_arp_packet(self):
         pass
 
+    @staticmethod
+    def get_port_status(ip, port, socket_object):
+        try:
+            print("checking "+port)
+            connection_object = socket_object.connect((ip, port))
+            connection_object.close()
+            return True
+        except:
+            return False
+
+    def multi_threading_control(self, ip, socket_object, queue_obj):
+        active_port = []
+        while True:
+            port = queue_obj.get()
+            result = self.get_port_status(ip=ip,
+                                          port=port,
+                                          socket_object=socket_object)
+            if result:
+                active_port.append(port)
+            queue_obj.task_done()
+
+        return active_port
+
     def scan_ports(self):
+
         socket_obj = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
         for interface in self.system_network.keys():
             socket_obj.bind((interface, 0))
             for ip in interface["connected_nodes"]:
+
                 self.system_network[interface]["Open_Port_Analysis"][ip] = []
+                queue_obj = Queue()
+
                 for port in (1, 65535):
-                    result = socket_obj.connect_ex((ip, port))
-                    if result == 0:
-                        self.system_network[interface]["Open_Port_Analysis"][ip].append(port)
+                    queue_obj.put(port)
+
+                active_ports = self.multi_threading_control(ip = ip,
+                                                           socket_object=socket_obj,
+                                                           queue_obj=queue_obj)
+
+                self.system_network[interface]["Open_Port_Analysis"][ip] = active_ports
+
             socket_obj.close()
 
     @staticmethod
     def calculate_all_ips(ip):
         all_ips = []
-        for i in range(1, 256):
+        for i in range(1, 255):
             temp_ip = ip[:ip.rfind(".")] + "." + str(i)
             all_ips.append(temp_ip)
         return all_ips
@@ -95,6 +136,10 @@ class NetworkMapper:  # (BaseTest):
         return cidr_value
 
     def process_system_network_info(self):
+        # Removing unused keys
+        self.network_info.pop("Total Bytes Sent (Since Boot)")
+        self.network_info.pop("Total Bytes Received (Since Boot)")
+
         for interface, interface_details in self.network_info.items():
             try:
                 ip = interface_details["IP_Address"]
@@ -118,8 +163,8 @@ class NetworkMapper:  # (BaseTest):
     def run_test(self):
         self.process_system_network_info()
         self.send_ping_packet()
-        self.scan_ports()
-        print(json.dumps(self.system_network))
+        #self.scan_ports()
+        #print(json.dumps(self.system_network))
 
 
 if __name__ == "__main__":
@@ -133,7 +178,7 @@ if __name__ == "__main__":
                         "Broadcast_MAC": None
                     },
                 "wlo1": {
-                        "IP_Address": "192.168.1.3",
+                        "IP_Address": "192.168.1.12",
                         "Netmask": None,
                         "Broadcast_IP": "192.168.1.255",
                         "MAC_Address": "7c:5c:f8:c6:18:d5",
