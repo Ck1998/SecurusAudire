@@ -331,4 +331,5 @@ python
 /SecurusAudire_Reports/json_report-2020-05-03.json
 /SecurusAudire_Reports/web_report-2020-05-03.html
 
-/not_included
+not_included/
+.idea/
