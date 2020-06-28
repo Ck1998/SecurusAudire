@@ -8,6 +8,7 @@ from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernelHar
 from modules.audits.linux.check_root_kit.lib_check_root_kit import CheckRootKits
 from modules.audits.linux.test_home_dir.lib_test_home_dir import TestHomeDir
 from modules.audits.linux.check_memory_processes.lib_check_memory_processes import CheckMemoryProcesses
+from modules.audits.base_model import BaseTest
 
 # report modules
 from modules.report_generation.report_generation_controller import ReportGenController
@@ -32,8 +33,13 @@ class LinuxAuditController:
         self.audit_start_time = ""
         self.audit_end_time = ""
 
-    def run_all_audits(self):
+    @staticmethod
+    def fetch_all_audit_classes():
+        audit_classes = BaseTest.__subclasses__()
+        return None
 
+    def run_all_audits(self):
+        fetch_all_aduit_classes = self.fetch_all_audit_classes()
         test_home_dir_object = TestHomeDir()
         check_root_kits_object = CheckRootKits()
         check_system_integrity_object = CheckSystemIntegrity()
