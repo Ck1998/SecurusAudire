@@ -1,8 +1,11 @@
 from modules.audits.base_model import BaseTest
 import os
 
+
 class CheckFilePermissions(BaseTest):
-    
+
+    __disabled__ = False
+
     def __init__(self):
         super().__init__()
         self.test_result = {}

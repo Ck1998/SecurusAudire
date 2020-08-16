@@ -3,7 +3,9 @@ import config as CONFIG
 
 
 class CheckSystemIntegrity(BaseTest):
-    
+
+    __disabled__ = False
+
     def __init__(self):
         super().__init__()
         self.test_result = {}

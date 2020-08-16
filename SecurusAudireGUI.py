@@ -3,10 +3,12 @@ from tkinter import filedialog
 from tkinter import messagebox
 from modules.audit_controller import AuditController
 from config import CURR_SYSTEM_PLATFORM, ROOT_DIR
+import getpass
 
 # UAC elevation
 import ctypes
 import sys
+
 
 class SecurusAudireGUI:
 
@@ -15,7 +17,7 @@ class SecurusAudireGUI:
         self.window = tk.Tk()
         self.window_width = 1000
         self.window_height = 200
-        self.window.geometry(str(self.window_width)+"x"+str(self.window_height))
+        self.window.geometry(str(self.window_width) + "x" + str(self.window_height))
         self.window.title("SecurusAudire - A Security Audit Tool")
         self.save_folder_location = ""
 
@@ -26,10 +28,10 @@ class SecurusAudireGUI:
 
         sub_title_label = tk.Label(self.window, text="2020")
         sub_title_label.grid(column=0, row=1)
-    
+
     def set_buttons(self):
-        
-        run_audit_button = tk.Button(self.window, text="Run System Audit", command= self.run_audit)
+
+        run_audit_button = tk.Button(self.window, text="Run System Audit", command=self.run_audit)
         run_audit_button.grid(column=0, row=7)
 
         exit_button = tk.Button(self.window, text="Exit", command=self.exit_gui)
@@ -44,12 +46,12 @@ class SecurusAudireGUI:
 
         file_save_button = tk.Button(self.window, text="Browse", command=self.set_save_directory)
         file_save_button.grid(column=2, row=4)
-    
+
     def set_save_directory(self):
         self.save_folder_location = tk.filedialog.askdirectory()
 
         if len(self.save_folder_location) == 0:
-            
+
             if CURR_SYSTEM_PLATFORM == "linux":
                 self.save_folder_location = "/var/log"
 
@@ -62,7 +64,6 @@ class SecurusAudireGUI:
         if CURR_SYSTEM_PLATFORM == "windows":
             self.save_folder_location = self.save_folder_location.replace("/", '\\')
 
-        
         file_entry_text = tk.Entry(self.window, width=50)
         file_entry_text.grid(column=1, row=4)
         file_entry_text.insert(0, self.save_folder_location)
@@ -70,20 +71,22 @@ class SecurusAudireGUI:
     def run_audit(self):
         audit_controller_object = AuditController(self.save_folder_location)
         audit_status = audit_controller_object.controller()
-        
+
         if audit_status == 5:
-            tk.messagebox.showinfo('Info','OS Not Supported as of now')
+            tk.messagebox.showinfo('Info', 'OS Not Supported as of now')
             self.exit_gui()
         elif audit_status == 0:
-            tk.messagebox.showinfo('Success','System Audit Complete. You can view generated reports at - '+self.save_folder_location+"/SecurusAudire_Reports/")
+            tk.messagebox.showinfo('Success',
+                                   'System Audit Complete. You can view generated reports at - ' + self.save_folder_location + "/SecurusAudire_Reports/")
             self.exit_gui()
         else:
-            result = tk.messagebox.askyesno('Error', 'SecurusAudire encountered some errors, are you running the script as root?') 
+            result = tk.messagebox.askyesno('Error',
+                                            'SecurusAudire encountered some errors, are you running the script as root?')
             if not result:
-                tk.messagebox.showinfo('Info','Script should be executed with root privileges!!!')
+                tk.messagebox.showinfo('Info', 'Script should be executed with root privileges!!!')
                 self.exit_gui()
             else:
-                tk.messagebox.showinfo('Info','Please exit and try again!!!')
+                tk.messagebox.showinfo('Info', 'Please exit and try again!!!')
                 self.exit_gui()
 
     def run_gui(self):
@@ -95,16 +98,18 @@ class SecurusAudireGUI:
     def exit_gui(self):
         self.window.destroy()
 
+
 def is_admin():
-    try: 
+    try:
         return ctypes.windll.shell32.IsUserAnAdmin()
     except:
         return False
 
+
 if __name__ == "__main__":
 
     if CURR_SYSTEM_PLATFORM == "windows":
-        
+
         if is_admin():
             # check if user is admin, if True then run audit
             # else re run program with admin privledges
@@ -118,4 +123,3 @@ if __name__ == "__main__":
 
         gui_obj = SecurusAudireGUI()
         gui_obj.run_gui()
-    

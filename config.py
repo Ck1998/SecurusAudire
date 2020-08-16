@@ -22,3 +22,9 @@ WARNING_DICT = {}
 
 # Platform System
 CURR_SYSTEM_PLATFORM = system().lower()
+
+
+COMMON_PORTS = {
+    23: "TCP",
+    234: "UDP"
+}

@@ -1,42 +1,29 @@
-# from modules.audits.base_model import BaseTest
-from subprocess import check_output, CalledProcessError
-from concurrent.futures import ThreadPoolExecutor
-import threading
+from modules.audits.base_model import BaseTest
+import nmap
 
 
-class IPScannerUsingPing:  # (BaseTest):
+class IPScannerUsingPing(BaseTest):
 
-    def __init__(self, all_possible_ips: list = None):
+    __disabled__ = False
+
+    def __init__(self):
         super().__init__()
-        self.all_possible_ips = all_possible_ips  # Set of 256 strings
-        self.active_ips = []
-        self.thread_pool_executor_obj = ThreadPoolExecutor(max_workers=32)
-
-    """
-        Ye karega ye saari ip lega 
-        ek ek karke ping karega 
-        check karega response ka agar 
-        response aaya too active ip mai daal dega
-        Isme ThreadPoolExecutor kaise use karun         
-    """
-
-    def send_ping_packet(self):
-        for ip in self.all_possible_ips:
-            output = ""
-            try:
-                # if CURR_SYSTEM_PLATFORM == "linux":
-                output = check_output(["ping", "-c", "1", ip])
-                # elif CURR_SYSTEM_PLATFORM == "windows":
-                #    output = check_output(["ping", "-n", "3", ip])
-            except CalledProcessError:
-                continue
-
-            output = output.decode("utf-8")
-            if "100% packet loss" not in output:
-                self.active_ips.append(ip)
-
+        self.test_result = {
+            "Total number of hosts": "",
+            "Hosts - Up": "",
+            "Hosts - Down": "",
+            "Live Hosts": []
+        }
 
     def run_test(self):
-        #self.send_ping_packet()
-        self.thread_pool_executor_obj.submit(self.send_ping_packet)
-        return self.active_ips
+        ip_scanner = nmap.PortScanner()
+        ip_scan_result = ip_scanner.scan(hosts='192.168.1.0/24', arguments='-n -sP -PE -PA21,23,80,3389', sudo=True)
+
+        self.test_result['Total number of hosts'] = ip_scan_result['nmap']['scanstats']['totalhosts']
+        self.test_result['Hosts - Up'] = ip_scan_result['nmap']['scanstats']['uphosts']
+        self.test_result['Hosts - Down'] = ip_scan_result['nmap']['scanstats']['downhosts']
+
+        for live_host in ip_scan_result['scan'].keys():
+            self.test_result["Live Hosts"].append(live_host)
+
+        return self.test_result

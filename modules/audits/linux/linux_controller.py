@@ -1,5 +1,7 @@
 # common modules
 from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
+# from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import IPScannerUsingPing
+# from modules.audits.common.network_mapper.port_scanner.lib_port_scanner import PortScanner
 
 # audit modules
 from modules.audits.linux.check_authentication.lib_authentication import CheckAuthenticationModule
@@ -8,6 +10,7 @@ from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernelHar
 from modules.audits.linux.check_root_kit.lib_check_root_kit import CheckRootKits
 from modules.audits.linux.test_home_dir.lib_test_home_dir import TestHomeDir
 from modules.audits.linux.check_memory_processes.lib_check_memory_processes import CheckMemoryProcesses
+
 from modules.audits.base_model import BaseTest
 
 # report modules
@@ -21,6 +24,9 @@ from traceback import print_exc
 
 # timestamp modules
 from datetime import datetime
+
+# Regex module
+import re
 
 
 class LinuxAuditController:
@@ -36,19 +42,26 @@ class LinuxAuditController:
     @staticmethod
     def fetch_all_audit_classes():
         audit_classes = BaseTest.__subclasses__()
-        return None
+        return audit_classes
 
     def run_all_audits(self):
-        fetch_all_aduit_classes = self.fetch_all_audit_classes()
-        test_home_dir_object = TestHomeDir()
+        audit_classes = self.fetch_all_audit_classes()
+        """test_home_dir_object = TestHomeDir()
         check_root_kits_object = CheckRootKits()
         check_system_integrity_object = CheckSystemIntegrity()
         kernel_hardening_object = KernelHardening()
         general_system_info_object = GeneralSystemInformation()
         check_authentication_object = CheckAuthenticationModule()
-        check_memory_processes = CheckMemoryProcesses()
+        check_memory_processes = CheckMemoryProcesses()"""
 
-        self.audit_result = {
+        for audit_class in audit_classes:
+            if audit_class.__disabled__:
+                continue
+            else:
+                audit_name = re.sub(r"(\w)([A-Z])", r"\1 \2", audit_class.__name__)
+                self.audit_result[audit_name] = audit_class().run_test()
+
+        """self.audit_result = {
             "General System Information": general_system_info_object.run_test(),
             "Authentication Audits": check_authentication_object.run_test(),
             "Home Directory Audits": test_home_dir_object.run_test(),
@@ -56,7 +69,7 @@ class LinuxAuditController:
             "System Integrity Audits": check_system_integrity_object.run_test(),
             "Kernel Hardening Audits": kernel_hardening_object.run_test(),
             "Root Kit Audits": check_root_kits_object.run_test()
-        }
+        }"""
 
         self.generate_full_report()
 

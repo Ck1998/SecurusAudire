@@ -1,35 +1,35 @@
-#############################################################################################################
-#                                                                                                           #
-#    This database is for the list of checks to                                                             #
-#    perform on a linux/debian based machine                                                                #
-#                                                                                                           #
-#############################################################################################################
+#############################################################################################################################
+#                                                                                                                           #
+#                        This database is for the list of checks to                                                         #
+#                        perform on a linux/debian based machine                                                            #
+#                                                                                                                           #
+#############################################################################################################################
 
-#############################################################################################################
-#                                                                                                           #
-#    Guidelines for this database                                                                           #
-#                                                                                                           #
-#    1. Lines starting with '#' and blank lines will                                                        #
-#       be ignored by the parser                                                                            #
-#
-#    2. Record in this database will be of the following
-#       format
-#           <record_typ > @<specific format for that recor >  !<success messag >  :<failed messag > 
-#                                                                                                           #
-#    3. Records in this db can be off the following 
-#       types - 
-#
-#           3.1 Search Records(s) - this record signifies that 
-#               the record is to be searched in the path 
-#               specidifed.
-#               Format -
-#                  s @ <test nam > :<file/directory nam >  >  <p laces to searc >  !<success messag >  :<failed messag > 
-#
-#           3.2 Regex Records(s) - this record signifies that 
-#               a regex is to be used to search in a particular  
-#               file
-#                                                                                                           #
-#############################################################################################################
+#############################################################################################################################
+#                                                                                                                           #
+#    Guidelines for this database                                                                                           #
+#                                                                                                                           #
+#    1. Lines starting with '#' and blank lines will                                                                        #
+#       be ignored by the parser                                                                                            #
+#                                                                                                                           #
+#    2. Record in this database will be of the following                                                                    #
+#       format                                                                                                              #
+#           <record_typ > @<specific format for that recor >  !<success messag >  :<failed messag >                         #
+#                                                                                                                           #
+#    3. Records in this db can be off the following                                                                         #
+#       types -                                                                                                             #
+#                                                                                                                           #
+#           3.1 Search Records(s) - this record signifies that                                                              #
+#               the record is to be searched in the path                                                                    #
+#               specidifed.                                                                                                 #
+#               Format -                                                                                                    #
+#                  s @ <test nam > :<file/directory nam >  >  <p laces to searc >  !<success messag >  :<failed messag >    #
+#                                                                                                                           #
+#           3.2 Regex Records(s) - this record signifies that                                                               #
+#               a regex is to be used to search in a particular                                                             #
+#               file                                                                                                        #
+#                                                                                                                           #
+#############################################################################################################################
 
 
 

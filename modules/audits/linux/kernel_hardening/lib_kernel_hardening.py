@@ -4,6 +4,7 @@ import config as CONFIG
 
 class KernelHardening(BaseTest):
 
+    __disabled__ = False
 
     def __init__(self):
         super().__init__()
