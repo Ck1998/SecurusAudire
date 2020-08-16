@@ -105,4 +105,9 @@ class LinuxAuditController:
             print(print_exc())
             return 1
             
-        return 0 
+        return 0
+
+
+# TODO: Rename classes name
+# TODO: Change reports
+# TODO: integrate network mapper

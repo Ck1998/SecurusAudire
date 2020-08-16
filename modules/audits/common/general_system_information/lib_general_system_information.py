@@ -111,7 +111,7 @@ class GeneralSystemInformation(BaseTest):
                 elif str(address.family) == 'AddressFamily.AF_PACKET':
                     self.test_results["Network Information"][interface_name].update(
                         MAC_Address=address.address,
-                        Netmask=address.netmask,
+                        MAC_Netmask=address.netmask,
                         Broadcast_MAC=address.broadcast
                     )
 
