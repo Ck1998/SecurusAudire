@@ -1,18 +1,25 @@
-# add audit modules
-from modules.audits.windows.windows_registry_check.lib_windows_registry_check import WindowsRegistryAudits
-from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
+# common audit modules
+from modules.audits.common import *
+
+# linux Audit modules
+from modules.audits.windows import *
+
+from modules.audits.base_model import BaseTest
 
 # report modules
 from modules.report_generation.report_generation_controller import ReportGenController
 
-# config varibales
+# config variable
 import config as CONFIG
 
-# debugging module 
+# debugging module
 from traceback import print_exc
 
-# datetime module
+# timestamp modules
 from datetime import datetime
+
+# Regex module
+import re
 
 
 class WindowsAuditController:
@@ -25,15 +32,20 @@ class WindowsAuditController:
         self.audit_start_time = ""
         self.audit_end_time = ""
 
+    @staticmethod
+    def fetch_all_audit_classes():
+        audit_classes = BaseTest.__subclasses__()
+        return audit_classes
+
     def run_all_audits(self):
+        audit_classes = self.fetch_all_audit_classes()
 
-        windows_registry_audits_object = WindowsRegistryAudits()
-        general_system_info_object = GeneralSystemInformation()
-
-        self.audit_result = {
-            "General System Information": general_system_info_object.run_test(),
-            "Windows Registry Audits": windows_registry_audits_object.run_test()
-        }
+        for audit_class in audit_classes:
+            if audit_class.__disabled__:
+                continue
+            else:
+                audit_name = re.sub(r"(\w)([A-Z])", r"\1 \2", audit_class.__name__)
+                self.audit_result[audit_name] = audit_class().run_test()
 
         self.generate_full_report()
 

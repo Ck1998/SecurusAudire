@@ -39,13 +39,6 @@ class LinuxAuditController:
 
     def run_all_audits(self):
         audit_classes = self.fetch_all_audit_classes()
-        """test_home_dir_object = TestHomeDir()
-        check_root_kits_object = CheckRootKits()
-        check_system_integrity_object = CheckSystemIntegrity()
-        kernel_hardening_object = KernelHardening()
-        general_system_info_object = GeneralSystemInformation()
-        check_authentication_object = CheckAuthenticationModule()
-        check_memory_processes = CheckMemoryProcesses()"""
 
         for audit_class in audit_classes:
             if audit_class.__disabled__:
@@ -53,16 +46,6 @@ class LinuxAuditController:
             else:
                 audit_name = re.sub(r"(\w)([A-Z])", r"\1 \2", audit_class.__name__)
                 self.audit_result[audit_name] = audit_class().run_test()
-
-        """self.audit_result = {
-            "General System Information": general_system_info_object.run_test(),
-            "Authentication Audits": check_authentication_object.run_test(),
-            "Home Directory Audits": test_home_dir_object.run_test(),
-            "Memory Process Audits": check_memory_processes.run_test(),
-            "System Integrity Audits": check_system_integrity_object.run_test(),
-            "Kernel Hardening Audits": kernel_hardening_object.run_test(),
-            "Root Kit Audits": check_root_kits_object.run_test()
-        }"""
 
         self.generate_full_report()
 
