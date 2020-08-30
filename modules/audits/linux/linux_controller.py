@@ -1,15 +1,15 @@
 # common modules
 from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
-from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import IPScannerUsingPing
+from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import NetworkScannerUsingPing
 from modules.audits.common.network_mapper.port_scanner.lib_port_scanner import PortScanner
 
 # audit modules
-from modules.audits.linux.check_authentication.lib_authentication import CheckAuthenticationModule
-from modules.audits.linux.check_system_integrity.lib_check_system_integrity import CheckSystemIntegrity
-from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernelHardening
-from modules.audits.linux.check_root_kit.lib_check_root_kit import CheckRootKits
-from modules.audits.linux.test_home_dir.lib_test_home_dir import TestHomeDir
-from modules.audits.linux.check_memory_processes.lib_check_memory_processes import CheckMemoryProcesses
+from modules.audits.linux.check_authentication.lib_authentication import AuthenticationModuleAudits
+from modules.audits.linux.check_system_integrity.lib_check_system_integrity import SystemIntegrityAudits
+from modules.audits.linux.kernel_hardening.lib_kernel_hardening import KernaleHardeningAudits
+from modules.audits.linux.check_root_kit.lib_check_root_kit import RootKitAudits
+from modules.audits.linux.test_home_dir.lib_test_home_dir import HomeDirectoryAudits
+from modules.audits.linux.check_memory_processes.lib_check_memory_processes import MemoryProcessAudits
 
 from modules.audits.base_model import BaseTest
 
