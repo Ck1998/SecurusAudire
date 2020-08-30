@@ -1,0 +1,10 @@
+# linux audit modules
+from .check_authentication.lib_authentication import AuthenticationModuleAudits
+from .check_system_integrity.lib_check_system_integrity import SystemIntegrityAudits
+from .kernel_hardening.lib_kernel_hardening import KernaleHardeningAudits
+from .check_root_kit.lib_check_root_kit import RootKitAudits
+from .test_home_dir.lib_test_home_dir import HomeDirectoryAudits
+from .check_memory_processes.lib_check_memory_processes import MemoryProcessAudits
+
+# custom audits
+from .custom_audits.lib_custom_audits import *
