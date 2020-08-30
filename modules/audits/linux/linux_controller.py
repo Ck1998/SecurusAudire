@@ -1,7 +1,7 @@
 # common modules
 from modules.audits.common.general_system_information.lib_general_system_information import GeneralSystemInformation
-# from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import IPScannerUsingPing
-# from modules.audits.common.network_mapper.port_scanner.lib_port_scanner import PortScanner
+from modules.audits.common.network_mapper.ip_scanner_using_ping.lib_ip_scanner_using_ping import IPScannerUsingPing
+from modules.audits.common.network_mapper.port_scanner.lib_port_scanner import PortScanner
 
 # audit modules
 from modules.audits.linux.check_authentication.lib_authentication import CheckAuthenticationModule
@@ -110,4 +110,3 @@ class LinuxAuditController:
 
 # TODO: Rename classes name
 # TODO: Change reports
-# TODO: integrate network mapper
