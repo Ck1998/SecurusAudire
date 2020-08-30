@@ -5,7 +5,7 @@ from psutil import STATUS_ZOMBIE, STATUS_DEAD, process_iter
 import config as CONFIG
 
 
-class CheckMemoryProcesses(BaseTest):
+class MemoryProcessAudits(BaseTest):
 
     __disabled__ = False
 

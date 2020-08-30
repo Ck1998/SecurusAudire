@@ -3,7 +3,7 @@ import re
 import config as CONFIG
 
 
-class TestHomeDir(BaseTest):
+class HomeDirectoryAudits(BaseTest):
 
     __disabled__ = False
 

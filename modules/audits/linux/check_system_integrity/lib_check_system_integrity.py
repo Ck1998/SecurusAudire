@@ -2,7 +2,7 @@ from modules.audits.base_model import BaseTest
 import config as CONFIG
 
 
-class CheckSystemIntegrity(BaseTest):
+class SystemIntegrityAudits(BaseTest):
 
     __disabled__ = False
 

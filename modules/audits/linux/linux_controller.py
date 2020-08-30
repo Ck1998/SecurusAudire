@@ -108,5 +108,4 @@ class LinuxAuditController:
         return 0
 
 
-# TODO: Rename classes name
 # TODO: Change reports

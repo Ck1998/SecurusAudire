@@ -3,7 +3,7 @@ import config as CONFIG
 import subprocess
 
 
-class CheckAuthenticationModule(BaseTest):
+class AuthenticationModuleAudits(BaseTest):
 
     __disabled__ = False
 

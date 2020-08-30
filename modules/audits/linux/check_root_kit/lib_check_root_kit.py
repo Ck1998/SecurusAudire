@@ -7,7 +7,7 @@ import os
 import glob
 
 
-class CheckRootKits(BaseTest):
+class RootKitAudits(BaseTest):
 
     __disabled__ = False
 

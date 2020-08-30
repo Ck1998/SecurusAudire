@@ -3,7 +3,7 @@ import nmap
 import psutil
 
 
-class IPScannerUsingPing(BaseTest):
+class NetworkScannerUsingPing(BaseTest):
 
     __disabled__ = False
 

@@ -2,7 +2,7 @@ from modules.audits.base_model import BaseTest
 import os
 
 
-class CheckFilePermissions(BaseTest):
+class FilePermissionAudits(BaseTest):
 
     __disabled__ = False
 
