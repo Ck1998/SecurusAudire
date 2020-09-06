@@ -80,8 +80,7 @@ class LinuxAuditController:
         except:
             print(print_exc())
             return 1
-            
-        return 0
 
+        return 0
 
 # TODO: Change reports

@@ -1,5 +1,6 @@
 from modules.utils.lib_general_utils import Utils
 
+
 class ReportGenBase(object):
 
     def __init__(self):
