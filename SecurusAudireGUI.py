@@ -10,7 +10,7 @@ import ctypes
 import sys
 
 
-class SecurusAudireGUI:
+class SecurusAudireGUI(object):
 
     def __init__(self):
         super().__init__()
