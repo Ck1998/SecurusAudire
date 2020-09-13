@@ -43,10 +43,10 @@ class CreateCheckBox(Frame):
         for i in range(len(check_box_arrays)):
             for j in range(len(check_box_arrays[i])):
                 option_value = IntVar()
-                ttk.Checkbutton(parent_frame, variable=option_value, text=f"{arr[i][j]}").grid(column=j,
+                ttk.Checkbutton(parent_frame, variable=option_value, text=f"{check_box_arrays[i][j]}").grid(column=j,
                                                                                                row=starting_row + i + 1,
                                                                                                sticky=(N, S))
-                self.vars[arr[i][j]] = option_value
+                self.vars[check_box_arrays[i][j]] = option_value
                 self.last_row = i + 1
 
     def get_last_row(self):
