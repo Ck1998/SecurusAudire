@@ -144,9 +144,9 @@ class SecurusAudireGUI(object):
         ttk.Label(custom_audit_frame, text="custom audits").grid(column=1, row=0, sticky=(W, E))
 
         if CURR_SYSTEM_PLATFORM == "linux":
-            import modules.audits.linux.custom_audits.lib_custom_audits
+            import modules.audits.linux.custom_audits
         elif CURR_SYSTEM_PLATFORM == "windows":
-            import modules.audits.windows.custom_audits.lib_custom_audits
+            import modules.audits.windows.custom_audits
         else:
             ttk.Label(custom_audit_frame, text=f"{CURR_SYSTEM_PLATFORM} not supported").grid(column=1, row=0,
                                                                                              sticky=(W, E))
@@ -155,7 +155,8 @@ class SecurusAudireGUI(object):
         self.audit_classes['custom_audits'] = [audit_class for audit_class in BaseTest.__subclasses__()
                                                if
                                                audit_class not in self.audit_classes['general_system_audits']
-                                               and audit_class not in self.audit_classes['system_specific_audits']]
+                                               if
+                                               audit_class not in self.audit_classes['system_specific_audits']]
 
         custom_audits = self.convert_to_matrix(self.audit_classes['custom_audits'])
 

@@ -4,6 +4,9 @@ from modules.audits.common import *
 # linux Audit modules
 from modules.audits.linux import *
 
+# custom audit modules
+from modules.audits.linux.custom_audits import *
+
 from modules.audits.base_model import BaseTest
 
 # report modules

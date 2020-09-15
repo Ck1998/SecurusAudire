@@ -87,7 +87,10 @@ class GenerateWebReport(ReportGenBase):
         audit_start_time = self.full_report["Audit Start Time"]
         audit_end_time = self.full_report["Audit End Time"]
         audit_duration = self.full_report["Audit Duration"]
-        hardening_index = round((system_score/total_score_possible)*100, 2)
+        try:
+            hardening_index = round((system_score/total_score_possible)*100, 2)
+        except ZeroDivisionError:
+            hardening_index = 0.00
 
         main_content = f""" <div id="content"> <nav class="navbar navbar-expand-lg navbar-light bg-light"> <div class="container-fluid"> <button type="button" id="sidebarCollapse" class="btn btn-info"> <i class="fas fa-align-left"></i> <span></span> </button> <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-align-justify"></i> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="nav navbar-nav ml-auto"> <li class="nav-item active"> <h4>Web Report</h4> </li></ul> </div></div></nav><!--Score--><hr /><div id="score" class="row"><div class="col"><h5 style="margin: auto; text-align: center;">Total Score - {system_score}/{total_score_possible}</h5></div><div class="col"><h5 style="margin: auto; text-align: center;"> Hardening Index - {hardening_index}%</h5></div></div><hr /><div id="time" class="row"><div class="col"><h5 style="margin: auto; text-align: center;">Audit Start Time - {audit_start_time}</h5></div><div class="col"><h5 style="margin: auto; text-align: center;"> Audit End Time - {audit_end_time}</h5></div></div><hr /><div id="duration" class="row"><div class="col"><h5 style="margin: auto; text-align: center;"> Audit Duration - {audit_duration}</h5></div></div>
         <hr /><br /><hr /><div id="main_table"><h5>Full Report</h5><hr /><br />{complete_table}</div><div id="main_content"><div id="Audit_content"><a class="go_back" href="#main_table"><h5>Full Report</a> > Audit Results</h5><hr /><br />{main_table}</div>"""

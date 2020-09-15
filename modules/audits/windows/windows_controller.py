@@ -1,8 +1,11 @@
 # common audit modules
 from modules.audits.common import *
 
-# linux Audit modules
+# windows Audit modules
 from modules.audits.windows import *
+
+# custom audit modules
+from modules.audits.linux.custom_audits import *
 
 from modules.audits.base_model import BaseTest
 
