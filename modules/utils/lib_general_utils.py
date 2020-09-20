@@ -37,11 +37,11 @@ class Utils:
 
         response.offset
 
-        return (datetime.fromtimestamp(response.tx_time, timezone.utc))
+        return datetime.fromtimestamp(response.tx_time, timezone.utc)
     
     @staticmethod
-    def get_current_datetime():
-        curr_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    def get_current_datetime() -> datetime:
+        curr_datetime = datetime.now()
         if curr_datetime is None:
             raise EnvironmentError
         else:

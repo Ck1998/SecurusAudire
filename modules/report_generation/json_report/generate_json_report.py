@@ -12,31 +12,28 @@ class GenerateJsonReport(ReportGenBase):
         self.save_folder_location = save_folder_location
         self.timestamp = timestamp
 
-    def parse_result(self):
-        file_content = self.util_obj.convert_dict_to_json(self.full_report)
-
-        self.create_file(file_content)
-
     def create_file(self, file_content):
 
         if CURR_SYSTEM_PLATFORM == "windows":
             if not self.util_obj.check_file_exsists(self.save_folder_location + r"\SecurusAudire_Reports"):
                 makedirs(self.save_folder_location + r'\SecurusAudire_Reports')
 
-            complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\json_report-" + str(
-                self.timestamp)[:str(self.timestamp).find(' ')] + ".json"
+            complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\json_report-{self.timestamp}.json"
 
         else:
             if not self.util_obj.check_file_exsists(self.save_folder_location + r"/SecurusAudire_Reports"):
                 makedirs(self.save_folder_location + r'/SecurusAudire_Reports')
 
-            complete_location = f"{self.save_folder_location}/SecurusAudire_Reports/json_report-" + str(self.timestamp)[
-                                                                                                    :str(
-                                                                                                        self.timestamp).find(
-                                                                                                        ' ')] + ".json"
+            complete_location = f"{self.save_folder_location}/SecurusAudire_Reports/" \
+                                f"json_report-{str(self.timestamp)}.json"
 
-        with open(complete_location, 'w') as write_file_obj:
+        with open(complete_location, 'w+') as write_file_obj:
             write_file_obj.write(file_content)
+
+    def parse_result(self):
+        file_content = self.util_obj.convert_dict_to_json(self.full_report)
+
+        self.create_file(file_content)
 
     def generate_report(self):
         self.parse_result()

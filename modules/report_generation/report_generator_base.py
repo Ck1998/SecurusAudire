@@ -10,7 +10,7 @@ class ReportGenBase(object):
     def parse_result(self):
         return "Custom Fucntion Not Implemneted"
 
-    def create_file(self):
+    def create_file(self, file_content):
         return "Custom Fucntion Not Implemneted"
 
     def generate_report(self):

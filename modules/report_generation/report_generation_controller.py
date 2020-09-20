@@ -13,7 +13,8 @@ class ReportGenController:
         self.save_folder_location = save_folder_location
         self.full_report = full_report
         util_obj = Utils()
-        self.timestamp = util_obj.get_current_datetime()
+        self.timestamp = util_obj.get_current_datetime().strftime("%d-%m-%Y %H_%M_%S")
+        self.timestamp = f"Date - {self.timestamp.split(' ')[0]}, Time - {self.timestamp.split(' ')[1]}"
 
     def generate_json_report(self):
         json_report_obj = GenerateJsonReport(self.full_report, self.save_folder_location, self.timestamp)
