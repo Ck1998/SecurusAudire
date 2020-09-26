@@ -91,7 +91,6 @@ class GenerateWebReport(ReportGenBase):
                 <li>
                 <a class="link" style="text-decoration:none; color: white;" href="#{module_name.replace(' ', '').replace('.', '').replace('(', '').replace(')', '')}SubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" id="{module_name.replace(' ', '').replace('.', '').replace('(', '').replace(')', '')}">{module_name}</a>
                 <ul class="collapse list-unstyled" id="{module_name.replace(' ', '').replace('.', '').replace('(', '').replace(')', '')}SubMenu">{sub_list}
-                </ul>
                 </li>
             """
 
