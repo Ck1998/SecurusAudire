@@ -85,5 +85,3 @@ class LinuxAuditController:
             return 1
 
         return 0
-
-# TODO: Change reports
