@@ -1,5 +1,17 @@
+############################################################################################################################################################################################################################################################################################
+#
+#    This database is used by windows registry audit module located at modules/audits/windows/windows_registry_checks/lib_windows_registry_check.py
+#    Guidelines for this database -
+#       1. Lines starting with '#' will be ignored by the parser
+#       2. Record Format -
+#           root_folder: <root folder name> -> path: <path to registry key> -> sub_key: <sub key to fetched from the registry key> -> expected_value: <expected value> -> desc: <description for this key, i.e what this key controls>
+#       3. Entries having '!' in front of them means that for these records, if they are not present then the expected value will be checked against the system value
+#
+############################################################################################################################################################################################################################################################################################
 
-root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: NoConnectedUser -> expected_value: 0 -> desc: 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts' 
+
+
+root_folder: HKEY_LOCAL_MACHINE -> path: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -> sub_key: NoConnectedUser -> expected_value: 0 -> desc: 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'
 
 
 root_folder: HKEY_LOCAL_MACHINE -> path: System\CurrentControlSet\Control\Lsa -> sub_key: SCENoApplyLegacyAuditPolicy -> expected_value: !1 -> desc: 'Audit: Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled' 

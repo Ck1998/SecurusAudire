@@ -73,6 +73,7 @@ class SecurusAudireGUI(object):
     def create_title_frame(self):
         title_frame = ttk.Frame(self.mainframe, padding="3 3 12 12")
         title_frame.grid(column=0, row=0, sticky=(N, W, E, S))
+        # canvas = Canvas(self.root, width=300, height=300).grid(column=1, row=0, sticky=(W, E))
 
         ttk.Label(title_frame, text="SecurusAudire").grid(column=1, row=0, sticky=(W, E))
         ttk.Label(title_frame, text="2020").grid(column=1, row=1, sticky=(W, E))
@@ -302,7 +303,5 @@ if __name__ == "__main__":
         else:
             ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 
-    elif CURR_SYSTEM_PLATFORM == "linux":
-
-        gui_obj = SecurusAudireGUI()
-        gui_obj.run_gui()
+    gui_obj = SecurusAudireGUI()
+    gui_obj.run_gui()
