@@ -67,13 +67,13 @@ class SecurusAudireGUI(object):
         return matrix
 
     def create_main_frame(self):
-        self.mainframe = ttk.Frame(self.root, padding="3 3 12 12")
+        self.mainframe = ttk.Frame(self.root, padding="3 3 12 12", borderwidth=10, relief=RIDGE, takefocus=True)
         self.mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
         self.root.columnconfigure(3, weight=1)
         self.root.rowconfigure(3, weight=1)
 
     def create_title_frame(self):
-        title_frame = ttk.Frame(self.mainframe, padding="3 3 3 3")
+        title_frame = ttk.Frame(self.mainframe, padding="3 3 3 3", borderwidth=5, relief=GROOVE, takefocus=True)
         title_frame.grid(column=0, row=0, sticky=(N, W, E, S))
         # canvas = Canvas(self.root, width=300, height=300).grid(column=1, row=0, sticky=(W, E))
 
@@ -84,14 +84,14 @@ class SecurusAudireGUI(object):
                                                                                           row=1, sticky=(N, E, W, S))
 
     def create_master_audit_frame(self):
-        audit_frame = ttk.Frame(self.mainframe, padding="3 3 12 12")
-        audit_frame.grid(column=0, row=1, sticky=(N, W, E, S))
-        audit_title = ttk.Label(audit_frame, text="Select Audits to perform - ")
+        self.master_audit_frame = ttk.Frame(self.mainframe, padding="3 3 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
+        self.master_audit_frame.grid(column=0, row=1, sticky=(N, W, E, S))
+        audit_title = ttk.Label(self.master_audit_frame, text="Select Audits to perform - ")
         audit_title.configure(font=("Verdana", 14, "bold"))
-        audit_title.grid(column=1, row=0, sticky=(W, E))
+        audit_title.grid(column=0, row=0, sticky=(W, E))
 
     def create_general_system_audits_section(self):
-        general_system_audits_frame = ttk.Frame(self.mainframe, padding="1 1 12 12")
+        general_system_audits_frame = ttk.Frame(self.master_audit_frame, padding="1 1 12 12")
         general_system_audits_frame.grid(column=0, row=2, sticky=(N, W, E, S))
         audit_type_title = ttk.Label(general_system_audits_frame, text="General System Audits")
         audit_type_title.configure(font=("Verdana", 12, "bold"))
@@ -120,7 +120,7 @@ class SecurusAudireGUI(object):
                                                                                                           sticky=(W, E))
 
     def create_system_based_audits_section(self):
-        system_based_audits_frame = ttk.Frame(self.mainframe, padding="1 1 12 12")
+        system_based_audits_frame = ttk.Frame(self.master_audit_frame, padding="1 1 12 12")
         system_based_audits_frame.grid(column=0, row=3, sticky=(N, W, E, S))
         audit_title = ttk.Label(system_based_audits_frame, text="System Based Audits")
         audit_title.configure(font=("Verdana", 12, "bold"))
@@ -172,7 +172,7 @@ class SecurusAudireGUI(object):
                                                                                                         sticky=(W, E))
 
     def create_custom_audits_section(self):
-        custom_audit_frame = ttk.Frame(self.mainframe, padding="1 1 12 12")
+        custom_audit_frame = ttk.Frame(self.master_audit_frame, padding="1 1 12 12")
         custom_audit_frame.grid(column=0, row=4, sticky=(N, W, E, S))
         audit_title = ttk.Label(custom_audit_frame, text="User defined Audits")
         audit_title.configure(font=("Verdana", 12, "bold"))
@@ -242,23 +242,23 @@ class SecurusAudireGUI(object):
         file_entry_widget.insert(0, self.save_folder_location)
 
     def create_file_save_location_section(self):
-        self.file_save_box_frame = ttk.Frame(self.mainframe, padding="1 1 12 12")
+        self.file_save_box_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
         self.file_save_box_frame.grid(column=0, row=5, sticky=(N, W, E, S))
 
         save_folder_title = ttk.Label(self.file_save_box_frame, text="Report Save Location:")
         save_folder_title.configure(font=("Verdana", 12, "bold"))
-        save_folder_title.grid(column=0, row=1, padx=10)
-        ttk.Entry(self.file_save_box_frame, width=50).grid(column=2, row=1, padx=10)
+        save_folder_title.grid(column=0, row=1, padx=10, pady=10)
+        ttk.Entry(self.file_save_box_frame, width=50).grid(column=2, row=1, padx=10, pady=10)
 
         ttk.Button(self.file_save_box_frame, text="Browse", command=self.set_save_directory).grid(column=3, row=1, padx=10)
 
     def create_driver_buttons_section(self):
-        driver_buttons_frame = ttk.Frame(self.mainframe, padding="1 1 12 12")
+        driver_buttons_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
         driver_buttons_frame.grid(column=0, row=6, sticky=(N, W, E, S))
 
-        ttk.Button(driver_buttons_frame, text="Start System Audit", command=self.run_audit).grid(column=2, row=1, padx=30)
+        ttk.Button(driver_buttons_frame, text="Start System Audit", command=self.run_audit).grid(column=2, row=1, padx=30, pady=5)
 
-        ttk.Button(driver_buttons_frame, text="Exit", command=self.exit_gui).grid(column=3, row=1, padx=30)
+        ttk.Button(driver_buttons_frame, text="Exit", command=self.exit_gui).grid(column=3, row=1, padx=30, pady=5)
 
     def set_audits_status(self):
         categories_state = [self.general_system_audits_check_boxes.state(),
