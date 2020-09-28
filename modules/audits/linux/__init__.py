@@ -5,3 +5,4 @@ from .kernel_hardening.lib_kernel_hardening import KernaleHardeningAudits
 from .check_root_kit.lib_check_root_kit import RootKitAudits
 from .test_home_dir.lib_test_home_dir import HomeDirectoryAudits
 from .check_memory_processes.lib_check_memory_processes import MemoryProcessAudits
+from .system_binaries_checks.lib_check_important_system_binaries import ImportantSystemBinariesCheck
