@@ -238,7 +238,7 @@ class SecurusAudireGUI(object):
             self.save_folder_location = self.save_folder_location.replace("/", '\\')
 
         file_entry_widget = ttk.Entry(self.file_save_box_frame, width=50)
-        file_entry_widget.grid(column=1, row=1)
+        file_entry_widget.grid(column=2, row=1, padx=10, pady=10)
         file_entry_widget.insert(0, self.save_folder_location)
 
     def create_file_save_location_section(self):
