@@ -1,4 +1,4 @@
 psutil
 ntplib
 json2html
-scapy
+python-nmap
