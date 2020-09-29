@@ -5,23 +5,48 @@
 #       @/etc/hosts !<regex to check> !<status_message>
 ############################################################
 
-@/etc/hosts  !^[^#]*avp.ch !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*avp.ru !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*awaps.net !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*ca.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*mcafee.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*microsoft.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*f-secure.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*sophos.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*symantec.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*my-etrust.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*nai.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*networkassociates.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*viruslist.ru !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*kaspersky !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*symantecliveupdate.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*grisoft.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*clamav.net !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*bitdefender.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*antivirus.com !Anti-virus site on the hosts file
-@/etc/hosts  !^[^#]*sans.org !Security site on the hosts file
+# /etc/hosts file checks
+
+@/etc/hosts !avp\.ch !Anti-virus site on the hosts file
+@/etc/hosts !avp\.ru !Anti-virus site on the hosts file
+@/etc/hosts !awaps\.net !Anti-virus site on the hosts file
+@/etc/hosts !ca\.com !Anti-virus site on the hosts file
+@/etc/hosts !mcafee\.com !Anti-virus site on the hosts file
+@/etc/hosts !microsoft\.com !Anti-virus site on the hosts file
+@/etc/hosts !f-secure\.com !Anti-virus site on the hosts file
+@/etc/hosts !sophos\.com !Anti-virus site on the hosts file
+@/etc/hosts !symantec\.com !Anti-virus site on the hosts file
+@/etc/hosts !my-etrust\.com !Anti-virus site on the hosts file
+@/etc/hosts !nai\.com !Anti-virus site on the hosts file
+@/etc/hosts !networkassociates\.com !Anti-virus site on the hosts file
+@/etc/hosts !viruslist\.ru !Anti-virus site on the hosts file
+@/etc/hosts !kaspersky !Anti-virus site on the hosts file
+@/etc/hosts !symantecliveupdate\.com !Anti-virus site on the hosts file
+@/etc/hosts !grisoft\.com !Anti-virus site on the hosts file
+@/etc/hosts !clamav\.net !Anti-virus site on the hosts file
+@/etc/hosts !bitdefender\.com !Anti-virus site on the hosts file
+@/etc/hosts !antivirus\.com !Anti-virus site on the hosts file
+@/etc/hosts !sans\.org !Security site on the hosts file
+
+# /etc/hosts.allow file checks
+
+@/etc/hosts.allow !avp\.ch !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !avp\.ru !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !awaps\.net !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !ca\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !mcafee\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !microsoft\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !f-secure\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !sophos\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !symantec\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !my-etrust\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !nai\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !networkassociates\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !viruslist\.ru !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !kaspersky !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !symantecliveupdate\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !grisoft\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !clamav\.net !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !bitdefender\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !antivirus\.com !Anti-virus site on the hosts.allow file
+@/etc/hosts.allow !sans\.org !Security site on the hosts.allow file
