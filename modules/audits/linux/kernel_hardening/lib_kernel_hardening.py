@@ -2,7 +2,7 @@ from modules.audits.base_model import BaseTest
 import config as CONFIG
 
 
-class KernaleHardeningAudits(BaseTest):
+class KernelHardeningAudits(BaseTest):
     __disabled__ = False
 
     def __init__(self):
