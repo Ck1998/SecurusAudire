@@ -31,6 +31,16 @@ class GenerateJsonReport(ReportGenBase):
             write_file_obj.write(file_content)
 
     def parse_result(self):
+        system_score = self.full_report["System Score"]
+        total_score_possible = self.full_report["Total Score Possible"]
+
+        try:
+            hardening_index = round((system_score / total_score_possible) * 100, 2)
+        except ZeroDivisionError:
+            hardening_index = 0.00
+        self.full_report['Hardening Index'] = f"{hardening_index} %"
+        self.full_report['System Detected'] = CURR_SYSTEM_PLATFORM
+
         file_content = self.util_obj.convert_dict_to_json(self.full_report)
 
         self.create_file(file_content)
