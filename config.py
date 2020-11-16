@@ -28,3 +28,5 @@ COMMON_PORTS = {
     23: "TCP",
     234: "UDP"
 }
+
+USER_SELECTED_LANGUAGE = None

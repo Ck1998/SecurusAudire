@@ -1,5 +1,5 @@
 from modules.audit_controller import AuditController
-from config import CURR_SYSTEM_PLATFORM, ROOT_DIR
+import config as CONFIG
 import getpass
 
 from tkinter import *
@@ -13,6 +13,9 @@ from modules.audits.base_model import BaseTest
 # UAC elevation
 import ctypes
 import sys
+
+# Language modules
+from translate import Translator
 
 
 class CreateCheckBox(Frame):
@@ -81,10 +84,11 @@ class SecurusAudireGUI(object):
         title.configure(font=("Verdana", 16, "bold"))
         title.grid(column=1, row=0, sticky=(E, W))
         ttk.Label(title_frame, text="                             ").grid(column=0,
-                                                                                          row=1, sticky=(N, E, W, S))
+                                                                          row=1, sticky=(N, E, W, S))
 
     def create_master_audit_frame(self):
-        self.master_audit_frame = ttk.Frame(self.mainframe, padding="3 3 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
+        self.master_audit_frame = ttk.Frame(self.mainframe, padding="3 3 12 12", borderwidth=5, relief=GROOVE,
+                                            takefocus=True)
         self.master_audit_frame.grid(column=0, row=1, sticky=(N, W, E, S))
         audit_title = ttk.Label(self.master_audit_frame, text="Select Audits to perform - ")
         audit_title.configure(font=("Verdana", 14, "bold"))
@@ -129,7 +133,8 @@ class SecurusAudireGUI(object):
         ttk.Label(system_based_audits_frame, text="                                             ").grid(column=1,
                                                                                                         row=1,
                                                                                                         sticky=(W, E))
-        system_title = ttk.Label(system_based_audits_frame, text=f"Showing audits for system type - {CURR_SYSTEM_PLATFORM}")
+        system_title = ttk.Label(system_based_audits_frame,
+                                 text=f"Showing audits for system type - {CONFIG.CURR_SYSTEM_PLATFORM}")
         system_title.configure(font=("Verdana", 10, "bold"))
         system_title.grid(
             column=1,
@@ -138,12 +143,12 @@ class SecurusAudireGUI(object):
         ttk.Label(system_based_audits_frame, text="                                             ").grid(column=1,
                                                                                                         row=3,
                                                                                                         sticky=(W, E))
-        if CURR_SYSTEM_PLATFORM == "linux":
+        if CONFIG.CURR_SYSTEM_PLATFORM == "linux":
             import modules.audits.linux
-        elif CURR_SYSTEM_PLATFORM == "windows":
+        elif CONFIG.CURR_SYSTEM_PLATFORM == "windows":
             import modules.audits.windows
         else:
-            ttk.Label(system_based_audits_frame, text=f"{CURR_SYSTEM_PLATFORM} not supported").grid(column=1, row=0,
+            ttk.Label(system_based_audits_frame, text=f"{CONFIG.CURR_SYSTEM_PLATFORM} not supported").grid(column=1, row=0,
                                                                                                     sticky=(W, E))
             return
 
@@ -180,12 +185,12 @@ class SecurusAudireGUI(object):
         ttk.Label(custom_audit_frame, text="                                             ").grid(column=1,
                                                                                                  row=1,
                                                                                                  sticky=(W, E))
-        if CURR_SYSTEM_PLATFORM == "linux":
+        if CONFIG.CURR_SYSTEM_PLATFORM == "linux":
             import modules.audits.linux.custom_audits
-        elif CURR_SYSTEM_PLATFORM == "windows":
+        elif CONFIG.CURR_SYSTEM_PLATFORM == "windows":
             import modules.audits.windows.custom_audits
         else:
-            ttk.Label(custom_audit_frame, text=f"{CURR_SYSTEM_PLATFORM} not supported").grid(column=1, row=0,
+            ttk.Label(custom_audit_frame, text=f"{CONFIG.CURR_SYSTEM_PLATFORM} not supported").grid(column=1, row=0,
                                                                                              sticky=(W, E))
             return
 
@@ -225,16 +230,16 @@ class SecurusAudireGUI(object):
 
         if len(self.save_folder_location) == 0:
 
-            if CURR_SYSTEM_PLATFORM == "linux":
+            if CONFIG.CURR_SYSTEM_PLATFORM == "linux":
                 self.save_folder_location = "/var/log"
 
-            elif CURR_SYSTEM_PLATFORM == "windows":
-                self.save_folder_location = ROOT_DIR
+            elif CONFIG.CURR_SYSTEM_PLATFORM == "windows":
+                self.save_folder_location = CONFIG.ROOT_DIR
 
             else:
                 pass
 
-        if CURR_SYSTEM_PLATFORM == "windows":
+        if CONFIG.CURR_SYSTEM_PLATFORM == "windows":
             self.save_folder_location = self.save_folder_location.replace("/", '\\')
 
         file_entry_widget = ttk.Entry(self.file_save_box_frame, width=50)
@@ -242,7 +247,8 @@ class SecurusAudireGUI(object):
         file_entry_widget.insert(0, self.save_folder_location)
 
     def create_file_save_location_section(self):
-        self.file_save_box_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
+        self.file_save_box_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE,
+                                             takefocus=True)
         self.file_save_box_frame.grid(column=0, row=5, sticky=(N, W, E, S))
 
         save_folder_title = ttk.Label(self.file_save_box_frame, text="Report Save Location:")
@@ -250,13 +256,16 @@ class SecurusAudireGUI(object):
         save_folder_title.grid(column=0, row=1, padx=10, pady=10)
         ttk.Entry(self.file_save_box_frame, width=50).grid(column=2, row=1, padx=10, pady=10)
 
-        ttk.Button(self.file_save_box_frame, text="Browse", command=self.set_save_directory).grid(column=3, row=1, padx=10)
+        ttk.Button(self.file_save_box_frame, text="Browse", command=self.set_save_directory).grid(column=3, row=1,
+                                                                                                  padx=10)
 
     def create_driver_buttons_section(self):
-        driver_buttons_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE, takefocus=True)
+        driver_buttons_frame = ttk.Frame(self.mainframe, padding="1 1 12 12", borderwidth=5, relief=GROOVE,
+                                         takefocus=True)
         driver_buttons_frame.grid(column=0, row=6, sticky=(N, W, E, S))
 
-        ttk.Button(driver_buttons_frame, text="Start System Audit", command=self.run_audit).grid(column=2, row=1, padx=30, pady=5)
+        ttk.Button(driver_buttons_frame, text="Start System Audit", command=self.run_audit).grid(column=2, row=1,
+                                                                                                 padx=30, pady=5)
 
         ttk.Button(driver_buttons_frame, text="Exit", command=self.exit_gui).grid(column=3, row=1, padx=30, pady=5)
 
@@ -340,6 +349,56 @@ class SecurusAudireGUI(object):
         self.root.destroy()
 
 
+class LanguageSelector(object):
+
+    def __init__(self):
+        self.language_selector_root = Tk()
+        self.language_selector_root.title('SecurusAudire - A Security Audit Tool | Language Selector')
+        self.language_selector_root.geometry('350x250')
+        self.supported_languages = {
+            "Chinese": "中文 (Chinese)",
+            "English": "English",
+            "Japanese": "日本人 (Japanese)",
+            "Korean": "한국어 (Korean)",
+            "Russian": "русский (Russian)",
+            "Spanish": "Española (Spanish)"
+        }
+        self.selected_language = StringVar()
+
+    @staticmethod
+    def quit():
+        exit(0)
+
+    def set_global_language(self):
+        if self.selected_language is None:
+            self.selected_language = "English"
+        else:
+            CONFIG.USER_SELECTED_LANGUAGE = self.selected_language
+
+    def generate_language_selector_gui(self):
+        choose_language = ttk.Combobox(self.language_selector_root, width=27,
+                                       textvariable=self.selected_language)
+
+        choose_language['values'] = [val for key, val in self.supported_languages.items()]
+
+        choose_language.grid(column=1, row=15)
+
+        # Selecting English as the default language
+        choose_language.current(1)
+
+        ttk.Button(self.language_selector_root, text='Start',
+                   command=self.set_global_language).grid(column=2,
+                                                          row=2,
+                                                          sticky=(W, E))
+
+        ttk.Button(self.language_selector_root, text='Quit',
+                   command=self.quit).grid(column=4,
+                                           row=2,
+                                           sticky=(W, E))
+        print(CONFIG.USER_SELECTED_LANGUAGE)
+        self.language_selector_root.mainloop()
+
+
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
@@ -349,7 +408,9 @@ def is_admin():
 
 if __name__ == "__main__":
 
-    if CURR_SYSTEM_PLATFORM == "windows":
+    LanguageSelector().generate_language_selector_gui()
+
+    if CONFIG.CURR_SYSTEM_PLATFORM == "windows":
 
         if is_admin():
             # check if user is admin, if True then run audit
