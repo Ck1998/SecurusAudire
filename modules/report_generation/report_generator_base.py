@@ -8,10 +8,10 @@ class ReportGenBase(object):
         self.util_obj = Utils()
 
     def parse_result(self):
-        return "Custom Fucntion Not Implemneted"
+        return "Custom Function Not Implemented"
 
     def create_file(self, file_content):
-        return "Custom Fucntion Not Implemneted"
+        return "Custom Function Not Implemented"
 
     def generate_report(self):
-        return "Custom Fucntion Not Implemneted"
+        return "Custom Function Not Implemented"

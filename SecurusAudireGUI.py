@@ -15,7 +15,7 @@ import ctypes
 import sys
 
 # Language modules
-from translate import Translator
+# from translate import Translator
 
 
 class CreateCheckBox(Frame):
@@ -408,7 +408,7 @@ def is_admin():
 
 if __name__ == "__main__":
 
-    LanguageSelector().generate_language_selector_gui()
+    # LanguageSelector().generate_language_selector_gui()
 
     if CONFIG.CURR_SYSTEM_PLATFORM == "windows":
 

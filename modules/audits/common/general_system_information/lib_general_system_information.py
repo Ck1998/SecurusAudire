@@ -14,7 +14,7 @@ class GeneralSystemInformation(BaseTest):
     def get_boot_time(self):
         self.test_results['Boot Time'] = {}
         boot_time_timestamp = psutil.boot_time()
-        bt = self.util_obj.get_datetime_fromtimestamp(boot_time_timestamp)
+        bt = self.util_obj.get_datetime_from_timestamp(boot_time_timestamp)
         self.test_results['Boot Time']["Boot Time"] = f"{bt.year}/{bt.month}/{bt.day} {bt.hour}:{bt.minute}:{bt.second}"
 
     def get_system_information(self):

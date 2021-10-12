@@ -15,13 +15,13 @@ class GenerateJsonReport(ReportGenBase):
     def create_file(self, file_content):
 
         if CURR_SYSTEM_PLATFORM == "windows":
-            if not self.util_obj.check_file_exsists(self.save_folder_location + r"\SecurusAudire_Reports"):
+            if not self.util_obj.check_file_exists(self.save_folder_location + r"\SecurusAudire_Reports"):
                 makedirs(self.save_folder_location + r'\SecurusAudire_Reports')
 
             complete_location = rf"{self.save_folder_location}\SecurusAudire_Reports\json_report-{self.timestamp}.json"
 
         else:
-            if not self.util_obj.check_file_exsists(self.save_folder_location + r"/SecurusAudire_Reports"):
+            if not self.util_obj.check_file_exists(self.save_folder_location + r"/SecurusAudire_Reports"):
                 makedirs(self.save_folder_location + r'/SecurusAudire_Reports')
 
             complete_location = f"{self.save_folder_location}/SecurusAudire_Reports/" \

@@ -28,7 +28,7 @@ class ImportantSystemBinariesCheck(BaseTest):
                 if search_type.lower() == 's':
                     found_flag = False
                     for search_directory in search_directories.split(" "):
-                        if self.util_obj.check_file_exsists(f"{CONFIG.ROOT_DIR}{search_directory}{binary_name}"):
+                        if self.util_obj.check_file_exists(f"{CONFIG.ROOT_DIR}{search_directory}{binary_name}"):
                             found_flag = True
                             break
 
