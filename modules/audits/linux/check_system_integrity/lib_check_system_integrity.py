@@ -30,7 +30,7 @@ class SystemIntegrityAudits(BaseTest):
     def check_csrutil(self):
         csrutils_file_path = self.ROOT_DIR+"usr/bin/csrutil"
         self.test_result['Checking for CSrutil'] = {}
-        result = self.util_obj.check_file_exsists(csrutils_file_path)
+        result = self.util_obj.check_file_exists(csrutils_file_path)
         
         if result:
             self.test_result['Checking for CSrutil'].update(result = "CSrutil binary found.", args = None)

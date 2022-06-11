@@ -7,10 +7,11 @@ import glob
 import json
 from json2html import *
 
+
 class Utils:
     
     """
-        This class contains all the util functions requireed by the code
+        This class contains all the util functions required by the code
     """
     
     def __init__(self):
@@ -31,14 +32,10 @@ class Utils:
         for i in range(1, 3):
             try:
                 response = c.request('in.pool.ntp.org', version=i)
-                break
-            except:
+                return datetime.fromtimestamp(response.tx_time, timezone.utc)
+            except Exception:
                 pass
 
-        response.offset
-
-        return datetime.fromtimestamp(response.tx_time, timezone.utc)
-    
     @staticmethod
     def get_current_datetime() -> datetime:
         curr_datetime = datetime.now()
@@ -48,13 +45,13 @@ class Utils:
             return curr_datetime
     
     @staticmethod
-    def get_datetime_fromtimestamp(timestamp):
+    def get_datetime_from_timestamp(timestamp):
         formatted_datetime = datetime.fromtimestamp(timestamp)
 
         return formatted_datetime
     
     @staticmethod
-    def check_file_exsists(file_path: str):
+    def check_file_exists(file_path: str):
         result = os.path.exists(file_path)
         return result
 
@@ -95,13 +92,14 @@ class Utils:
     def convert_dict_to_json(dict_convert: dict):
         try:
             converted_json = json.dumps(dict_convert, indent=4)
-        except:
+        except Exception:
             converted_json = json.dumps({"None":"None"})
 
         return converted_json
 
     @staticmethod
     def convert_json_to_html_table(json_data: dict):
-        minify_html_table = json2html.convert(json = json_data, table_attributes=f'class="table table-bordered table-hover"')
+        minify_html_table = json2html.convert(json = json_data, table_attributes=f'class="table table-bordered '
+                                                                                 f'table-hover"')
 
         return minify_html_table
